@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1l78a6skk20c"]
+
+[ext_resource type="Script" path="res://back.gd" id="1_gi4hq"]
+
+[node name="Load Game" type="Node2D"]
+
+[node name="GridContainer" type="GridContainer" parent="."]
+offset_right = 104.0
+offset_bottom = 58.0
+
+[node name="Saved Games" type="Label" parent="GridContainer"]
+layout_mode = 2
+text = "Saved Games"
+
+[node name="Back" type="Button" parent="GridContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+text = "Go Back"
+script = ExtResource("1_gi4hq")
+
+[connection signal="pressed" from="GridContainer/Back" to="GridContainer/Back" method="_on_pressed"]
