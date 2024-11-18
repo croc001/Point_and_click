@@ -53,9 +53,8 @@ The game will be made with the Godot engine, primarily using its own programming
 
 
 <!-- GETTING STARTED -->
-## Getting Started
 
-### Prerequisites
+## Prerequisites
 
 You don't need Godot to start the game demo, but it may still be useful to have the program installed. You can download it through the following links, depending on your device:
 
@@ -65,27 +64,18 @@ You don't need Godot to start the game demo, but it may still be useful to have 
 4. Itch.io: https://godotengine.itch.io/godot
 5. Epic Games: https://store.epicgames.com/de/p/godot-engine
 
-### Installation
+## Installation
 
-_Below is a short guide to help you through the installation process. The game is available on mediafire: https://www.mediafire.com/file/m9vkdg7947uzuda/goofy-ahh-game.zip/file._
+_Below is a short guide to help you through the installation process._
 
-1. Clone the repo and check the README
-   ```sh
-   git clone https://github.com/croc001/Point_and_click.git
-   ```
-2. Download the game through the mediafire link and press "download"
-   ```sh
-   https://www.mediafire.com/file/m9vkdg7947uzuda/goofy-ahh-game.zip/file 
-   ```
-3. Start the game
-   ```sh
-   Unzip the folder. Double click the "game" file in the folder to start it.
-   ```
-4. Defender/Antivirus
-   ```sh
-   If your PC prevents the installation due to secruity reasons, press "trust this source" to install it anyway.
-   ```
-Now you should be able to play the game. Have fun!
+1. Download the game through the [**bwSync&Share**](https://bwsyncandshare.kit.edu/s/xSer3LqXGbdDHnB) link and press "download".
+   
+2. Double click the .exe file in the folder to start it.
+   
+3. If your PC prevents the installation due to secruity reasons, press "trust this source" to install it anyway.
+   
+
+_Now you should be able to play the game. Have fun!_
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
