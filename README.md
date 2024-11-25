@@ -26,17 +26,17 @@
       <a href="#about-the-project">About The Project</a>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
+      <a href="#installing-the-game-exe">Installing the Game (.exe)</a>
+    </li>
+    <li>
+      <a href="#running-the-game-in-godot-for-developers">Running the Game in Godot (for developers)</a>
     </li>
     <li><a href="#creators">Creators</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
+
 
 
 
@@ -54,19 +54,9 @@ The game will be made with the Godot engine, primarily using its own programming
 
 <!-- GETTING STARTED -->
 
-## Prerequisites
+## Installing the game (.exe)
 
-You don't need Godot to start the game demo, but it may still be useful to have the program installed. You can download it through the following links, depending on your device:
-
-1. Website (Windows): https://godotengine.org/download/windows/
-2. Website (Mac): https://godotengine.org/download/macos/
-3. Steam: https://store.steampowered.com/app/404790/Godot_Engine/
-4. Itch.io: https://godotengine.itch.io/godot
-5. Epic Games: https://store.epicgames.com/de/p/godot-engine
-
-## Installation
-
-_Below is a short guide to help you through the installation process._
+_Below is a short guide to help you through the installation process. The game is currently only available for Windows._
 
 1. Download the game through the [**bwSync&Share**](https://bwsyncandshare.kit.edu/s/xSer3LqXGbdDHnB) link and press "download".
    
@@ -76,6 +66,29 @@ _Below is a short guide to help you through the installation process._
    
 
 _Now you should be able to play the game. Have fun!_
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+## Running the game in Godot (for developers)
+
+1. First, download Godot. You can download it through the following links, depending on your device:
+
+   - **Windows:** https://godotengine.org/download/windows/  
+   - **Mac:** https://godotengine.org/download/macos/  
+
+2. Unzip and install the program.
+
+3. Clone the repository using the following command in your terminal:  
+   ```sh
+   git clone https://github.com/croc001/Point_and_click.git
+   ```
+4. Start Godot and import the folder "goofy-ahh-game".
+
+5. You can press "f5" to start the game preview.
+
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
