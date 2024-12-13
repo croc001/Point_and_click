@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bphlhh5fom6x2"
+path="res://.godot/imported/CS_VocoBitB_Hit-11.wav-1ae3df3bd4c77bbff079f91e5494734d.sample"
+
+[deps]
+
+source_file="res://Tutorial/Tutorial Assets/Audio/Sounds/CS_VocoBitB_Hit-11.wav"
+dest_files=["res://.godot/imported/CS_VocoBitB_Hit-11.wav-1ae3df3bd4c77bbff079f91e5494734d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

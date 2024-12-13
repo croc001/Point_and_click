@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://nar6tx5u2tgk"]
+
+[ext_resource type="Script" path="res://Tutorial/Tutorial Szenes/load_game_new.gd" id="1_jvioc"]
+[ext_resource type="AudioStream" uid="uid://bwwmudqachi67" path="res://Tutorial/Tutorial Assets/Audio/Sounds/main_press_button.wav" id="2_pvxaa"]
+
+[node name="LoadGameNew" type="Node2D"]
+script = ExtResource("1_jvioc")
+
+[node name="Saved Games" type="Label" parent="."]
+offset_top = 4.0
+offset_right = 1151.0
+offset_bottom = 115.0
+theme_override_font_sizes/font_size = 75
+text = "Saved Games"
+horizontal_alignment = 1
+
+[node name="Go_Back_To_Main_Menu" type="Button" parent="."]
+offset_left = 1.0
+offset_top = 561.0
+offset_right = 1154.0
+offset_bottom = 645.0
+text = "Go Back To Main Menu"
+
+[node name="main_press_button" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_pvxaa")
+volume_db = -10.0
+
+[connection signal="pressed" from="Go_Back_To_Main_Menu" to="." method="_on_go_back_to_main_menu_pressed"]
