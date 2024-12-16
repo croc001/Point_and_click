@@ -1,8 +1,0 @@
-[gd_scene format=3 uid="uid://624p82qubifo"]
-
-[node name="Game View" type="Node2D"]
-
-[node name="Label" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
-text = "Main game view"
