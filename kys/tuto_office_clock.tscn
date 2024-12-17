@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://iphm3iliwse5"]
+
+[ext_resource type="Texture2D" uid="uid://bfc55xgoah84r" path="res://assets/cases/00_tutorial/scenes/tuto_office/objects/closeup_clock.png" id="1_smn8c"]
+[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/object_scripts/back_to_office.gd" id="2_uhh8i"]
+
+[node name="clock_closeup" type="Node2D"]
+
+[node name="CloseupClock" type="Sprite2D" parent="."]
+position = Vector2(576, 323.5)
+scale = Vector2(1.72973, 1.82303)
+texture = ExtResource("1_smn8c")
+
+[node name="back_to_office" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+offset_right = 1155.0
+offset_bottom = 652.0
+script = ExtResource("2_uhh8i")
+
+[connection signal="pressed" from="back_to_office" to="back_to_office" method="_on_pressed"]

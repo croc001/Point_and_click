@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://dmqsc0peu1s8"]
+
+[ext_resource type="Script" path="res://scripts/global/ui/go_back_to_main_menu_from_load_saves.gd" id="1_x3xlx"]
+
+[node name="saved_games" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 1151.0
+offset_bottom = 119.0
+theme_override_font_sizes/font_size = 75
+text = "Saved Game"
+horizontal_alignment = 1
+
+[node name="go_back_to_main_menu_from_load_saves" type="Button" parent="."]
+layout_mode = 0
+offset_top = 602.0
+offset_right = 1152.0
+offset_bottom = 647.0
+text = "Go Back To Main Menu"
+script = ExtResource("1_x3xlx")
+
+[connection signal="pressed" from="go_back_to_main_menu_from_load_saves" to="go_back_to_main_menu_from_load_saves" method="_on_pressed"]
