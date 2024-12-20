@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://dv0413aqihhfb"]
+[gd_scene load_steps=3 format=3 uid="uid://iphm3iliwse5"]
 
 [ext_resource type="Texture2D" uid="uid://bfc55xgoah84r" path="res://assets/cases/00_tutorial/scenes/tuto_office/objects/closeup_clock.png" id="1_smn8c"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/object_scripts/back_to_office.gd" id="2_uhh8i"]

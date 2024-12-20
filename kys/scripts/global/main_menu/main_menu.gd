@@ -6,8 +6,6 @@ extends Control
 func _ready() -> void:
 	background_animation.play("default")
 
-
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
@@ -15,7 +13,7 @@ func _process(delta: float) -> void:
 func _on_new_game_pressed() -> void:
 	$new_game/MainNewGameButton.play()
 	await _delayed_scene_change_new_game()
-	get_tree().change_scene_to_file("res://scripts/cases/00_tutorial/scenes/tuto_office/00_tuto_office.tscn")
+	get_tree().change_scene_to_file("res://assets/cases/00_tutorial/scenes/tuto_office/background/00_tuto_office.tscn")
 	
 func _delayed_scene_change_new_game() -> void:
 	await get_tree().create_timer(0.8).timeout

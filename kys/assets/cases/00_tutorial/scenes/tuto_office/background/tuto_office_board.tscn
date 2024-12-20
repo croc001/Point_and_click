@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://dptsaeojcrgug"]
+[gd_scene load_steps=3 format=3 uid="uid://c7dxnkhcjgpu3"]
 
 [ext_resource type="Texture2D" uid="uid://bvt6x6hrj31di" path="res://assets/cases/00_tutorial/scenes/tuto_office/objects/closeup_whiteboard.png" id="1_d1tjt"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/object_scripts/back_to_office_from_board.gd" id="2_53oda"]

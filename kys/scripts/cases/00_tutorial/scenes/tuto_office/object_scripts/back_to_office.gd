@@ -13,4 +13,4 @@ func _process(delta: float) -> void:
 
 
 func _on_pressed() -> void:
-	get_tree().change_scene_to_file("res://scripts/cases/00_tutorial/scenes/tuto_office/00_tuto_office.tscn")
+	get_tree().change_scene_to_file("res://assets/cases/00_tutorial/scenes/tuto_office/background/00_tuto_office.tscn")

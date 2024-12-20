@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://cat6dy4hy6s0t"]
+[gd_scene load_steps=3 format=3 uid="uid://2lpn6vhlece3"]
 
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/main_scripts.gd.gd" id="2_ibuey"]
 [ext_resource type="Texture2D" uid="uid://bh3vx2hjvtbdu" path="res://assets/cases/00_tutorial/scenes/tuto_office/background/detective_office.png" id="2_vf2cg"]

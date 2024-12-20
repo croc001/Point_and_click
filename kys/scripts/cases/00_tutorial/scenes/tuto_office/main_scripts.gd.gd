@@ -7,13 +7,13 @@ func _ready() -> void:
 
 
 func _on_pressed() -> void:
-	get_tree().change_scene_to_file("res://tuto_office_clock.tscn")
+	get_tree().change_scene_to_file("res://assets/cases/00_tutorial/scenes/tuto_office/background/tuto_office_clock.tscn")
 
 func _on_pc_pressed() -> void:
-	get_tree().change_scene_to_file("res://tuto_office_closeup_pc.tscn")
+	get_tree().change_scene_to_file("res://assets/cases/00_tutorial/scenes/tuto_office/background/tuto_office_closeup_pc.tscn")
 	
 func _on_board_pressed() -> void:
-	get_tree().change_scene_to_file("res://tuto_office_board.tscn")
+	get_tree().change_scene_to_file("res://assets/cases/00_tutorial/scenes/tuto_office/background/tuto_office_board.tscn")
 
 func _on_certificate_pressed() -> void:
 	get_tree().change_scene_to_file("res://closeup_certificate.tscn")
