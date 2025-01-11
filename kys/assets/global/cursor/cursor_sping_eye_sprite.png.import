@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bc6x0karwf7t8"
-path="res://.godot/imported/cursor_basic.png-c5bbcac77a1a6ca34ef5b1e23ce9941a.ctex"
+uid="uid://cu07fu83qt0gt"
+path="res://.godot/imported/cursor_sping_eye_sprite.png-5ddeb1946841d62d5697f5619eed5f9b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/global/cursor/cursor_basic.png"
-dest_files=["res://.godot/imported/cursor_basic.png-c5bbcac77a1a6ca34ef5b1e23ce9941a.ctex"]
+source_file="res://assets/global/cursor/cursor_sping_eye_sprite.png"
+dest_files=["res://.godot/imported/cursor_sping_eye_sprite.png-5ddeb1946841d62d5697f5619eed5f9b.ctex"]
 
 [params]
 
