@@ -34,12 +34,3 @@ func _on_quit_to_os_pressed() -> void:
 	$quit_to_os/MainPressButton.play()
 	await _delayed_scene_change()
 	get_tree().quit()
-
-var hand_cursor = preload("res://assets/global/cursor/ahhhhh.png")
-var basic_cursor = preload("res://assets/global/cursor/cursor_basic.png")
-
-func change_cursor_hand():
-	Input.set_custom_mouse_cursor(basic_cursor)
-	
-func change_cursor_back():
-	Input.set_custom_mouse_cursor(hand_cursor)

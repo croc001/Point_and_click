@@ -26,3 +26,7 @@ func _on_register_pressed() -> void:
 
 func _on_window_pressed() -> void:
 	get_tree().change_scene_to_file("res://assets/cases/00_tutorial/scenes/tuto_office/background/closeup_window.tscn")
+
+
+func _on_door_to_corridor_pressed() -> void:
+	get_tree().change_scene_to_file("res://assets/cases/00_tutorial/scenes/tuto_corridor/background/tuto_corridor.tscn")

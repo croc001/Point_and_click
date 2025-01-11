@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://c10tdvqh272kr"]
+
+[ext_resource type="Script" path="res://scripts/global/mechanics/lockpick/lockpick_minigame.gd" id="1_8l251"]
+[ext_resource type="Texture2D" uid="uid://iwpxopfdl60m" path="res://scripts/global/mechanics/lockpick/lock.jpg" id="1_cwu62"]
+[ext_resource type="Script" path="res://scripts/global/mechanics/lockpick/lock.gd" id="3_8bw7q"]
+[ext_resource type="Texture2D" uid="uid://crrwrbqedggk0" path="res://scripts/global/mechanics/lockpick/lockpick.png" id="3_pkyie"]
+
+[node name="lockpick_minigame" type="Node2D"]
+script = ExtResource("1_8l251")
+
+[node name="lock" type="Sprite2D" parent="."]
+position = Vector2(580, 325)
+texture = ExtResource("1_cwu62")
+script = ExtResource("3_8bw7q")
+
+[node name="lockpick" type="Sprite2D" parent="."]
+position = Vector2(578.159, 196.931)
+rotation = 2.35619
+scale = Vector2(0.240082, 0.245894)
+texture = ExtResource("3_pkyie")
+
+[node name="unlocksound" type="AudioStreamPlayer2D" parent="."]

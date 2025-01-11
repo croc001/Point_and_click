@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cp8k38xrhmsxo"
-path="res://.godot/imported/Sprite-0002_3.0.aseprite-f8ce6fd8013ab9bea062ec7dc67a47c6.ctex"
+uid="uid://crrwrbqedggk0"
+path="res://.godot/imported/lockpick.png-d80d63ad840c8caa0f198eb688591a63.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/global/main_menu/images/background/Sprite-0002_3.0.aseprite"
-dest_files=["res://.godot/imported/Sprite-0002_3.0.aseprite-f8ce6fd8013ab9bea062ec7dc67a47c6.ctex"]
+source_file="res://scripts/global/mechanics/lockpick/lockpick.png"
+dest_files=["res://.godot/imported/lockpick.png-d80d63ad840c8caa0f198eb688591a63.ctex"]
 
 [params]
 

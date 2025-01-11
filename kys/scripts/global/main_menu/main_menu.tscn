@@ -349,8 +349,6 @@ position = Vector2(927, 417)
 scale = Vector2(1.25758, 1.40218)
 texture = ExtResource("6_sanps")
 
-[connection signal="mouse_entered" from="." to="." method="change_cursor_hand"]
-[connection signal="mouse_exited" from="." to="." method="change_cursor_back"]
 [connection signal="pressed" from="new_game" to="." method="_on_new_game_pressed"]
 [connection signal="pressed" from="settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="saved_games" to="." method="_on_saved_games_pressed"]

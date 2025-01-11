@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cat6dy4hy6s0t"]
+[gd_scene load_steps=6 format=3 uid="uid://cat6dy4hy6s0t"]
 
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/main_scripts.gd.gd" id="2_ibuey"]
 [ext_resource type="Texture2D" uid="uid://vvd3etjcqm0o" path="res://assets/cases/00_tutorial/scenes/tuto_office/detective_office_new.png" id="2_if1x8"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/window.gd" id="3_77ymu"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/object_scripts/register.gd" id="3_110rt"]
+[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/door_to_corridor.gd" id="5_2cto0"]
 
 [node name="00_tuto_office" type="Node2D"]
 
@@ -63,9 +64,19 @@ offset_right = 486.0
 offset_bottom = 395.0
 script = ExtResource("3_110rt")
 
+[node name="door to corridor" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 989.0
+offset_top = 229.0
+offset_right = 1091.0
+offset_bottom = 465.0
+script = ExtResource("5_2cto0")
+
 [connection signal="pressed" from="clock" to="clock" method="_on_pressed"]
 [connection signal="pressed" from="pc" to="clock" method="_on_pc_pressed"]
 [connection signal="pressed" from="board" to="clock" method="_on_board_pressed"]
 [connection signal="pressed" from="certificate" to="clock" method="_on_certificate_pressed"]
 [connection signal="pressed" from="window" to="clock" method="_on_window_pressed"]
 [connection signal="pressed" from="register" to="clock" method="_on_register_pressed"]
+[connection signal="pressed" from="door to corridor" to="clock" method="_on_door_to_corridor_pressed"]
