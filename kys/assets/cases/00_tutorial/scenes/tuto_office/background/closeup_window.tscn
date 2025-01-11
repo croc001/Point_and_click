@@ -11,6 +11,8 @@ scale = Vector2(1.72973, 1.82022)
 texture = ExtResource("1_o0cbi")
 
 [node name="Button_back_to_office_from_window" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
 offset_right = 1152.0
 offset_bottom = 648.0
 script = ExtResource("2_36qyj")
