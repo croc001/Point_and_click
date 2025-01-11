@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dnuga82but3qm"]
 
-[ext_resource type="Texture2D" uid="uid://cnfv6kll0kneq" path="res://assets/cases/00_tutorial/scenes/tuto_office/objects/closeup_sheet.png" id="1_i8wqr"]
+[ext_resource type="Texture2D" uid="uid://dwr3qijja5srh" path="res://assets/cases/00_tutorial/scenes/tuto_office/background/closeup_sheet.png" id="1_jhv1i"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/object_scripts/back_from_certificate.gd" id="2_vawj0"]
 
 [node name="closeup_certificate" type="Node2D"]
@@ -8,7 +8,7 @@
 [node name="CloseupSheet" type="Sprite2D" parent="."]
 position = Vector2(576, 324)
 scale = Vector2(1.72973, 1.82022)
-texture = ExtResource("1_i8wqr")
+texture = ExtResource("1_jhv1i")
 
 [node name="back_from_certificate" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)

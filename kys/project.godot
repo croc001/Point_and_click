@@ -22,6 +22,8 @@ aseprite_executable_path="C:/Users/Danie/Desktop/Aseprite-v1.3.9.1-trial/Aseprit
 [display]
 
 window/stretch/mode="viewport"
+mouse_cursor/custom_image="res://assets/global/cursor/cursor_basic.png"
+mouse_cursor/custom_image_hotspot=Vector2(291, 156)
 
 [editor_plugins]
 

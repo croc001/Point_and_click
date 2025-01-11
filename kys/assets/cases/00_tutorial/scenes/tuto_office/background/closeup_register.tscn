@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccfusmr7it07e"]
+
+[ext_resource type="Texture2D" uid="uid://djefkcm4ggur4" path="res://assets/cases/00_tutorial/scenes/tuto_office/background/closeup_register.png" id="1_0avfw"]
+[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/button_back_from_register.gd" id="2_tiwih"]
+
+[node name="register" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(1.72973, 1.82022)
+texture = ExtResource("1_0avfw")
+
+[node name="button_back_from_register" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+offset_right = 1149.0
+offset_bottom = 651.0
+script = ExtResource("2_tiwih")
+
+[connection signal="pressed" from="button_back_from_register" to="button_back_from_register" method="_on_pressed"]

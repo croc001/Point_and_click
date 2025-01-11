@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://cat6dy4hy6s0t"]
+[gd_scene load_steps=5 format=3 uid="uid://cat6dy4hy6s0t"]
 
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/main_scripts.gd.gd" id="2_ibuey"]
-[ext_resource type="Texture2D" uid="uid://bh3vx2hjvtbdu" path="res://assets/cases/00_tutorial/scenes/tuto_office/background/detective_office.png" id="2_vf2cg"]
+[ext_resource type="Texture2D" uid="uid://vvd3etjcqm0o" path="res://assets/cases/00_tutorial/scenes/tuto_office/detective_office_new.png" id="2_if1x8"]
+[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/window.gd" id="3_77ymu"]
+[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/object_scripts/register.gd" id="3_110rt"]
 
 [node name="00_tuto_office" type="Node2D"]
 
@@ -38,12 +40,32 @@ offset_top = 70.0
 offset_right = 817.0
 offset_bottom = 131.0
 
-[node name="DetectiveOffice" type="Sprite2D" parent="."]
+[node name="tuto_office" type="Sprite2D" parent="."]
 position = Vector2(576, 324)
 scale = Vector2(1.72973, 1.82022)
-texture = ExtResource("2_vf2cg")
+texture = ExtResource("2_if1x8")
+
+[node name="window" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 44.0
+offset_top = 107.0
+offset_right = 146.0
+offset_bottom = 362.0
+script = ExtResource("3_77ymu")
+
+[node name="register" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 287.0
+offset_top = 170.0
+offset_right = 486.0
+offset_bottom = 395.0
+script = ExtResource("3_110rt")
 
 [connection signal="pressed" from="clock" to="clock" method="_on_pressed"]
 [connection signal="pressed" from="pc" to="clock" method="_on_pc_pressed"]
 [connection signal="pressed" from="board" to="clock" method="_on_board_pressed"]
 [connection signal="pressed" from="certificate" to="clock" method="_on_certificate_pressed"]
+[connection signal="pressed" from="window" to="clock" method="_on_window_pressed"]
+[connection signal="pressed" from="register" to="clock" method="_on_register_pressed"]
