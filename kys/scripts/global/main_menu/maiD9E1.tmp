@@ -402,15 +402,14 @@ scale = Vector2(1.25758, 1.40218)
 texture = ExtResource("6_sanps")
 
 [node name="SpinningCursor" type="AnimatedSprite2D" parent="."]
-position = Vector2(9, 11)
+position = Vector2(30, 30)
 sprite_frames = SubResource("SpriteFrames_fl3or")
 animation = &"cursor_spinning"
 frame = 5
-offset = Vector2(21, 19)
 script = ExtResource("10_di7to")
 
-[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="." to="." method="change_cursor_hand"]
+[connection signal="mouse_exited" from="." to="." method="change_cursor_back"]
 [connection signal="pressed" from="new_game" to="." method="_on_new_game_pressed"]
 [connection signal="pressed" from="settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="saved_games" to="." method="_on_saved_games_pressed"]

@@ -27,6 +27,7 @@ offset_bottom = 113.0
 script = ExtResource("2_ibuey")
 
 [node name="pc" type="Button" parent="."]
+visible = false
 modulate = Color(1, 1, 1, 0)
 self_modulate = Color(1, 1, 1, 0)
 offset_left = 205.0
@@ -130,6 +131,7 @@ script = ExtResource("9_luior")
 [connection signal="mouse_exited" from="door to corridor" to="door to corridor" method="_on_mouse_exited"]
 [connection signal="pressed" from="door to corridor" to="clock" method="_on_door_to_corridor_pressed"]
 [connection signal="timeout" from="tuto_phone_timer" to="tuto_phone_timer" method="_on_timeout"]
+[connection signal="focus_entered" from="tuto_phone_timer/phone" to="tuto_phone_timer/phone" method="_on_focus_entered"]
 [connection signal="mouse_entered" from="tuto_phone_timer/phone" to="tuto_phone_timer/phone" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="tuto_phone_timer/phone" to="tuto_phone_timer/phone" method="_on_mouse_exited"]
 [connection signal="pressed" from="tuto_phone_timer/phone" to="tuto_phone_timer/phone" method="_on_pressed"]

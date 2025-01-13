@@ -50,17 +50,6 @@ func _on_quit_to_os_pressed() -> void:
 	await _delayed_scene_change()
 	get_tree().quit()
 
-# Funktion zum Setzen des Standard-Cursors
-func change_cursor_hand():
-	Input.set_custom_mouse_cursor(basic_cursor)
-
-# Funktion zum Starten der Hover-Animation und Ausblenden des Cursors
-func change_cursor_back():
-	hover_cursor.show_hover_animation()
-	# Cursor ausblenden
-	Input.set_custom_mouse_cursor(null)  # Setze den Standard-Cursor auf null, um ihn auszublenden
-	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)  # Verstecke den Standard-System-Cursor
-
 # Funktion zum Anzeigen der Hover-Animation
 func show_hover_animation():
 	hover_cursor.play("cursor_spinning")  # Spiele die Animation auf dem AnimatedSprite2D ab
@@ -76,3 +65,9 @@ func hide_hover_animation():
 	# Den normalen Cursor wieder anzeigen
 	Input.set_custom_mouse_cursor(basic_cursor)  # Zeige den benutzerdefinierten Cursor wieder an
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)  # Zeige den System-Cursor wieder an
+
+func _on_mouse_entered() -> void:
+	hide_hover_animation()
+
+func _on_mouse_exited() -> void:
+	show_hover_animation()
