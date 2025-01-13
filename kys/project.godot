@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 aseprite_executable_path="C:/Users/Danie/Desktop/Aseprite-v1.3.9.1-trial/Aseprite.exe"
 
+[autoload]
+
+DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+
 [display]
 
 window/stretch/mode="viewport"
@@ -27,4 +31,4 @@ mouse_cursor/custom_image_hotspot=Vector2(291, 156)
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/nklbdev.aseprite_importers/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
