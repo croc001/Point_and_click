@@ -9,12 +9,12 @@
 script = ExtResource("1_8l251")
 
 [node name="lock" type="Sprite2D" parent="."]
-position = Vector2(580, 325)
+position = Vector2(580, 327)
 texture = ExtResource("1_cwu62")
 script = ExtResource("3_8bw7q")
 
 [node name="lockpick" type="Sprite2D" parent="."]
-position = Vector2(578.159, 196.931)
+position = Vector2(577.159, 196.931)
 rotation = 2.35619
 scale = Vector2(0.240082, 0.245894)
 texture = ExtResource("3_pkyie")
