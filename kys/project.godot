@@ -27,7 +27,7 @@ DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 
 window/stretch/mode="viewport"
 mouse_cursor/custom_image="res://assets/global/cursor/cursor_basic.png"
-mouse_cursor/custom_image_hotspot=Vector2(291, 156)
+mouse_cursor/custom_image_hotspot=Vector2(35, 26)
 
 [editor_plugins]
 

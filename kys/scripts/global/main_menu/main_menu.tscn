@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://w25oxh2g2r0u"]
+[gd_scene load_steps=55 format=3 uid="uid://w25oxh2g2r0u"]
 
 [ext_resource type="Script" path="res://scripts/global/main_menu/main_menu.gd" id="1_psgft"]
 [ext_resource type="AudioStream" uid="uid://gg3wwsea07cu" path="res://assets/global/main_menu/audio/main_new_game_button.wav" id="2_5o3hf"]
@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://gw5fewrphspx" path="res://assets/global/main_menu/images/background/new_game.png" id="4_ebqp5"]
 [ext_resource type="Texture2D" uid="uid://w1euxy5hfyuh" path="res://assets/global/main_menu/images/background/quit_button.png" id="5_ctodl"]
 [ext_resource type="Texture2D" uid="uid://dsr2r650xs2ct" path="res://assets/global/main_menu/images/background/settings_button.png" id="6_sanps"]
+[ext_resource type="Texture2D" uid="uid://d1v4h647xlmaf" path="res://assets/global/cursor/cursor_spin_basic_sprite.png" id="9_ao7qv"]
+[ext_resource type="Script" path="res://scripts/global/main_menu/spinning_cursor.gd" id="10_di7to"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q1rca"]
 atlas = ExtResource("2_k156w")
@@ -269,6 +271,56 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_h1srr"]
+atlas = ExtResource("9_ao7qv")
+region = Rect2(0, 0, 76, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lwwjr"]
+atlas = ExtResource("9_ao7qv")
+region = Rect2(76, 0, 76, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dnr6s"]
+atlas = ExtResource("9_ao7qv")
+region = Rect2(152, 0, 76, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eew5c"]
+atlas = ExtResource("9_ao7qv")
+region = Rect2(228, 0, 76, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_is6v7"]
+atlas = ExtResource("9_ao7qv")
+region = Rect2(304, 0, 76, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yrv4c"]
+atlas = ExtResource("9_ao7qv")
+region = Rect2(380, 0, 76, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fl3or"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h1srr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lwwjr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dnr6s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eew5c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_is6v7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yrv4c")
+}],
+"loop": true,
+"name": &"cursor_spinning",
+"speed": 12.0
+}]
+
 [node name="main_menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -349,6 +401,15 @@ position = Vector2(927, 417)
 scale = Vector2(1.25758, 1.40218)
 texture = ExtResource("6_sanps")
 
+[node name="SpinningCursor" type="AnimatedSprite2D" parent="."]
+position = Vector2(30, 30)
+sprite_frames = SubResource("SpriteFrames_fl3or")
+animation = &"cursor_spinning"
+frame = 5
+script = ExtResource("10_di7to")
+
+[connection signal="mouse_entered" from="." to="." method="change_cursor_hand"]
+[connection signal="mouse_exited" from="." to="." method="change_cursor_back"]
 [connection signal="pressed" from="new_game" to="." method="_on_new_game_pressed"]
 [connection signal="pressed" from="settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="saved_games" to="." method="_on_saved_games_pressed"]

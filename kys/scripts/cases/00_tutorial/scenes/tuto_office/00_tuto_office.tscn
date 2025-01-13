@@ -1,16 +1,21 @@
-[gd_scene load_steps=10 format=3 uid="uid://cat6dy4hy6s0t"]
+[gd_scene load_steps=14 format=3 uid="uid://cat6dy4hy6s0t"]
 
+[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/00_tuto_office.gd" id="1_pu6w3"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/main_scripts.gd.gd" id="2_ibuey"]
 [ext_resource type="Texture2D" uid="uid://bf0quatrdl6bm" path="res://assets/cases/00_tutorial/scenes/tuto_office/background/detective_office_new.png" id="2_if1x8"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/window.gd" id="3_77ymu"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/object_scripts/register.gd" id="3_110rt"]
+[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/pc.gd" id="3_l6kv8"]
+[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/board.gd" id="4_i74ls"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/door_to_corridor.gd" id="5_2cto0"]
+[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/certificate.gd" id="5_5wgsl"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/tuto_office_phone.gd" id="6_gd1ue"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/tuto_phone_timer.gd" id="7_md7qg"]
 [ext_resource type="AudioStream" uid="uid://dlthcxx25it5a" path="res://assets/cases/00_tutorial/scenes/tuto_office/audio/fx/phone_ring.mp3" id="8_2adsv"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/phone_ring.gd" id="9_luior"]
 
 [node name="00_tuto_office" type="Node2D"]
+script = ExtResource("1_pu6w3")
 
 [node name="clock" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
@@ -28,6 +33,7 @@ offset_left = 205.0
 offset_top = 419.0
 offset_right = 291.0
 offset_bottom = 518.0
+script = ExtResource("3_l6kv8")
 
 [node name="board" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
@@ -36,6 +42,7 @@ offset_left = 641.0
 offset_top = 210.0
 offset_right = 872.0
 offset_bottom = 339.0
+script = ExtResource("4_i74ls")
 
 [node name="certificate" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
@@ -44,6 +51,7 @@ offset_left = 772.0
 offset_top = 70.0
 offset_right = 817.0
 offset_bottom = 131.0
+script = ExtResource("5_5wgsl")
 
 [node name="tuto_office" type="Sprite2D" parent="."]
 position = Vector2(576, 324)
@@ -98,13 +106,31 @@ script = ExtResource("6_gd1ue")
 stream = ExtResource("8_2adsv")
 script = ExtResource("9_luior")
 
+[connection signal="mouse_entered" from="clock" to="clock" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="clock" to="clock" method="_on_mouse_exited"]
 [connection signal="pressed" from="clock" to="clock" method="_on_pressed"]
+[connection signal="mouse_entered" from="pc" to="clock" method="_on_pc_mouse_entered"]
+[connection signal="mouse_entered" from="pc" to="pc" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="pc" to="clock" method="_on_pc_mouse_exited"]
+[connection signal="mouse_exited" from="pc" to="pc" method="_on_mouse_exited"]
 [connection signal="pressed" from="pc" to="clock" method="_on_pc_pressed"]
+[connection signal="mouse_entered" from="board" to="board" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board" to="board" method="_on_mouse_exited"]
 [connection signal="pressed" from="board" to="clock" method="_on_board_pressed"]
+[connection signal="mouse_entered" from="certificate" to="certificate" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="certificate" to="certificate" method="_on_mouse_exited"]
 [connection signal="pressed" from="certificate" to="clock" method="_on_certificate_pressed"]
+[connection signal="mouse_entered" from="window" to="window" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="window" to="window" method="_on_mouse_exited"]
 [connection signal="pressed" from="window" to="clock" method="_on_window_pressed"]
+[connection signal="mouse_entered" from="register" to="register" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="register" to="register" method="_on_mouse_exited"]
 [connection signal="pressed" from="register" to="clock" method="_on_register_pressed"]
+[connection signal="mouse_entered" from="door to corridor" to="door to corridor" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="door to corridor" to="door to corridor" method="_on_mouse_exited"]
 [connection signal="pressed" from="door to corridor" to="clock" method="_on_door_to_corridor_pressed"]
 [connection signal="timeout" from="tuto_phone_timer" to="tuto_phone_timer" method="_on_timeout"]
+[connection signal="mouse_entered" from="tuto_phone_timer/phone" to="tuto_phone_timer/phone" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="tuto_phone_timer/phone" to="tuto_phone_timer/phone" method="_on_mouse_exited"]
 [connection signal="pressed" from="tuto_phone_timer/phone" to="tuto_phone_timer/phone" method="_on_pressed"]
 [connection signal="finished" from="tuto_phone_timer/phone_ring" to="tuto_phone_timer/phone_ring" method="_on_finished"]
