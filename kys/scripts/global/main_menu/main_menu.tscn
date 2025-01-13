@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://w25oxh2g2r0u"]
+[gd_scene load_steps=47 format=3 uid="uid://w25oxh2g2r0u"]
 
 [ext_resource type="Script" path="res://scripts/global/main_menu/main_menu.gd" id="1_psgft"]
 [ext_resource type="AudioStream" uid="uid://gg3wwsea07cu" path="res://assets/global/main_menu/audio/main_new_game_button.wav" id="2_5o3hf"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://gw5fewrphspx" path="res://assets/global/main_menu/images/background/new_game.png" id="4_ebqp5"]
 [ext_resource type="Texture2D" uid="uid://w1euxy5hfyuh" path="res://assets/global/main_menu/images/background/quit_button.png" id="5_ctodl"]
 [ext_resource type="Texture2D" uid="uid://dsr2r650xs2ct" path="res://assets/global/main_menu/images/background/settings_button.png" id="6_sanps"]
+[ext_resource type="Script" path="res://scripts/global/main_menu/button.gd" id="9_j2wj1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q1rca"]
 atlas = ExtResource("2_k156w")
@@ -349,7 +350,16 @@ position = Vector2(927, 417)
 scale = Vector2(1.25758, 1.40218)
 texture = ExtResource("6_sanps")
 
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 206.0
+offset_top = 91.0
+offset_right = 286.0
+offset_bottom = 150.0
+script = ExtResource("9_j2wj1")
+
 [connection signal="pressed" from="new_game" to="." method="_on_new_game_pressed"]
 [connection signal="pressed" from="settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="saved_games" to="." method="_on_saved_games_pressed"]
 [connection signal="pressed" from="quit_to_os" to="." method="_on_quit_to_os_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

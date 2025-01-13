@@ -14,9 +14,10 @@ texture = ExtResource("1_cwu62")
 script = ExtResource("3_8bw7q")
 
 [node name="lockpick" type="Sprite2D" parent="."]
-position = Vector2(577.159, 196.931)
+position = Vector2(580, 299)
 rotation = 2.35619
 scale = Vector2(0.240082, 0.245894)
 texture = ExtResource("3_pkyie")
+offset = Vector2(-300, 300)
 
 [node name="unlocksound" type="AudioStreamPlayer2D" parent="."]

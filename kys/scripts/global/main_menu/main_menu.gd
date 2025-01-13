@@ -34,3 +34,7 @@ func _on_quit_to_os_pressed() -> void:
 	$quit_to_os/MainPressButton.play()
 	await _delayed_scene_change()
 	get_tree().quit()
+
+#testing for lockpicking
+func _on_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://scripts/global/mechanics/lockpick/lockpick_minigame.tscn")
