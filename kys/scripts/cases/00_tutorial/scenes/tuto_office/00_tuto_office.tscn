@@ -1,10 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://cat6dy4hy6s0t"]
+[gd_scene load_steps=10 format=3 uid="uid://cat6dy4hy6s0t"]
 
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/main_scripts.gd.gd" id="2_ibuey"]
-[ext_resource type="Texture2D" uid="uid://vvd3etjcqm0o" path="res://assets/cases/00_tutorial/scenes/tuto_office/detective_office_new.png" id="2_if1x8"]
+[ext_resource type="Texture2D" uid="uid://bf0quatrdl6bm" path="res://assets/cases/00_tutorial/scenes/tuto_office/background/detective_office_new.png" id="2_if1x8"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/window.gd" id="3_77ymu"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/object_scripts/register.gd" id="3_110rt"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/door_to_corridor.gd" id="5_2cto0"]
+[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/tuto_office_phone.gd" id="6_gd1ue"]
+[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/tuto_phone_timer.gd" id="7_md7qg"]
+[ext_resource type="AudioStream" uid="uid://dlthcxx25it5a" path="res://assets/cases/00_tutorial/scenes/tuto_office/audio/fx/phone_ring.mp3" id="8_2adsv"]
+[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/phone_ring.gd" id="9_luior"]
 
 [node name="00_tuto_office" type="Node2D"]
 
@@ -73,6 +77,27 @@ offset_right = 1091.0
 offset_bottom = 465.0
 script = ExtResource("5_2cto0")
 
+[node name="tuto_phone_timer" type="Timer" parent="."]
+process_callback = 0
+wait_time = 10.0
+one_shot = true
+autostart = true
+script = ExtResource("7_md7qg")
+
+[node name="phone" type="Button" parent="tuto_phone_timer"]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 291.0
+offset_top = 448.0
+offset_right = 329.0
+offset_bottom = 472.0
+disabled = true
+script = ExtResource("6_gd1ue")
+
+[node name="phone_ring" type="AudioStreamPlayer" parent="tuto_phone_timer"]
+stream = ExtResource("8_2adsv")
+script = ExtResource("9_luior")
+
 [connection signal="pressed" from="clock" to="clock" method="_on_pressed"]
 [connection signal="pressed" from="pc" to="clock" method="_on_pc_pressed"]
 [connection signal="pressed" from="board" to="clock" method="_on_board_pressed"]
@@ -80,3 +105,6 @@ script = ExtResource("5_2cto0")
 [connection signal="pressed" from="window" to="clock" method="_on_window_pressed"]
 [connection signal="pressed" from="register" to="clock" method="_on_register_pressed"]
 [connection signal="pressed" from="door to corridor" to="clock" method="_on_door_to_corridor_pressed"]
+[connection signal="timeout" from="tuto_phone_timer" to="tuto_phone_timer" method="_on_timeout"]
+[connection signal="pressed" from="tuto_phone_timer/phone" to="tuto_phone_timer/phone" method="_on_pressed"]
+[connection signal="finished" from="tuto_phone_timer/phone_ring" to="tuto_phone_timer/phone_ring" method="_on_finished"]
