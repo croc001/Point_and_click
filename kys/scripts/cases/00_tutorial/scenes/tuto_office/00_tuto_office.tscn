@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cat6dy4hy6s0t"]
+[gd_scene load_steps=23 format=3 uid="uid://cat6dy4hy6s0t"]
 
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/00_tuto_office.gd" id="1_pu6w3"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/main_scripts.gd.gd" id="2_ibuey"]
@@ -13,6 +13,58 @@
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/tuto_phone_timer.gd" id="7_md7qg"]
 [ext_resource type="AudioStream" uid="uid://dlthcxx25it5a" path="res://assets/cases/00_tutorial/scenes/tuto_office/audio/fx/phone_ring.mp3" id="8_2adsv"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/phone_ring.gd" id="9_luior"]
+[ext_resource type="Texture2D" uid="uid://d1v4h647xlmaf" path="res://assets/global/cursor/cursor_spin_basic_sprite.png" id="14_j8goi"]
+[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/spinning_cursor.gd" id="15_vnxmx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h1srr"]
+atlas = ExtResource("14_j8goi")
+region = Rect2(0, 0, 76, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lwwjr"]
+atlas = ExtResource("14_j8goi")
+region = Rect2(76, 0, 76, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dnr6s"]
+atlas = ExtResource("14_j8goi")
+region = Rect2(152, 0, 76, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eew5c"]
+atlas = ExtResource("14_j8goi")
+region = Rect2(228, 0, 76, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_is6v7"]
+atlas = ExtResource("14_j8goi")
+region = Rect2(304, 0, 76, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yrv4c"]
+atlas = ExtResource("14_j8goi")
+region = Rect2(380, 0, 76, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_53gic"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h1srr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lwwjr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dnr6s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eew5c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_is6v7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yrv4c")
+}],
+"loop": true,
+"name": &"cursor_spinning",
+"speed": 12.0
+}]
 
 [node name="00_tuto_office" type="Node2D"]
 script = ExtResource("1_pu6w3")
@@ -27,7 +79,6 @@ offset_bottom = 113.0
 script = ExtResource("2_ibuey")
 
 [node name="pc" type="Button" parent="."]
-visible = false
 modulate = Color(1, 1, 1, 0)
 self_modulate = Color(1, 1, 1, 0)
 offset_left = 205.0
@@ -106,6 +157,14 @@ script = ExtResource("6_gd1ue")
 [node name="phone_ring" type="AudioStreamPlayer" parent="tuto_phone_timer"]
 stream = ExtResource("8_2adsv")
 script = ExtResource("9_luior")
+
+[node name="SpinningCursor2" type="AnimatedSprite2D" parent="."]
+position = Vector2(9, 11)
+sprite_frames = SubResource("SpriteFrames_53gic")
+animation = &"cursor_spinning"
+frame_progress = 0.923615
+offset = Vector2(21, 19)
+script = ExtResource("15_vnxmx")
 
 [connection signal="mouse_entered" from="clock" to="clock" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="clock" to="clock" method="_on_mouse_exited"]

@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://w1euxy5hfyuh" path="res://assets/global/main_menu/images/background/quit_button.png" id="5_ctodl"]
 [ext_resource type="Texture2D" uid="uid://dsr2r650xs2ct" path="res://assets/global/main_menu/images/background/settings_button.png" id="6_sanps"]
 [ext_resource type="Texture2D" uid="uid://d1v4h647xlmaf" path="res://assets/global/cursor/cursor_spin_basic_sprite.png" id="9_ao7qv"]
-[ext_resource type="Script" path="res://scripts/global/main_menu/spinning_cursor.gd" id="10_di7to"]
+[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/spinning_cursor.gd" id="10_3m2bx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q1rca"]
 atlas = ExtResource("2_k156w")
@@ -407,7 +407,7 @@ sprite_frames = SubResource("SpriteFrames_fl3or")
 animation = &"cursor_spinning"
 frame = 5
 offset = Vector2(21, 19)
-script = ExtResource("10_di7to")
+script = ExtResource("10_3m2bx")
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
