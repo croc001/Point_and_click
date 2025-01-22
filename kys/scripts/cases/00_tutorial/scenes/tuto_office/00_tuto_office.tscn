@@ -106,26 +106,26 @@ offset_bottom = 131.0
 script = ExtResource("5_5wgsl")
 
 [node name="tuto_office" type="Sprite2D" parent="."]
-position = Vector2(576, 324)
+position = Vector2(606, 278)
 scale = Vector2(1.72973, 1.82022)
 texture = ExtResource("2_if1x8")
 
 [node name="window" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
 self_modulate = Color(1, 1, 1, 0)
-offset_left = 44.0
-offset_top = 107.0
-offset_right = 146.0
-offset_bottom = 362.0
+offset_left = 61.0
+offset_top = 108.0
+offset_right = 163.0
+offset_bottom = 363.0
 script = ExtResource("3_77ymu")
 
 [node name="register" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
 self_modulate = Color(1, 1, 1, 0)
-offset_left = 287.0
-offset_top = 170.0
-offset_right = 486.0
-offset_bottom = 395.0
+offset_left = 298.0
+offset_top = 160.0
+offset_right = 497.0
+offset_bottom = 385.0
 script = ExtResource("3_110rt")
 
 [node name="door to corridor" type="Button" parent="."]
@@ -147,10 +147,10 @@ script = ExtResource("7_md7qg")
 [node name="phone" type="Button" parent="tuto_phone_timer"]
 modulate = Color(1, 1, 1, 0)
 self_modulate = Color(1, 1, 1, 0)
-offset_left = 291.0
-offset_top = 448.0
-offset_right = 329.0
-offset_bottom = 472.0
+offset_left = 309.0
+offset_top = 393.0
+offset_right = 337.0
+offset_bottom = 409.0
 disabled = true
 script = ExtResource("6_gd1ue")
 
