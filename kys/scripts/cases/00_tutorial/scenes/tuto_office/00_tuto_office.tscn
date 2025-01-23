@@ -72,59 +72,59 @@ script = ExtResource("1_pu6w3")
 [node name="clock" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
 self_modulate = Color(1, 1, 1, 0)
-offset_left = 532.0
+offset_left = 514.0
 offset_top = 11.0
-offset_right = 626.0
-offset_bottom = 113.0
+offset_right = 597.0
+offset_bottom = 100.0
 script = ExtResource("2_ibuey")
 
 [node name="pc" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
 self_modulate = Color(1, 1, 1, 0)
-offset_left = 205.0
-offset_top = 419.0
-offset_right = 291.0
-offset_bottom = 518.0
+offset_left = 212.0
+offset_top = 424.0
+offset_right = 264.0
+offset_bottom = 501.0
 script = ExtResource("3_l6kv8")
 
 [node name="board" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
 self_modulate = Color(1, 1, 1, 0)
-offset_left = 641.0
-offset_top = 210.0
-offset_right = 872.0
-offset_bottom = 339.0
+offset_left = 631.0
+offset_top = 203.0
+offset_right = 845.0
+offset_bottom = 319.0
 script = ExtResource("4_i74ls")
 
 [node name="certificate" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
 self_modulate = Color(1, 1, 1, 0)
-offset_left = 772.0
+offset_left = 763.0
 offset_top = 70.0
-offset_right = 817.0
+offset_right = 802.0
 offset_bottom = 131.0
 script = ExtResource("5_5wgsl")
 
 [node name="tuto_office" type="Sprite2D" parent="."]
-position = Vector2(606, 278)
+position = Vector2(577, 325)
 scale = Vector2(1.72973, 1.82022)
 texture = ExtResource("2_if1x8")
 
 [node name="window" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
 self_modulate = Color(1, 1, 1, 0)
-offset_left = 61.0
+offset_left = 27.0
 offset_top = 108.0
-offset_right = 163.0
+offset_right = 109.0
 offset_bottom = 363.0
 script = ExtResource("3_77ymu")
 
 [node name="register" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
 self_modulate = Color(1, 1, 1, 0)
-offset_left = 298.0
-offset_top = 160.0
-offset_right = 497.0
+offset_left = 273.0
+offset_top = 180.0
+offset_right = 466.0
 offset_bottom = 385.0
 script = ExtResource("3_110rt")
 
@@ -147,10 +147,10 @@ script = ExtResource("7_md7qg")
 [node name="phone" type="Button" parent="tuto_phone_timer"]
 modulate = Color(1, 1, 1, 0)
 self_modulate = Color(1, 1, 1, 0)
-offset_left = 309.0
-offset_top = 393.0
-offset_right = 337.0
-offset_bottom = 409.0
+offset_left = 278.0
+offset_top = 429.0
+offset_right = 306.0
+offset_bottom = 445.0
 disabled = true
 script = ExtResource("6_gd1ue")
 
