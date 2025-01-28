@@ -13,6 +13,8 @@ func _ready() -> void:
 func _on_pressed() -> void:
 	$"../phone_ring".free()
 	DialogueManager.show_dialogue_balloon(call_res, "phone_call")
+	GlobalVar.phone_is_answered = true
+	self.disabled = true
 	print("Telefon gedrückt")
 
 func show_hover_animation():

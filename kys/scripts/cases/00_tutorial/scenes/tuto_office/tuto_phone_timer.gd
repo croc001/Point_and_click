@@ -14,5 +14,8 @@ func _process(delta: float) -> void:
 
 
 func _on_timeout() -> void:
-	phone_ring.play()
-	phone_button.disabled = false
+	if GlobalVar.phone_is_answered == false:
+		phone_ring.play()
+		phone_button.disabled = false
+	else:
+		pass

@@ -22,6 +22,7 @@ aseprite_executable_path="C:/Users/Danie/Desktop/Aseprite-v1.3.9.1-trial/Aseprit
 [autoload]
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+GlobalVar="*res://scripts/global/global_var.gd"
 
 [display]
 
