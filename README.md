@@ -26,9 +26,6 @@
       <a href="#about-the-project">About The Project</a>
     </li>
     <li>
-      <a href="#installing-the-game-exe">Installing the Game (.exe)</a>
-    </li>
-    <li>
       <a href="#running-the-game-in-godot-for-developers">Running the Game in Godot (for developers)</a>
     </li>
     <li><a href="#creators">Creators</a></li>
@@ -55,6 +52,10 @@ The game will be made with the Godot engine, primarily using its own programming
 <!-- GETTING STARTED -->
 
 ## Installing the game (.exe)
+**The current state of the Game changes a lot since we are still in Development, the Version provided with this method might be outdated !**
+
+**To be sure to get the newest Version please check out <a href="#running-the-game-in-godot-for-developers">Running the Game in Godot (for developers)</a>**
+
 
 _Below is a short guide to help you through the installation process. The game is currently only available for Windows._
 
