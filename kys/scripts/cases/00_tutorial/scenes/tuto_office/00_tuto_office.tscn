@@ -13,7 +13,7 @@
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/tuto_phone_timer.gd" id="7_md7qg"]
 [ext_resource type="AudioStream" uid="uid://dlthcxx25it5a" path="res://assets/cases/00_tutorial/scenes/tuto_office/audio/fx/phone_ring.mp3" id="8_2adsv"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/phone_ring.gd" id="9_luior"]
-[ext_resource type="Texture2D" uid="uid://d1v4h647xlmaf" path="res://assets/global/cursor/cursor_spin_basic_sprite.png" id="14_j8goi"]
+[ext_resource type="Texture2D" uid="uid://d1v4h647xlmaf" path="res://cursor_spin_basic_sprite.png" id="14_j8goi"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/spinning_cursor.gd" id="15_vnxmx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h1srr"]
