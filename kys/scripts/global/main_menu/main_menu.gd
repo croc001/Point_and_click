@@ -12,7 +12,6 @@ func _ready() -> void:
 	background_animation.play("default")
 	# Stelle sicher, dass der benutzerdefinierte Cursor beim Start sichtbar ist
 	Input.set_custom_mouse_cursor(basic_cursor)
-	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

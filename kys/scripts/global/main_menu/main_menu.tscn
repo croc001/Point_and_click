@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://gw5fewrphspx" path="res://assets/global/main_menu/images/background/new_game.png" id="4_ebqp5"]
 [ext_resource type="Texture2D" uid="uid://w1euxy5hfyuh" path="res://assets/global/main_menu/images/background/quit_button.png" id="5_ctodl"]
 [ext_resource type="Texture2D" uid="uid://dsr2r650xs2ct" path="res://assets/global/main_menu/images/background/settings_button.png" id="6_sanps"]
-[ext_resource type="Texture2D" uid="uid://d1v4h647xlmaf" path="res://assets/global/cursor/cursor_spin_basic_sprite.png" id="9_ao7qv"]
+[ext_resource type="Texture2D" uid="uid://d1v4h647xlmaf" path="res://cursor_spin_basic_sprite.png" id="9_ao7qv"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/spinning_cursor.gd" id="10_3m2bx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q1rca"]
