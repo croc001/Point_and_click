@@ -17,7 +17,7 @@ func _on_board_pressed() -> void:
 	get_tree().change_scene_to_file("res://assets/cases/00_tutorial/scenes/tuto_office/background/closeup_whiteboard.tscn")
 
 func _on_certificate_pressed() -> void:
-	get_tree().change_scene_to_file("res://closeup_certificate.tscn")
+	get_tree().change_scene_to_file("res://assets/cases/00_tutorial/scenes/tuto_office/background/closeup_certificate.tscn")
 
 
 
