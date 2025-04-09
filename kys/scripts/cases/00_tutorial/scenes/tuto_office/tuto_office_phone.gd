@@ -20,6 +20,7 @@ func _on_pressed() -> void:
 	$"../phone_ring".free()
 	DialogueManager.show_dialogue_balloon(call_res, "phone_call")
 	print("Telefon gedrückt")
+	GlobalVar.phone_is_answered = true
 
 func _on_mouse_entered() -> void:
 	print("Mouse entered phone button")
