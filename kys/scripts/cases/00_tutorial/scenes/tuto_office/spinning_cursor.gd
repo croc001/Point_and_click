@@ -9,8 +9,8 @@ func _process(delta: float):
 	position = get_viewport().get_mouse_position()
 
 func show_hover_animation():
-	play("cursor_spinning")  # Spiele die Animation ab
 	show()  # Zeige das Overlay
+	play("cursor_spinning")  # Spiele die Animation ab
 
 func hide_hover_animation():
 	stop()  # Stoppe die Animation

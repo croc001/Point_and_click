@@ -154,17 +154,17 @@ offset_bottom = 445.0
 disabled = true
 script = ExtResource("6_gd1ue")
 
-[node name="phone_ring" type="AudioStreamPlayer" parent="tuto_phone_timer"]
-stream = ExtResource("8_2adsv")
-script = ExtResource("9_luior")
-
-[node name="SpinningCursor2" type="AnimatedSprite2D" parent="."]
-position = Vector2(9, 11)
+[node name="SpinningCursor2" type="AnimatedSprite2D" parent="tuto_phone_timer/phone"]
+position = Vector2(-269, -418)
 sprite_frames = SubResource("SpriteFrames_53gic")
 animation = &"cursor_spinning"
 frame_progress = 0.923615
 offset = Vector2(21, 19)
 script = ExtResource("15_vnxmx")
+
+[node name="phone_ring" type="AudioStreamPlayer" parent="tuto_phone_timer"]
+stream = ExtResource("8_2adsv")
+script = ExtResource("9_luior")
 
 [connection signal="mouse_entered" from="clock" to="clock" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="clock" to="clock" method="_on_mouse_exited"]

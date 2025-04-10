@@ -33,13 +33,15 @@ func _on_mouse_exited() -> void:
 func show_hover_animation() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	if hover_cursor:
-		if hover_cursor.sprite_frames and hover_cursor.sprite_frames.has_animation("cursor_spinning2"):
+		if hover_cursor.sprite_frames and hover_cursor.sprite_frames.has_animation("cursor_spinning"):
 			hover_cursor.global_position = get_viewport().get_mouse_position()
-			hover_cursor.play("cursor_spinning2")
+			hover_cursor.play("cursor_spinning")
 			hover_cursor.show()
 			print("Showing hover animation")
 		else:
 			print("Error: Animation 'cursor_spinning2' not found")
+			print("hover_cursor.sprite_frames", hover_cursor.sprite_frames)
+			print("hover_cursor.sprite_frames.has_animation(cursor_spinning)", hover_cursor.sprite_frames.has_animation("cursor_spinning"))
 	else:
 		print("Error: Hover cursor is null")
 
