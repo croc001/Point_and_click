@@ -1,7 +1,7 @@
 [gd_scene load_steps=23 format=3 uid="uid://cat6dy4hy6s0t"]
 
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/00_tuto_office.gd" id="1_pu6w3"]
-[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/main_scripts.gd.gd" id="2_ibuey"]
+[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/main_scripts.gd" id="2_ibuey"]
 [ext_resource type="Texture2D" uid="uid://bf0quatrdl6bm" path="res://assets/cases/00_tutorial/scenes/tuto_office/background/detective_office_new.png" id="2_if1x8"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/window.gd" id="3_77ymu"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/object_scripts/register.gd" id="3_110rt"]
@@ -155,10 +155,11 @@ disabled = true
 script = ExtResource("6_gd1ue")
 
 [node name="SpinningCursor2" type="AnimatedSprite2D" parent="tuto_phone_timer/phone"]
+z_index = 100
 position = Vector2(-269, -418)
 sprite_frames = SubResource("SpriteFrames_53gic")
 animation = &"cursor_spinning"
-frame_progress = 0.923615
+frame_progress = 0.0963183
 offset = Vector2(21, 19)
 script = ExtResource("15_vnxmx")
 

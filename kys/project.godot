@@ -23,6 +23,7 @@ aseprite_executable_path="C:/Users/Danie/Desktop/Aseprite-v1.3.9.1-trial/Aseprit
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 GlobalVar="*res://scripts/global/global_var.gd"
+GlobalCursor="*res://assets/global/ui/global_cursor.tscn"
 
 [display]
 
