@@ -1,18 +1,19 @@
-[gd_scene load_steps=23 format=3 uid="uid://cat6dy4hy6s0t"]
+[gd_scene load_steps=24 format=3 uid="uid://cat6dy4hy6s0t"]
 
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/00_tuto_office.gd" id="1_pu6w3"]
-[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/main_scripts.gd" id="2_ibuey"]
 [ext_resource type="Texture2D" uid="uid://bf0quatrdl6bm" path="res://assets/cases/00_tutorial/scenes/tuto_office/background/detective_office_new.png" id="2_if1x8"]
-[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/window.gd" id="3_77ymu"]
-[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/object_scripts/register.gd" id="3_110rt"]
-[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/pc.gd" id="3_l6kv8"]
-[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/board.gd" id="4_i74ls"]
-[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/door_to_corridor.gd" id="5_2cto0"]
-[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/certificate.gd" id="5_5wgsl"]
+[ext_resource type="Script" path="res://scripts/common/SceneSwitchButton.gd" id="2_vtybv"]
+[ext_resource type="PackedScene" uid="uid://bpxhtykqwqije" path="res://assets/cases/00_tutorial/scenes/tuto_office/background/tuto_office_clock.tscn" id="3_f63my"]
+[ext_resource type="PackedScene" uid="uid://d32dan1mv2sr4" path="res://assets/cases/00_tutorial/scenes/tuto_office/background/tuto_office_closeup_pc.tscn" id="4_cahqc"]
+[ext_resource type="PackedScene" uid="uid://dptsaeojcrgug" path="res://tuto_office_board.tscn" id="5_kthfu"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/tuto_office_phone.gd" id="6_gd1ue"]
+[ext_resource type="PackedScene" uid="uid://df5wtw0s748xh" path="res://closeup_certificate.tscn" id="6_xhjgk"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/tuto_phone_timer.gd" id="7_md7qg"]
 [ext_resource type="AudioStream" uid="uid://dlthcxx25it5a" path="res://assets/cases/00_tutorial/scenes/tuto_office/audio/fx/phone_ring.mp3" id="8_2adsv"]
+[ext_resource type="PackedScene" uid="uid://df75pkg02w12f" path="res://assets/cases/00_tutorial/scenes/tuto_office/background/closeup_window.tscn" id="8_svw4f"]
+[ext_resource type="PackedScene" uid="uid://ccfusmr7it07e" path="res://assets/cases/00_tutorial/scenes/tuto_office/background/closeup_register.tscn" id="9_ls1yg"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/phone_ring.gd" id="9_luior"]
+[ext_resource type="PackedScene" uid="uid://b4176x40cccpr" path="res://assets/cases/00_tutorial/scenes/tuto_corridor/background/tuto_corridor.tscn" id="10_gyd18"]
 [ext_resource type="Texture2D" uid="uid://d1v4h647xlmaf" path="res://cursor_spin_basic_sprite.png" id="14_j8goi"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/spinning_cursor.gd" id="15_vnxmx"]
 
@@ -76,7 +77,8 @@ offset_left = 514.0
 offset_top = 11.0
 offset_right = 597.0
 offset_bottom = 100.0
-script = ExtResource("2_ibuey")
+script = ExtResource("2_vtybv")
+target_scene = ExtResource("3_f63my")
 
 [node name="pc" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
@@ -85,7 +87,8 @@ offset_left = 212.0
 offset_top = 424.0
 offset_right = 264.0
 offset_bottom = 501.0
-script = ExtResource("3_l6kv8")
+script = ExtResource("2_vtybv")
+target_scene = ExtResource("4_cahqc")
 
 [node name="board" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
@@ -94,7 +97,8 @@ offset_left = 631.0
 offset_top = 203.0
 offset_right = 845.0
 offset_bottom = 319.0
-script = ExtResource("4_i74ls")
+script = ExtResource("2_vtybv")
+target_scene = ExtResource("5_kthfu")
 
 [node name="certificate" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
@@ -103,7 +107,8 @@ offset_left = 763.0
 offset_top = 70.0
 offset_right = 802.0
 offset_bottom = 131.0
-script = ExtResource("5_5wgsl")
+script = ExtResource("2_vtybv")
+target_scene = ExtResource("6_xhjgk")
 
 [node name="tuto_office" type="Sprite2D" parent="."]
 position = Vector2(577, 325)
@@ -117,7 +122,8 @@ offset_left = 27.0
 offset_top = 108.0
 offset_right = 109.0
 offset_bottom = 363.0
-script = ExtResource("3_77ymu")
+script = ExtResource("2_vtybv")
+target_scene = ExtResource("8_svw4f")
 
 [node name="register" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
@@ -126,7 +132,8 @@ offset_left = 273.0
 offset_top = 180.0
 offset_right = 466.0
 offset_bottom = 385.0
-script = ExtResource("3_110rt")
+script = ExtResource("2_vtybv")
+target_scene = ExtResource("9_ls1yg")
 
 [node name="door to corridor" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
@@ -135,7 +142,8 @@ offset_left = 989.0
 offset_top = 229.0
 offset_right = 1091.0
 offset_bottom = 465.0
-script = ExtResource("5_2cto0")
+script = ExtResource("2_vtybv")
+target_scene = ExtResource("10_gyd18")
 
 [node name="tuto_phone_timer" type="Timer" parent="."]
 process_callback = 0
@@ -170,26 +178,24 @@ script = ExtResource("9_luior")
 [connection signal="mouse_entered" from="clock" to="clock" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="clock" to="clock" method="_on_mouse_exited"]
 [connection signal="pressed" from="clock" to="clock" method="_on_pressed"]
-[connection signal="mouse_entered" from="pc" to="clock" method="_on_pc_mouse_entered"]
 [connection signal="mouse_entered" from="pc" to="pc" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="pc" to="clock" method="_on_pc_mouse_exited"]
-[connection signal="mouse_exited" from="pc" to="pc" method="_on_mouse_exited"]
-[connection signal="pressed" from="pc" to="clock" method="_on_pc_pressed"]
+[connection signal="mouse_exited" from="pc" to="." method="_on_mouse_exited"]
+[connection signal="pressed" from="pc" to="pc" method="_on_pressed"]
 [connection signal="mouse_entered" from="board" to="board" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="board" to="board" method="_on_mouse_exited"]
-[connection signal="pressed" from="board" to="clock" method="_on_board_pressed"]
+[connection signal="pressed" from="board" to="board" method="_on_pressed"]
 [connection signal="mouse_entered" from="certificate" to="certificate" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="certificate" to="certificate" method="_on_mouse_exited"]
-[connection signal="pressed" from="certificate" to="clock" method="_on_certificate_pressed"]
+[connection signal="pressed" from="certificate" to="certificate" method="_on_pressed"]
 [connection signal="mouse_entered" from="window" to="window" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="window" to="window" method="_on_mouse_exited"]
-[connection signal="pressed" from="window" to="clock" method="_on_window_pressed"]
+[connection signal="pressed" from="window" to="window" method="_on_pressed"]
 [connection signal="mouse_entered" from="register" to="register" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="register" to="register" method="_on_mouse_exited"]
-[connection signal="pressed" from="register" to="clock" method="_on_register_pressed"]
+[connection signal="pressed" from="register" to="register" method="_on_pressed"]
 [connection signal="mouse_entered" from="door to corridor" to="door to corridor" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="door to corridor" to="door to corridor" method="_on_mouse_exited"]
-[connection signal="pressed" from="door to corridor" to="clock" method="_on_door_to_corridor_pressed"]
+[connection signal="pressed" from="door to corridor" to="door to corridor" method="_on_pressed"]
 [connection signal="timeout" from="tuto_phone_timer" to="tuto_phone_timer" method="_on_timeout"]
 [connection signal="focus_entered" from="tuto_phone_timer/phone" to="tuto_phone_timer/phone" method="_on_focus_entered"]
 [connection signal="mouse_entered" from="tuto_phone_timer/phone" to="tuto_phone_timer/phone" method="_on_mouse_entered"]
