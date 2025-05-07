@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkmx6ydxbydi5"]
+
+[ext_resource type="Script" path="res://assets/global/ui/map/MapOverlay.gd" id="1_xgf6q"]
+[ext_resource type="Texture2D" uid="uid://ceqiw402tswl6" path="res://map_background.png" id="2_a67f4"]
+
+[node name="MapOverlay" type="CanvasLayer"]
+script = ExtResource("1_xgf6q")
+
+[node name="MapImage" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_a67f4")
