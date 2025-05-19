@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bncr7638p2uch"]
+
+[ext_resource type="Texture2D" uid="uid://uxx2pi55kfto" path="res://assets/cases/00_tutorial/scenes/tuto_icecream_shop_inside/background/icecream_shop.png" id="1_6pb6a"]
+
+[node name="TutoIcecreamShopInside" type="Node2D"]
+
+[node name="tuto_icream_shop" type="Sprite2D" parent="."]
+position = Vector2(599, 334)
+scale = Vector2(0.785, 0.785)
+texture = ExtResource("1_6pb6a")
