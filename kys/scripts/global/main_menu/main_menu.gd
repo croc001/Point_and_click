@@ -9,7 +9,7 @@ var eye_cursor = preload("res://assets/global/cursor/cursor_eye.png")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	DetectivePhone.visible = false #wenn false ist das handy unsichtbar wenn true sichtbar
+	#DetectivePhone.visible = false #wenn false ist das handy unsichtbar wenn true sichtbar
 	background_animation.play("default")
 	# Stelle sicher, dass der benutzerdefinierte Cursor beim Start sichtbar ist
 	Input.set_custom_mouse_cursor(basic_cursor)
