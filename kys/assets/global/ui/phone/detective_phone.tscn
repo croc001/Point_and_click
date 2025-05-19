@@ -1,0 +1,61 @@
+[gd_scene load_steps=3 format=3 uid="uid://bougd7exuwurh"]
+
+[ext_resource type="Texture2D" uid="uid://trdsti2txn6x" path="res://assets/global/ui/phone/phonefixed.png" id="1_llyqw"]
+[ext_resource type="Script" path="res://assets/global/ui/phone/ui.gd" id="2_x151j"]
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("2_x151j")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="PhonePanel" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 985.0
+offset_top = 625.0
+offset_right = 1134.0
+offset_bottom = 785.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_llyqw")
+expand_mode = 1
+
+[node name="MAP_APP" type="Button" parent="Control/PhonePanel"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 25.0
+offset_top = 58.0
+offset_right = 64.0
+offset_bottom = 98.0
+
+[node name="EVIDENCE_APP" type="Button" parent="Control/PhonePanel"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 76.0
+offset_top = 58.0
+offset_right = 115.0
+offset_bottom = 98.0
+
+[node name="INVENTORY_APP" type="Button" parent="Control/PhonePanel"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 25.0
+offset_top = 109.0
+offset_right = 64.0
+offset_bottom = 149.0
+
+[node name="QUESTLOG_APP" type="Button" parent="Control/PhonePanel"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 76.0
+offset_top = 110.0
+offset_right = 116.0
+offset_bottom = 150.0
