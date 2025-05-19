@@ -7,3 +7,28 @@ func _ready() -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("toggle_map"):  # Taste M im Input Map
 		visible = not visible
+		
+func _on_button_forest_pressed() -> void:
+	hide()
+	get_tree().change_scene_to_file("res://scripts/cases/00_tutorial/scenes/tuto_forest_trail_1/forest_trail_1.tscn")
+
+
+func _on_button_school_pressed() -> void:
+	hide()
+	get_tree().change_scene_to_file("res://scripts/cases/00_tutorial/scenes/tuto_school/tuto_school.tscn")
+
+
+func _on_button_office_pressed() -> void:
+	hide()
+	get_tree().change_scene_to_file("res://scripts/cases/00_tutorial/scenes/tuto_office/00_tuto_office.tscn")
+
+
+func _on_button_icecream_shop_pressed() -> void:
+	hide()
+	get_tree().change_scene_to_file("res://scripts/cases/00_tutorial/scenes/tuto_icecream_shop_inside/tuto_icecream_shop_inside.tscn")
+
+
+func _on_button_forest_focus_entered() -> void:
+	pass # Replace with function body.
+	
+	
