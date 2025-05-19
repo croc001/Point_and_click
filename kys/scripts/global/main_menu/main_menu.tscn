@@ -406,7 +406,7 @@ position = Vector2(9, 11)
 sprite_frames = SubResource("SpriteFrames_fl3or")
 animation = &"cursor_spinning"
 frame = 5
-offset = Vector2(21, 19)
+offset = Vector2(3.2, 5.475)
 script = ExtResource("10_3m2bx")
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
