@@ -1,62 +1,76 @@
 extends Node2D
+
 @onready var lock = $lock
 @onready var lockpick = $lockpick
 
-# References to lockpick and lock
-#var lockpick = load("res://scripts/global/mechanics/lockpick/lockpick.png")
-#var lock = load("res://scripts/global/mechanics/lockpick/lock.jpg")
-#var unlock_sound: AudioStreamPlayer
+# --- Einstellungen ---
+var lock_angle: float = randf_range(-90.0, 90.0)  # Zielwinkel zum Entsperren
+var tolerance: float = 15.0  # Wie genau muss der Spieler treffen?
+var lockpick_rotation_speed: float = 1.5
+var lock_turn_speed: float = 32.0
 
-# Lockpick settings
-var lock_angle: float = randf_range(0.0, 180.0) # Random angle for the sweet spot
-var tolerance: float = 15.0 # Angle tolerance for success
-var lockpick_rotation_speed: float = 1.5 # Speed to rotate lockpick
-var lock_turn_speed: float = 32.0 # Speed to turn lock
-
-# Lock rotation progress
+# --- Statusvariablen ---
 var lock_turn_progress: float = 0.0
 var is_unlocked: bool = false
+var player_set_rotation: float = 0.0
+var lockpick_modified_by_unlock: bool = false
 
 func _ready():
-	randomize() # Initialize RNG for lock position
+	randomize()
 	lockpick.rotation_degrees = 0.0
 	lock.rotation_degrees = 0.0
+	player_set_rotation = 0.0
 
 func _process(delta: float):
 	if is_unlocked:
 		return
 
-	# Rotate the lockpick using the left and right arrow keys
+	# --- Spieler bewegt den Dietrich ---
+	var rotating = false
 	if Input.is_action_pressed("ui_left"):
 		lockpick.rotation_degrees -= lockpick_rotation_speed
+		rotating = true
 	elif Input.is_action_pressed("ui_right"):
 		lockpick.rotation_degrees += lockpick_rotation_speed
+		rotating = true
 
-	# Clamp rotation between 0 and 180 degrees
-	lockpick.rotation_degrees = clamp(lockpick.rotation_degrees, 0.0, 180.0)
+	lockpick.rotation_degrees = clamp(lockpick.rotation_degrees, -90.0, 90.0)
 
-	# Check for player attempting to turn the lock
-	if Input.is_action_pressed("ui_accept"):  # Key = ENTER
+	if rotating:
+		player_set_rotation = lockpick.rotation_degrees
+		lockpick_modified_by_unlock = false
+
+	# --- Spieler versucht zu entsperren ---
+	if Input.is_action_pressed("ui_accept"):  # ENTER
 		attempt_unlock(delta)
 	else:
-		lock_turn_progress = max(lock_turn_progress - delta * lock_turn_speed * 2, 0.0)  # Reset lock rotation
+		# Schloss dreht zurück
+		lock_turn_progress = max(lock_turn_progress - delta * lock_turn_speed * 2, 0.0)
 		lock.rotation_degrees = lock_turn_progress
 
-func attempt_unlock(delta: float):
-	# Calculate the distance between lockpick angle and lock sweet spot
-	var angle_difference = abs(lockpick.rotation_degrees - lock_angle)
+		# Dietrich kehrt nur zurück, wenn er durch den Unlock verändert wurde
+		if lockpick_modified_by_unlock:
+			lockpick.rotation_degrees = lerp(lockpick.rotation_degrees, player_set_rotation, delta * 5.0)
 
-	if angle_difference <= tolerance:
+func attempt_unlock(delta: float):
+	var angle_diff = abs((lockpick.rotation_degrees - lock.rotation_degrees) - lock_angle)
+
+	if angle_diff <= tolerance:
+		# Schloss wird gedreht
 		lock_turn_progress += delta * lock_turn_speed
 		lock.rotation_degrees = lock_turn_progress
 
-		if lock_turn_progress >= 90.0: # Fully unlocked
+		# Dietrich wird "mitgedreht"
+		lockpick.rotation_degrees += delta * lock_turn_speed * 0.5
+		lockpick_modified_by_unlock = true
+
+		if lock_turn_progress >= 90.0:
 			unlock()
 	else:
+		# Wenn zu weit weg → Schloss dreht zurück
 		lock_turn_progress = max(lock_turn_progress - delta * lock_turn_speed * 2, 0.0)
 		lock.rotation_degrees = lock_turn_progress
 
 func unlock():
 	is_unlocked = true
-	#unlock_sound.play()
 	print("Unlocked!")
