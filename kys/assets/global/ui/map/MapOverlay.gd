@@ -25,7 +25,7 @@ func _on_button_office_pressed() -> void:
 
 func _on_button_icecream_shop_pressed() -> void:
 	hide()
-	get_tree().change_scene_to_file("res://scripts/cases/00_tutorial/scenes/tuto_icecream_shop_inside/tuto_icecream_shop_inside.tscn")
+	get_tree().change_scene_to_file("res://scripts/cases/00_tutorial/scenes/tuto_icecreamshop_outside/tuto_icecream_outside.tscn")
 
 
 func _on_button_forest_focus_entered() -> void:

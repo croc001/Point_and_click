@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cvy4yxx4tcc6x"]
+
+[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_icecreamshop_outside/tuto_icecream_outside.gd" id="1_0s655"]
+[ext_resource type="Texture2D" uid="uid://gbsmsajc16lc" path="res://assets/cases/00_tutorial/scenes/tuto_icecream_shop_outside/icecream_outside.png" id="1_eyddh"]
+[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_icecreamshop_outside/button_icecream_shop_inside.gd" id="3_uxyhg"]
+
+[node name="TutoIcecreamOutside" type="Node2D"]
+script = ExtResource("1_0s655")
+
+[node name="icecream_shop_outside" type="Sprite2D" parent="."]
+position = Vector2(595, 325)
+scale = Vector2(1.835, 1.835)
+texture = ExtResource("1_eyddh")
+
+[node name="Button_icecream_shop_inside" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 335.0
+offset_top = 335.0
+offset_right = 521.0
+offset_bottom = 577.0
+script = ExtResource("3_uxyhg")
+
+[connection signal="pressed" from="Button_icecream_shop_inside" to="." method="_on_button_icecream_shop_inside_pressed"]
