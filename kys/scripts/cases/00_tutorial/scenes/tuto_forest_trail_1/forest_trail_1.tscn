@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://jrlgybf0t6xk"]
+[gd_scene load_steps=5 format=3 uid="uid://jrlgybf0t6xk"]
 
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_forest_trail_1/forest_trail_1.gd" id="1_vcv2s"]
 [ext_resource type="Texture2D" uid="uid://bqi4qlawt3gmj" path="res://assets/cases/00_tutorial/scenes/tuto_forrest_trail_1/background/forrest_trail_1.png" id="2_p4ls2"]
+[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_forest_trail_1/button_forest_trail_2.gd" id="3_sjkh3"]
+[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_forest_trail_1/button_forest_trail_1_1.gd" id="4_6w7yf"]
 
 [node name="ForestTrail1" type="Node2D"]
 script = ExtResource("1_vcv2s")
@@ -10,3 +12,22 @@ script = ExtResource("1_vcv2s")
 position = Vector2(575, 332)
 scale = Vector2(0.755, 0.755)
 texture = ExtResource("2_p4ls2")
+
+[node name="Button_forest_trail_2" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -34.0
+offset_top = 90.0
+offset_right = 310.0
+offset_bottom = 406.0
+script = ExtResource("3_sjkh3")
+
+[node name="Button_forest_trail_1_1" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 888.0
+offset_top = 164.0
+offset_right = 1248.0
+offset_bottom = 490.0
+script = ExtResource("4_6w7yf")
+
+[connection signal="pressed" from="Button_forest_trail_2" to="." method="_on_button_forest_trail_2_pressed"]
+[connection signal="pressed" from="Button_forest_trail_1_1" to="." method="_on_button_forest_trail_1_1_pressed"]

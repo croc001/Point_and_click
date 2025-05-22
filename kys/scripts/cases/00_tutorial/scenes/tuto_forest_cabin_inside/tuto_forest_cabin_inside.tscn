@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cnh8hery3ks0u"]
+
+[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_forest_cabin_inside/tuto_forest_cabin_inside.gd" id="1_eplrq"]
+[ext_resource type="Texture2D" uid="uid://d3yi1kwvxjm12" path="res://assets/cases/00_tutorial/scenes/tuto_forest_cabin_inside/forest_cabin_inside.png" id="1_n6xcb"]
+[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_forest_cabin_inside/button_forest_cabin_outside.gd" id="2_xl7ti"]
+
+[node name="TutoForestCabinInside" type="Node2D"]
+script = ExtResource("1_eplrq")
+
+[node name="forest_cabin_inside" type="Sprite2D" parent="."]
+position = Vector2(582, 322)
+scale = Vector2(1.875, 1.875)
+texture = ExtResource("1_n6xcb")
+
+[node name="Button_forest_cabin_outside" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 863.0
+offset_top = 215.0
+offset_right = 1048.0
+offset_bottom = 580.0
+script = ExtResource("2_xl7ti")
+
+[connection signal="pressed" from="Button_forest_cabin_outside" to="." method="_on_button_forest_cabin_outside_pressed"]

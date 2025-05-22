@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5lpgax5os0r3"]
+
+[ext_resource type="Texture2D" uid="uid://bpxjjoackrj7w" path="res://assets/cases/00_tutorial/scenes/tuto_forest_trail_2/forest_trail_2.png" id="1_5r4jj"]
+[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_forest_trail_2/tuto_forest_trail_2.gd" id="1_xlgdf"]
+[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_forest_trail_2/button_forest_trail_1.gd" id="2_vf43x"]
+
+[node name="TutoForestTrail2" type="Node2D"]
+script = ExtResource("1_xlgdf")
+
+[node name="forest_trail_2" type="Sprite2D" parent="."]
+position = Vector2(580, 325)
+scale = Vector2(1.855, 1.855)
+texture = ExtResource("1_5r4jj")
+
+[node name="Button_forest_trail_1" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -55.0
+offset_top = 589.0
+offset_right = 839.0
+offset_bottom = 684.0
+script = ExtResource("2_vf43x")
+
+[connection signal="pressed" from="Button_forest_trail_1" to="." method="_on_button_forest_trail_1_pressed"]

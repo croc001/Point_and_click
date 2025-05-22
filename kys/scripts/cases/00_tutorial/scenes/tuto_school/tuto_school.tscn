@@ -1,11 +1,24 @@
-[gd_scene load_steps=2 format=3 uid="uid://5qcq1py1n1ra"]
+[gd_scene load_steps=4 format=3 uid="uid://5qcq1py1n1ra"]
 
 [ext_resource type="Texture2D" uid="uid://ocxasg0p5wu6" path="res://assets/cases/00_tutorial/scenes/tuto_school/background/school.png" id="1_1o0di"]
+[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_school/tuto_school.gd" id="1_5tafw"]
+[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_school/button_school_inside.gd" id="2_cw4ge"]
 
 [node name="TutoSchool" type="Node2D"]
+script = ExtResource("1_5tafw")
 
 [node name="tuto_school" type="Sprite2D" parent="."]
 position = Vector2(586.705, 338.5)
 scale = Vector2(0.77156, 0.727539)
 texture = ExtResource("1_1o0di")
 offset = Vector2(0.955, 0)
+
+[node name="Button_school_inside" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 479.0
+offset_top = 308.0
+offset_right = 645.0
+offset_bottom = 473.0
+script = ExtResource("2_cw4ge")
+
+[connection signal="pressed" from="Button_school_inside" to="." method="_on_button_school_inside_pressed"]

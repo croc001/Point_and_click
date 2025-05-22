@@ -11,10 +11,9 @@ func _process(delta: float) -> void:
 	pass
 
 
-
-func _on_button_forest_trail_2_pressed() -> void:
-	get_tree().change_scene_to_file("res://scripts/cases/00_tutorial/scenes/tuto_forest_trail_2/tuto_forest_trail_2.tscn")
-
-
 func _on_button_forest_trail_1_1_pressed() -> void:
 	get_tree().change_scene_to_file("res://scripts/cases/00_tutorial/scenes/tuto_forest_trail_1.1/tuto_forest_trail_1_1.tscn")
+
+
+func _on_button_forest_cabin_inside_pressed() -> void:
+	get_tree().change_scene_to_file("res://scripts/cases/00_tutorial/scenes/tuto_forest_cabin_inside/tuto_forest_cabin_inside.tscn")
