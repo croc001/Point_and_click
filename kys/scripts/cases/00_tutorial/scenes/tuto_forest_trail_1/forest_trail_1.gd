@@ -10,8 +10,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-
-
 func _on_button_forest_trail_2_pressed() -> void:
 	get_tree().change_scene_to_file("res://scripts/cases/00_tutorial/scenes/tuto_forest_trail_2/tuto_forest_trail_2.tscn")
 
