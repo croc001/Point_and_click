@@ -1,0 +1,18 @@
+~ IcreamTalk
+Main Character: Good afternoon, my name is Detective (Name) and I’m looking for (Student). I was told he was here a lot, do you know him?
+Icy Giovanni: Ahh Iggy(16 year old name), of course i know him, he and his friends come almost everyday, he, he isnt in trouble is he? 
+Main Character: No, he’s not in trouble, but he’s been missing for a week. Have you seen anything? 
+Icy Giovanni: Now that you mention it … he wasn´t here for quiet some time … I do hope that meet-up worked out okay…
+Main Character: Meet-up?  
+Icy Giovanni: Yeah, his friends were talking about meeting him … said something like… a cabin that belonged to one of their grandparents or something? But they did mention the woods.
+Main Character: So they wanted to meet (Student) a week ago in that shack? … you wouldn’t happen to know where exactly it is, would you?
+Icy Giovanni: Oh, it isn’t that far, the kids hang out there all the time, there’s this small trail off the road by the dead tree just before you’d drive out of the city, just follow down there, you can’t miss it. 
+Main Character: That was very helpful, thank you very much for your help.
+Icy Giovanni: Ah dont mention it, it was nothing really… I hope they’re okay…
+
+~ Bark
+% Icy Giovanni: Thats all i know, maybe go check the Cabin.
+% Icy Giovanni: You want some Ice Cream or what?
+% Icy Giovanni: Thats all i know, your scaring away the customers the Devs had no time to draw. Please leave 
+%0.0.1 Icy Giovanni: Kekelek ich fick dich weg !
+=> END

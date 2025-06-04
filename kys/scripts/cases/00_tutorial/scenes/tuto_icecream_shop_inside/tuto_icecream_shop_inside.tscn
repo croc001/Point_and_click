@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://bncr7638p2uch"]
+[gd_scene load_steps=6 format=3 uid="uid://bncr7638p2uch"]
 
 [ext_resource type="Texture2D" uid="uid://uxx2pi55kfto" path="res://assets/cases/00_tutorial/scenes/tuto_icecream_shop_inside/background/icecream_shop.png" id="1_6pb6a"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_icecream_shop_inside/tuto_icecream_shop_inside.gd" id="1_mf7qw"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_icecream_shop_inside/button_icecream_shop_outside.gd" id="2_7rynh"]
+[ext_resource type="Texture2D" uid="uid://d37pjmptlyq3v" path="res://assets/cases/00_tutorial/scenes/tuto_icecream_shop_inside/character/IcecreamMan.png" id="4_5u7r2"]
+[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_icecream_shop_inside/button_interaction_IcyGiovanni.gd" id="5_2074w"]
 
 [node name="TutoIcecreamShopInside" type="Node2D"]
 script = ExtResource("1_mf7qw")
@@ -20,4 +22,23 @@ offset_right = 1048.0
 offset_bottom = 454.0
 script = ExtResource("2_7rynh")
 
+[node name="IcecreamMan" type="Sprite2D" parent="."]
+position = Vector2(871.813, 365.281)
+scale = Vector2(2.11625, 2.2775)
+texture = ExtResource("4_5u7r2")
+
+[node name="button_interaction_IcyGiovanni" type="Button" parent="IcecreamMan"]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = -1
+anchor_left = 0.21
+anchor_top = 0.174
+anchor_right = 0.88
+anchor_bottom = 0.963
+offset_left = -50.0
+offset_top = -87.45
+offset_right = -50.0
+offset_bottom = -87.525
+script = ExtResource("5_2074w")
+
 [connection signal="pressed" from="Button_icecream_shop_outside" to="." method="_on_button_icecream_shop_outside_pressed"]
+[connection signal="pressed" from="IcecreamMan/button_interaction_IcyGiovanni" to="IcecreamMan/button_interaction_IcyGiovanni" method="_on_pressed"]

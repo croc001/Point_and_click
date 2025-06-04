@@ -1,17 +1,11 @@
-extends Button
+extends Sprite2D
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	DetectivePhone.visible = true #Wichtig für das handy das man es sehen kann
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
-
-
-func _on_pressed() -> void:
-	get_tree().change_scene_to_file("res://scripts/cases/00_tutorial/scenes/tuto_office/00_tuto_office.tscn")
-	

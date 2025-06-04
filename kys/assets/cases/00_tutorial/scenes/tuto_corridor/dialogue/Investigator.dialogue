@@ -1,0 +1,12 @@
+~ Investigator_dialogue
+Investigator: Hey (Name of Main Character) you heared about the new case?” 
+Main Character: actually i was just on the phone with the chief, he assigned it to me.
+Investigator: ”It’s scary what this city has become…”   
+Investigator: …   
+Investigator:  you um… you sure you up for this?
+Main Character: im fine. I´ll manage it
+Investigator: Well, if you’re sure,[wait=2] I heard about your wife and-
+Main Character interupts the investigator before he could say another word
+Main Character: I said I‘m fine. i´ll manage the case”
+Investigator: Alright, alright i was just trying to help…
+=> END

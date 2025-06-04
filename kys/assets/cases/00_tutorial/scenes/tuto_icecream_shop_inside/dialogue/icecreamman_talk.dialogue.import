@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://dynufh26cjno6"
+path="res://.godot/imported/icecreamman_talk.dialogue-96b24e9bc74b4e7afa474a41951ec072.tres"
+
+[deps]
+
+source_file="res://assets/cases/00_tutorial/scenes/tuto_icecream_shop_inside/dialogue/icecreamman_talk.dialogue"
+dest_files=["res://.godot/imported/icecreamman_talk.dialogue-96b24e9bc74b4e7afa474a41951ec072.tres"]
+
+[params]
+
+defaults=true
