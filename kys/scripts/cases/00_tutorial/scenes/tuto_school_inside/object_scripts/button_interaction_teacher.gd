@@ -13,3 +13,5 @@ func _process(delta: float) -> void:
 func _pressed() -> void:
 	if GlobalVar.teacher_dialogue_is_over == false:
 		DialogueManager.show_dialogue_balloon(dialogue, "teacher_talk")
+		GlobalVar.teacher_dialogue_is_over = true
+	
