@@ -4,6 +4,7 @@ var menu_open := false
 var is_animating := false
 var phone_start_pos := Vector2()
 var phone_offset_y := -135
+var map_overlay: Node = null
 
 func _ready():
 	visible = true #das macht das das gesamte handy angezeigt wird oder nicht
@@ -13,8 +14,14 @@ func _ready():
 	$Control/PhonePanel/INVENTORY_APP.pressed.connect(_on_inventory_app_pressed)
 	$Control/PhonePanel/QUESTLOG_APP.pressed.connect(_on_questlog_app_pressed)
 	#von hier bis
+	
 func _on_map_app_pressed():
-	print("Map geöffnet")
+	if map_overlay == null:
+		var scene = preload("res://assets/global/ui/map/MapOverlay.tscn")
+		map_overlay = scene.instantiate()
+		get_tree().current_scene.add_child(map_overlay)  # adds to the root of current scene
+	else:
+		map_overlay.visible = not map_overlay.visible
 
 func _on_evidence_app_pressed():
 	print("Evidenceboard geöffnet")

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://c3rde5y6s5s3o"
+path="res://.godot/imported/teacher_talk.dialogue-a44ae87b995271ee75958287194ce754.tres"
+
+[deps]
+
+source_file="res://assets/cases/00_tutorial/scenes/tuto_school_inside/dialogue/teacher_talk.dialogue"
+dest_files=["res://.godot/imported/teacher_talk.dialogue-a44ae87b995271ee75958287194ce754.tres"]
+
+[params]
+
+defaults=true

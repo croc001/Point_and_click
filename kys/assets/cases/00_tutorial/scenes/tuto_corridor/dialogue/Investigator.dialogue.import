@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://vebgnpidk653"
+path="res://.godot/imported/Investigator.dialogue-80b0b8741d06f0a8c4b9a32f9668b7de.tres"
+
+[deps]
+
+source_file="res://assets/cases/00_tutorial/scenes/tuto_corridor/dialogue/Investigator.dialogue"
+dest_files=["res://.godot/imported/Investigator.dialogue-80b0b8741d06f0a8c4b9a32f9668b7de.tres"]
+
+[params]
+
+defaults=true

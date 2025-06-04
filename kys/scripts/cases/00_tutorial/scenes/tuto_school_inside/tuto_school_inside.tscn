@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://btj3oknatxump"]
+[gd_scene load_steps=6 format=3 uid="uid://btj3oknatxump"]
 
 [ext_resource type="Texture2D" uid="uid://8yd8p7frptya" path="res://assets/cases/00_tutorial/scenes/tuto_school_inside/tuto_school_inside.png" id="1_nsrw3"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_school_inside/tuto_school_inside.gd" id="1_tqfbj"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_school_inside/button.gd" id="2_ech2s"]
+[ext_resource type="Texture2D" uid="uid://cwflruspl08up" path="res://assets/cases/00_tutorial/scenes/tuto_school_inside/character/Teacher.png" id="4_2sg0j"]
+[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_school_inside/object_scripts/button_interaction_teacher.gd" id="5_ots2y"]
 
 [node name="TutoSchoolInside" type="Node2D"]
 script = ExtResource("1_tqfbj")
@@ -20,4 +22,22 @@ offset_right = 753.0
 offset_bottom = 514.0
 script = ExtResource("2_ech2s")
 
+[node name="Teacher" type="Sprite2D" parent="."]
+position = Vector2(1041, 450)
+scale = Vector2(1.7175, 1.81643)
+texture = ExtResource("4_2sg0j")
+
+[node name="button_interaction_teacher" type="Button" parent="Teacher"]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = -1
+anchor_top = 0.111
+anchor_right = 0.84
+anchor_bottom = 1.0
+offset_left = -49.0
+offset_top = -87.425
+offset_right = -50.0
+offset_bottom = -87.0
+script = ExtResource("5_ots2y")
+
 [connection signal="pressed" from="Button_school_outside" to="." method="_on_button_school_outside_pressed"]
+[connection signal="pressed" from="Teacher/button_interaction_teacher" to="Teacher/button_interaction_teacher" method="_on_pressed"]
