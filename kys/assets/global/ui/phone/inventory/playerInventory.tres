@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Inventory" load_steps=5 format=3 uid="uid://bonro0hy4ckie"]
+
+[ext_resource type="Script" path="res://assets/global/ui/phone/inventory/inventoryItem.gd" id="1_hunn2"]
+[ext_resource type="Resource" uid="uid://cubfjj1gcv5ie" path="res://assets/global/ui/phone/inventory/items/smartphone.tres" id="2_1uhop"]
+[ext_resource type="Resource" uid="uid://bd1euotms421l" path="res://assets/global/ui/phone/inventory/items/testitem.tres" id="3_hudv2"]
+[ext_resource type="Script" path="res://assets/global/ui/phone/inventory/inventory.gd" id="4_2f6o5"]
+
+[resource]
+script = ExtResource("4_2f6o5")
+items = Array[ExtResource("1_hunn2")]([ExtResource("2_1uhop"), ExtResource("3_hudv2"), ExtResource("3_hudv2"), null, null, null, null, null, null, ExtResource("2_1uhop"), null, null, null, null])
