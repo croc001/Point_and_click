@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 @onready var animated_cursor = $AnimatedCursor
-@onready var inventory: Inventory
+@onready var inventory: Inventory = preload("res://assets/global/ui/phone/inventory/playerInventory.tres")
 
 var hovered_item: Node = null
 
@@ -44,7 +44,7 @@ func _input(event):
 			if area and area.has_method("collect"):
 				area.collect(inventory)
 
-#Methode wird von Items aufgerufen
+# Methode wird von Items aufgerufen
 func register_hover_item(item: Node) -> void:
 	hovered_item = item
 	Input.set_custom_mouse_cursor(

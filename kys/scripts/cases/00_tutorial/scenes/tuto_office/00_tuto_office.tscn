@@ -19,9 +19,6 @@
 [ext_resource type="PackedScene" path="res://assets/global/ui/phone/detective_phone.tscn" id="17_y74n2"]
 [ext_resource type="PackedScene" uid="uid://co2a42of6qxpx" path="res://assets/global/ui/phone/inventory/items/test_item.tscn" id="19_41eyn"]
 [ext_resource type="PackedScene" uid="uid://bksh2lt0x3kf" path="res://assets/global/ui/phone/inventory/items/smartphone.tscn" id="20_fcn63"]
-[ext_resource type="PackedScene" uid="uid://bougd7exuwurh" path="res://assets/global/ui/phone/detective_phone.tscn" id="17_y74n2"]
-[ext_resource type="Texture2D" uid="uid://r27issrp616j" path="res://assets/cases/00_tutorial/scenes/tuto_office/objects/item_smartphone.png" id="18_84gq6"]
-[ext_resource type="Texture2D" uid="uid://73p263lxrkol" path="res://assets/cases/00_tutorial/scenes/tuto_office/objects/Item_test.png" id="19_q4r4i"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h1srr"]
 atlas = ExtResource("14_j8goi")

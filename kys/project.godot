@@ -30,6 +30,7 @@ SaveLoadMenu="*res://assets/global/ui/savescreen/SaveLoadMenu.tscn"
 MapOverlay="*res://assets/global/ui/map/MapOverlay.tscn"
 InventoryMenu="*res://assets/global/ui/phone/inventory/InventoryMenu.tscn"
 DetectivePhone="*res://assets/global/ui/phone/detective_phone.tscn"
+PlayerInventory="*res://assets/global/ui/phone/inventory/playerInventory.tres"
 
 [display]
 
