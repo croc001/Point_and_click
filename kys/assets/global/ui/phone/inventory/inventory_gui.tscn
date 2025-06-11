@@ -11,6 +11,7 @@ offset_bottom = 20.0
 script = ExtResource("1_kfnyx")
 
 [node name="background" type="Sprite2D" parent="."]
+scale = Vector2(0.32, 0.32)
 texture = ExtResource("1_w42dl")
 centered = false
 vframes = 2

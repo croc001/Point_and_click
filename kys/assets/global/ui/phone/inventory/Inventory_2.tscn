@@ -36,10 +36,6 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(3.65, 3.65)
 texture = ExtResource("1_kpepy")
-patch_margin_left = 6
-patch_margin_top = 6
-patch_margin_right = 6
-patch_margin_bottom = 6
 
 [node name="GridContainer" type="GridContainer" parent="NinePatchRect"]
 layout_mode = 1
