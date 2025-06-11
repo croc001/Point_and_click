@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwgcn8w44l6xq"]
+
+[ext_resource type="Script" path="res://assets/global/ui/phone/inventory/items/item_pick_up.gd" id="1_8k36g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7c4h3"]
+resource_local_to_scene = true
+
+[node name="ItemPickUp" type="Area2D"]
+script = ExtResource("1_8k36g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_7c4h3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]

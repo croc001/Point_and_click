@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbdwaq25wk24k"]
+
+[ext_resource type="Script" path="res://assets/global/ui/phone/inventory/inventory_gui.gd" id="1_kfnyx"]
+[ext_resource type="Texture2D" uid="uid://chot27xlgd1h8" path="res://assets/global/ui/phone/inventory/inventory_slot.png" id="1_w42dl"]
+
+[node name="Slot" type="Panel"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+offset_right = 20.0
+offset_bottom = 20.0
+script = ExtResource("1_kfnyx")
+
+[node name="background" type="Sprite2D" parent="."]
+texture = ExtResource("1_w42dl")
+centered = false
+vframes = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 0
+offset_right = 20.0
+offset_bottom = 20.0
+
+[node name="Panel" type="Panel" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="item" type="Sprite2D" parent="CenterContainer/Panel"]

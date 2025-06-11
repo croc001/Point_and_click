@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://co2a42of6qxpx"]
+
+[ext_resource type="PackedScene" uid="uid://cwgcn8w44l6xq" path="res://assets/global/ui/phone/inventory/items/ItemPickUp.tscn" id="1_t7y41"]
+[ext_resource type="Script" path="res://assets/global/ui/phone/inventory/items/test_item.gd" id="2_vlji3"]
+[ext_resource type="Texture2D" uid="uid://c3mrj40qrdq48" path="res://assets/cases/00_tutorial/scenes/tuto_office/objects/item_test_inventory.png" id="2_vrldt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hqkms"]
+resource_local_to_scene = true
+size = Vector2(31, 31)
+
+[node name="TestItem" instance=ExtResource("1_t7y41")]
+script = ExtResource("2_vlji3")
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(0.5, 1.5)
+shape = SubResource("RectangleShape2D_hqkms")
+
+[node name="Sprite2D" parent="." index="1"]
+texture = ExtResource("2_vrldt")
