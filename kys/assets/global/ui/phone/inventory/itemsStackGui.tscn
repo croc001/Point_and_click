@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://duq7bfsmfqf2f"]
+
+[ext_resource type="Script" path="res://assets/global/ui/phone/inventory/items_stack_gui.gd" id="1_e0r8o"]
+
+[node name="Panel" type="Panel"]
+script = ExtResource("1_e0r8o")
+
+[node name="item" type="Sprite2D" parent="."]

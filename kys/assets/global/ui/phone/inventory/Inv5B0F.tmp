@@ -1,10 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://qr2rwxxc8blm"]
+[gd_scene load_steps=4 format=3 uid="uid://qr2rwxxc8blm"]
 
 [ext_resource type="Script" path="res://assets/global/ui/phone/inventory/inventory_2.gd" id="1_jt4k7"]
 [ext_resource type="Texture2D" uid="uid://b0tgr6p71hebw" path="res://assets/global/ui/phone/inventory/inventory_background.png" id="1_kpepy"]
 [ext_resource type="PackedScene" uid="uid://dbdwaq25wk24k" path="res://assets/global/ui/phone/inventory/inventory_gui.tscn" id="2_br1g6"]
-[ext_resource type="Texture2D" uid="uid://1r85hdlqrna0" path="res://assets/global/ui/phone/inventory/background_inventory.png" id="4_mpp0i"]
-[ext_resource type="Script" path="res://assets/global/ui/phone/inventory/background.gd" id="5_jbtfc"]
 
 [node name="Inventory2" type="Control"]
 custom_minimum_size = Vector2(128, 80)
@@ -98,9 +96,3 @@ layout_mode = 2
 
 [node name="Slot15" parent="NinePatchRect/GridContainer" instance=ExtResource("2_br1g6")]
 layout_mode = 2
-
-[node name="Background" type="Sprite2D" parent="."]
-position = Vector2(78, 53)
-scale = Vector2(1.78979, 1.91011)
-texture = ExtResource("4_mpp0i")
-script = ExtResource("5_jbtfc")
