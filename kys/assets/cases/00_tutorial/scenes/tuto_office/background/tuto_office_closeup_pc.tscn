@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://d32dan1mv2sr4"]
+[gd_scene load_steps=4 format=3 uid="uid://d32dan1mv2sr4"]
 
 [ext_resource type="Texture2D" uid="uid://cwipy2ctchtmd" path="res://assets/cases/00_tutorial/scenes/tuto_office/objects/closeup_pc.png" id="1_ouf3p"]
+[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/object_scripts/tuto_office_closeup_pc.gd" id="1_xrno6"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/object_scripts/back_to_office_from_pc.gd" id="2_d6fwx"]
 
 [node name="tuto_office_closeup_pc" type="Node2D"]
+script = ExtResource("1_xrno6")
 
 [node name="CloseupPc" type="Sprite2D" parent="."]
 position = Vector2(576, 324)

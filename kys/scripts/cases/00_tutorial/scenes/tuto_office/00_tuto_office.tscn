@@ -5,7 +5,8 @@
 [ext_resource type="Script" path="res://scripts/common/SceneSwitchButton.gd" id="2_vtybv"]
 [ext_resource type="PackedScene" uid="uid://bpxhtykqwqije" path="res://assets/cases/00_tutorial/scenes/tuto_office/background/tuto_office_clock.tscn" id="3_f63my"]
 [ext_resource type="PackedScene" uid="uid://d32dan1mv2sr4" path="res://assets/cases/00_tutorial/scenes/tuto_office/background/tuto_office_closeup_pc.tscn" id="4_cahqc"]
-[ext_resource type="PackedScene" uid="uid://b0v7d62gft74e" path="res://tuto_office_board.tscn" id="5_kthfu"]
+[ext_resource type="PackedScene" uid="uid://caocihig0mxee" path="res://assets/cases/00_tutorial/scenes/tuto_office/background/closeup_whiteboard.tscn" id="5_58p8q"]
+[ext_resource type="PackedScene" uid="uid://dnuga82but3qm" path="res://assets/cases/00_tutorial/scenes/tuto_office/background/closeup_certificate.tscn" id="6_6t2fn"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/tuto_office_phone.gd" id="6_gd1ue"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/tuto_phone_timer.gd" id="7_md7qg"]
 [ext_resource type="AudioStream" uid="uid://dlthcxx25it5a" path="res://assets/cases/00_tutorial/scenes/tuto_office/audio/fx/phone_ring.mp3" id="8_2adsv"]
@@ -19,9 +20,6 @@
 [ext_resource type="PackedScene" uid="uid://co2a42of6qxpx" path="res://assets/global/ui/phone/inventory/items/test_item.tscn" id="19_41eyn"]
 [ext_resource type="PackedScene" uid="uid://lhqb8jhlpqc2" path="res://assets/global/characters/main/MainCharacter.tscn" id="20_cl4vq"]
 [ext_resource type="PackedScene" uid="uid://bksh2lt0x3kf" path="res://assets/global/ui/phone/inventory/items/smartphone.tscn" id="20_fcn63"]
-
-[sub_resource type="Resource" id="Resource_4ppvh"]
-metadata/__load_path__ = "res://closeup_certificate.tscn"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h1srr"]
 atlas = ExtResource("14_j8goi")
@@ -109,7 +107,7 @@ offset_top = 203.0
 offset_right = 845.0
 offset_bottom = 319.0
 script = ExtResource("2_vtybv")
-target_scene = ExtResource("5_kthfu")
+target_scene = ExtResource("5_58p8q")
 
 [node name="certificate" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
@@ -119,7 +117,7 @@ offset_top = 70.0
 offset_right = 802.0
 offset_bottom = 131.0
 script = ExtResource("2_vtybv")
-target_scene = SubResource("Resource_4ppvh")
+target_scene = ExtResource("6_6t2fn")
 
 [node name="tuto_office" type="Sprite2D" parent="."]
 position = Vector2(577, 325)
