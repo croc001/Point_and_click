@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://ccfusmr7it07e"]
+[gd_scene load_steps=4 format=3 uid="uid://ccfusmr7it07e"]
 
 [ext_resource type="Texture2D" uid="uid://djefkcm4ggur4" path="res://assets/cases/00_tutorial/scenes/tuto_office/background/closeup_register.png" id="1_0avfw"]
+[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/object_scripts/closeup_register.gd" id="1_tuvm6"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/button_back_from_register.gd" id="2_tiwih"]
 
 [node name="register" type="Node2D"]
+script = ExtResource("1_tuvm6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(576, 324)

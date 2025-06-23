@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://df75pkg02w12f"]
+[gd_scene load_steps=4 format=3 uid="uid://df75pkg02w12f"]
 
 [ext_resource type="Texture2D" uid="uid://du3gbqf4qemgf" path="res://assets/cases/00_tutorial/scenes/tuto_office/background/closeup_window.png" id="1_o0cbi"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/object_scripts/button_back_to_office_from_window.gd" id="2_36qyj"]
+[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/object_scripts/window_closeup.gd" id="2_cihyl"]
 
 [node name="window" type="Node2D"]
+script = ExtResource("2_cihyl")
 
 [node name="window_closeup" type="Sprite2D" parent="."]
 position = Vector2(576, 324)

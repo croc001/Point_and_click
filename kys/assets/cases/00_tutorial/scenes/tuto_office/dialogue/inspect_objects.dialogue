@@ -1,0 +1,30 @@
+~ inspect_window
+% Jacob: This damn weather never changes huh...
+% Jacob: New Day, new Case
+% Jacob: Ah Ashcreek, as ugly as ever, only my wife was able to brighten up this city for me.
+=> END
+
+~ inspect_evidenceboard
+Jacob: Good old whiteboard, ... how many cases did we solve together. Ahh shit, the meeting.
+=> END
+
+~ inspect_clock
+Jacob: Its already that late, how long was i asleep?
+=> END
+
+~ inspect_folders
+% Jacob: So much paperwork to do, so many cases to solve
+% Jacob: Man i like the Job, but the Paperwork...
+=> END
+
+~ inspect_pc
+% Jacob: This thing seems to never work when i need it
+% Jacob: I think my Handy is better than this old Desktop
+% Jacob: Like all office PCs, slow and when you need them they never seem to work
+=> END
+
+~ inspect_certificate
+% Jacob: Huh... back when I thought a badge could fix the world
+% Jacob: Feels like another life. Before the cases... before she left.
+% Jacob: Graduated with honors... she was in the front row. Smiling like I’d already made it. Now shes gone, left togehter with my will doing this godforskaken Job
+=> END

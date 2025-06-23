@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://caocihig0mxee"]
+[gd_scene load_steps=4 format=3 uid="uid://caocihig0mxee"]
 
+[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/object_scripts/closeup_whiteboard.gd" id="1_pmjg2"]
 [ext_resource type="Texture2D" uid="uid://dy3o5jbmi3w8n" path="res://assets/cases/00_tutorial/scenes/tuto_office/background/closeup_whiteboard.png" id="1_tfjsq"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/object_scripts/back_to_office_from_board.gd" id="2_qn7pq"]
 
 [node name="tuto_office_board" type="Node2D"]
+script = ExtResource("1_pmjg2")
 
 [node name="CloseupWhiteboard" type="Sprite2D" parent="."]
 position = Vector2(576, 324)

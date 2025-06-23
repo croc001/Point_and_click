@@ -402,7 +402,6 @@ scale = Vector2(1.25758, 1.40218)
 texture = ExtResource("6_sanps")
 
 [node name="SpinningCursor" type="AnimatedSprite2D" parent="."]
-position = Vector2(9, 11)
 sprite_frames = SubResource("SpriteFrames_fl3or")
 animation = &"cursor_spinning"
 frame = 5
