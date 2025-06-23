@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://bkjn67pjpmjb1"
+path="res://.godot/imported/inspect_objects.dialogue-6f6231fbae808fdbfce068ed4ed57709.tres"
+
+[deps]
+
+source_file="res://assets/cases/00_tutorial/scenes/tuto_office/dialogue/inspect_objects.dialogue"
+dest_files=["res://.godot/imported/inspect_objects.dialogue-6f6231fbae808fdbfce068ed4ed57709.tres"]
+
+[params]
+
+defaults=true

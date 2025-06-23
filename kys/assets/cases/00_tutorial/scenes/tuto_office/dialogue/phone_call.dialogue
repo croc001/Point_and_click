@@ -1,11 +1,16 @@
 ~ phone_call
-Main Character: youre speaking to detectiv (Name of character) how can i help you!
+Jacob: Youre speaking to detectiv Trace how can i help you!
 Person on the phone: ...
-Main Character: A missing person? How long has he been missing for?
+Jacob: A missing person? Can you give me futher Informations about him ? 
 Person on the phone: ...
-Main Character: A week? That is along time, he never messaged you?
+Jacob: I understand that it is hard for you Sir but try to focus, i get right to it.
+Person on the phone: ...
+Jacob notes down: Iggy Welst, 16 Years old, male, ca. 173 cm tall, Hair: brown, Eyes: brown, Went missing after School
+Jacob: How long has he been missing for?
+Person on the phone: ...
+Jacob: A week? That is along time, he never messaged you?
 Person on the phone: ... 
-Main Character: Was there anything strange about him when you last talked to him
+Jacob: Was there anything strange about him when you last talked to him
 Person on the phone: ...
-Main Character: I understand, i will start right away
+Jacob: I understand, i will start right away
 => END
