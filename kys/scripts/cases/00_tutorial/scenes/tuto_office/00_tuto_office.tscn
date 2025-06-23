@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://scripts/common/SceneSwitchButton.gd" id="2_vtybv"]
 [ext_resource type="PackedScene" uid="uid://bpxhtykqwqije" path="res://assets/cases/00_tutorial/scenes/tuto_office/background/tuto_office_clock.tscn" id="3_f63my"]
 [ext_resource type="PackedScene" uid="uid://d32dan1mv2sr4" path="res://assets/cases/00_tutorial/scenes/tuto_office/background/tuto_office_closeup_pc.tscn" id="4_cahqc"]
-[ext_resource type="PackedScene" uid="uid://dsclloasjh410" path="res://tuto_office_board.tscn" id="5_kthfu"]
+[ext_resource type="PackedScene" uid="uid://b0v7d62gft74e" path="res://tuto_office_board.tscn" id="5_kthfu"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/tuto_office_phone.gd" id="6_gd1ue"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/tuto_phone_timer.gd" id="7_md7qg"]
 [ext_resource type="AudioStream" uid="uid://dlthcxx25it5a" path="res://assets/cases/00_tutorial/scenes/tuto_office/audio/fx/phone_ring.mp3" id="8_2adsv"]
@@ -74,9 +74,9 @@ animations = [{
 }]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_2n0mp"]
-vertices = PackedVector2Array(394.313, 55.4922, 449.891, 65.7266, 157.57, 65.8281, 163.25, 63.1172, 197.039, 59.5469, 198.609, 45.3906, 169.43, 59.5469, 50.9219, 65.5781, 32.0234, 65.5, 51.6094, 61.6563)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(4, 5, 0), PackedInt32Array(4, 3, 6), PackedInt32Array(7, 8, 9)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(81.9534, 45.536, 117.193, 45.654, 117.193, 49.5469, 188.083, 49.5469, 189.722, 34.9188, 395.425, 45.536, 471.642, 59.5743, 472.871, 75.736, 113.506, 75.854, 158.58, 54.2657, 161.039, 52.8501, 100.393, 52.1423, 61.4651, 63.3493, 59.826, 72.6689, 58.1869, 75.6181, 3.27814, 75.3821, 2.4586, 61.1079)])
+vertices = PackedVector2Array(473.672, 75.4063, 100.078, 75.8281, 104.078, 73.8828, 144.82, 68.7734, 190.656, 46.9219, 190.648, 46.9063, 396.172, 45.8594, 475.898, 60.3594, 63.6719, 63.8516, 45.3281, 76.4063, 8.75781, 75.75, 1.42188, 60.6719, 34.6563, 53.2266, 53.8125, 50.2422, 88.0938, 46.5781, 78.4922, 56.0703, 86.6328, 52.6328, 143.078, 49.5391, 140.523, 47.5234)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(0, 4, 5, 6, 7), PackedInt32Array(8, 9, 10, 11, 12, 13, 14), PackedInt32Array(15, 8, 14), PackedInt32Array(16, 15, 14), PackedInt32Array(17, 16, 14, 18), PackedInt32Array(17, 18, 4), PackedInt32Array(3, 17, 4, 0)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(32.7814, 43.4126, 52.4502, 40.3454, 87.6902, 36.5704, 140.55, 37.5141, 190.542, 36.9243, 397.064, 35.8625, 487.213, 52.2602, 482.296, 85.4095, 56.5479, 85.8814, 101.213, 64.1751, 133.994, 60.0462, 88.9195, 62.5235, 82.773, 65.1188, 68.8409, 72.4329, 48.3525, 86.4712, 2.4586, 85.6454, -13.1126, 53.6759)])
 
 [node name="00_tuto_office" type="Node2D"]
 script = ExtResource("1_pu6w3")
@@ -197,7 +197,7 @@ position = Vector2(193, 511)
 scale = Vector2(1.69, 1.69)
 
 [node name="Bastard" type="NavigationRegion2D" parent="."]
-position = Vector2(-3, 3)
+position = Vector2(-7, 6)
 scale = Vector2(2.44041, 8.47681)
 navigation_polygon = SubResource("NavigationPolygon_2n0mp")
 

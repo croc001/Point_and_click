@@ -1,8 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://5qcq1py1n1ra"]
+[gd_scene load_steps=6 format=3 uid="uid://5qcq1py1n1ra"]
 
 [ext_resource type="Texture2D" uid="uid://ocxasg0p5wu6" path="res://assets/cases/00_tutorial/scenes/tuto_school/background/school.png" id="1_1o0di"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_school/tuto_school.gd" id="1_5tafw"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_school/button_school_inside.gd" id="2_cw4ge"]
+[ext_resource type="PackedScene" uid="uid://lhqb8jhlpqc2" path="res://assets/global/characters/main/MainCharacter.tscn" id="4_bmjrl"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_u5mlc"]
+vertices = PackedVector2Array(769.008, 537.141, 767, 516.07, 1173.19, 518.93, 1176.8, 700, 17.5078, 517.047, 358.203, 518.938, 357.211, 531.859, 8.50781, 700)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6), PackedInt32Array(3, 7, 4, 6), PackedInt32Array(3, 6, 0)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(8, 507, 369, 509, 368, 522, 758, 527, 756, 506, 1183, 509, 1187, 710, -2, 710)])
 
 [node name="TutoSchool" type="Node2D"]
 script = ExtResource("1_5tafw")
@@ -20,5 +26,11 @@ offset_top = 308.0
 offset_right = 645.0
 offset_bottom = 473.0
 script = ExtResource("2_cw4ge")
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_u5mlc")
+
+[node name="MainCharacter" parent="NavigationRegion2D" instance=ExtResource("4_bmjrl")]
+position = Vector2(272, 478)
 
 [connection signal="pressed" from="Button_school_inside" to="." method="_on_button_school_inside_pressed"]

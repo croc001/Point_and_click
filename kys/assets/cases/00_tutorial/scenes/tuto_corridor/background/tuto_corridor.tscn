@@ -1,10 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://b4176x40cccpr"]
+[gd_scene load_steps=8 format=3 uid="uid://b4176x40cccpr"]
 
 [ext_resource type="Texture2D" uid="uid://yjgmnskg0ubg" path="res://assets/cases/00_tutorial/scenes/tuto_corridor/background/tuto_corridor.png" id="1_27v2j"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_corridor/main_scripts.gd/tuto_corridor.gd" id="1_w4cie"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_corridor/main_scripts.gd/from_corridor_to_office.gd" id="2_ghlkh"]
 [ext_resource type="Texture2D" uid="uid://dogkavm0a4cip" path="res://assets/cases/00_tutorial/scenes/tuto_corridor/character/John_Officer.png" id="3_f1k51"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_corridor/object_scripts/john_officer.gd" id="5_lphtu"]
+[ext_resource type="PackedScene" uid="uid://lhqb8jhlpqc2" path="res://assets/global/characters/main/MainCharacter.tscn" id="6_3gnhc"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_7mx1e"]
+vertices = PackedVector2Array(852.938, 334.758, 1084.51, 630.07, 109.219, 633.813, 798.844, 332.102)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(61, 644, 797, 322, 858, 325, 1105, 640)])
 
 [node name="tuto_corridor" type="Node2D"]
 script = ExtResource("1_w4cie")
@@ -29,5 +35,11 @@ position = Vector2(657.5, 457.313)
 scale = Vector2(1.49, 1.59214)
 texture = ExtResource("3_f1k51")
 script = ExtResource("5_lphtu")
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_7mx1e")
+
+[node name="MainCharacter" parent="." instance=ExtResource("6_3gnhc")]
+position = Vector2(162, 619)
 
 [connection signal="pressed" from="from corridor to office" to="from corridor to office" method="_on_pressed"]
