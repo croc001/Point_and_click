@@ -39,7 +39,7 @@ func save_game(slot_name: String = "") -> void:
 	# 1) Record current scene path
 	save_data["scene"] = get_tree().current_scene.scene_file_path
 	# 2) Record any global flags
-	save_data["phone_answered"] = GlobalVar.phone_is_answered
+	#save_data["phone_answered"] = GlobalVar.phone_is_answered
 
 	# 3) Serialize to JSON
 	var json_str: String = JSON.stringify(save_data)

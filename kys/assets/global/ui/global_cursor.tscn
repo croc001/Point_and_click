@@ -1,6 +1,5 @@
-[gd_scene load_steps=10 format=3 uid="uid://bewms8rnmadgd"]
+[gd_scene load_steps=9 format=3 uid="uid://bewms8rnmadgd"]
 
-[ext_resource type="Script" path="res://assets/global/ui/global_cursor.gd" id="1_n8ulf"]
 [ext_resource type="Texture2D" uid="uid://d1v4h647xlmaf" path="res://cursor_spin_basic_sprite.png" id="1_r4rt1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h1srr"]
@@ -54,7 +53,6 @@ animations = [{
 }]
 
 [node name="GlobalCursor" type="CanvasLayer"]
-script = ExtResource("1_n8ulf")
 
 [node name="AnimatedCursor" type="AnimatedSprite2D" parent="."]
 z_index = 100

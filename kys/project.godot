@@ -23,18 +23,18 @@ aseprite_executable_path="C:/Users/Danie/Desktop/Aseprite-v1.3.9.1-trial/Aseprit
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 GlobalVar="*res://scripts/global/global_var.gd"
-GlobalCursor="*res://assets/global/ui/global_cursor.tscn"
-CursorManager="*res://scripts/common/CursorManager.gd"
 SaveManager="*res://scripts/common/SaveManager.gd"
 SaveLoadMenu="*res://assets/global/ui/savescreen/SaveLoadMenu.tscn"
 MapOverlay="*res://assets/global/ui/map/MapOverlay.tscn"
-InventoryMenu="*res://assets/global/ui/phone/inventory/InventoryMenu.tscn"
+InventoryMenu="res://assets/global/ui/phone/inventory/InventoryMenu.tscn"
 DetectivePhone="*res://assets/global/ui/phone/detective_phone.tscn"
-PlayerInventory="*res://assets/global/ui/phone/inventory/playerInventory.tres"
+PlayerInventory="res://assets/global/ui/phone/inventory/playerInventory.tres"
 
 [display]
 
 window/stretch/mode="viewport"
+mouse_cursor/custom_image="res://assets/global/cursor/cursor_basic.png"
+mouse_cursor/custom_image_hotspot=Vector2(37, 26)
 
 [dotnet]
 

@@ -5,8 +5,6 @@ Generischer Button zum Szenenwechsel + Hover-Cursor.
 
 @export var target_scene : PackedScene        # im Inspector auswählen
 
-func _on_mouse_entered(): CursorManager.set_eye()
-func _on_mouse_exited():  CursorManager.set_basic()
 
 func _on_pressed() -> void:
 	if target_scene:
