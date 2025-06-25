@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://cat6dy4hy6s0t"]
+[gd_scene load_steps=29 format=3 uid="uid://cat6dy4hy6s0t"]
 
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/00_tuto_office.gd" id="1_pu6w3"]
 [ext_resource type="Texture2D" uid="uid://bf0quatrdl6bm" path="res://assets/cases/00_tutorial/scenes/tuto_office/background/detective_office_new.png" id="2_if1x8"]
@@ -19,7 +19,6 @@
 [ext_resource type="PackedScene" uid="uid://co2a42of6qxpx" path="res://assets/global/ui/phone/inventory/items/test_item.tscn" id="19_41eyn"]
 [ext_resource type="PackedScene" uid="uid://lhqb8jhlpqc2" path="res://assets/global/characters/main/MainCharacter.tscn" id="20_cl4vq"]
 [ext_resource type="PackedScene" uid="uid://bksh2lt0x3kf" path="res://assets/global/ui/phone/inventory/items/smartphone.tscn" id="20_fcn63"]
-[ext_resource type="PackedScene" uid="uid://cte7qgnlox211" path="res://assets/global/cursor/cursor_basic.tscn" id="20_felgf"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nqryu"]
 
@@ -203,10 +202,6 @@ navigation_polygon = SubResource("NavigationPolygon_2n0mp")
 
 [node name="MainCharacter" parent="." instance=ExtResource("20_cl4vq")]
 position = Vector2(631, 455)
-
-[node name="layer_for_Cursor_Basic" type="CanvasLayer" parent="."]
-
-[node name="cursor_basic" parent="layer_for_Cursor_Basic" instance=ExtResource("20_felgf")]
 
 [connection signal="mouse_entered" from="clock" to="clock" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="clock" to="clock" method="_on_mouse_exited"]

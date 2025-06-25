@@ -29,7 +29,7 @@ MapOverlay="*res://assets/global/ui/map/MapOverlay.tscn"
 InventoryMenu="*res://assets/global/ui/phone/inventory/InventoryMenu.tscn"
 DetectivePhone="*res://assets/global/ui/phone/detective_phone.tscn"
 PlayerInventory="*res://assets/global/ui/phone/inventory/playerInventory.tres"
-LayerForCursorBasic="*res://layer_for_cursor_basic.gd"
+CursorBasic="*res://assets/global/cursor/cursor_basic.tscn"
 
 [display]
 
