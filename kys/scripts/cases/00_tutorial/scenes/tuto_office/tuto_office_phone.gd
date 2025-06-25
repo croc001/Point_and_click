@@ -1,7 +1,9 @@
-extends Button
+extends Interactable_object_button
 
 var call_res = load("res://assets/cases/00_tutorial/scenes/tuto_office/dialogue/phone_call.dialogue")
 
+func _ready() -> void:
+	cursor_hover_state = "cursor_spinning"
 
 func _on_pressed() -> void:
 	# Lösche den Ring-Sound-Player (wenn er noch abgespielt wird)

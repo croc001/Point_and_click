@@ -1,6 +1,6 @@
-extends Button
+extends Interactable_object_button
 """
-Generischer Button zum Szenenwechsel + Hover-Cursor.
+Generischer Button zum Szenenwechsel
 """
 
 @export var target_scene : PackedScene        # im Inspector auswählen

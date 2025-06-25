@@ -1,0 +1,79 @@
+[gd_scene load_steps=12 format=3 uid="uid://dqo01sxqe5iab"]
+
+[ext_resource type="Texture2D" uid="uid://cxoirc4go57kb" path="res://assets/global/cursor/cursor_eye.png" id="1_soy8m"]
+[ext_resource type="Texture2D" uid="uid://1uyrythwr0v2" path="res://assets/global/cursor/cursor_basic.png" id="1_vtr7r"]
+[ext_resource type="Script" path="res://assets/global/cursor/cursor_basic.gd" id="2_nxje3"]
+[ext_resource type="Texture2D" uid="uid://kwh6ailuxmwi" path="res://assets/global/cursor/cursor_sping_eye_sprite.png" id="2_wonfn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hq343"]
+atlas = ExtResource("2_wonfn")
+region = Rect2(0, 0, 76, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ix17f"]
+atlas = ExtResource("2_wonfn")
+region = Rect2(76, 0, 76, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kcc0l"]
+atlas = ExtResource("2_wonfn")
+region = Rect2(152, 0, 76, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_61xmn"]
+atlas = ExtResource("2_wonfn")
+region = Rect2(228, 0, 76, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2pvlf"]
+atlas = ExtResource("2_wonfn")
+region = Rect2(304, 0, 76, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uobtl"]
+atlas = ExtResource("2_wonfn")
+region = Rect2(380, 0, 76, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gluot"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_soy8m")
+}],
+"loop": true,
+"name": &"cursor_eye",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hq343")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ix17f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kcc0l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_61xmn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2pvlf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uobtl")
+}],
+"loop": true,
+"name": &"cursor_spinning",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_vtr7r")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 1.0
+}]
+
+[node name="Cursor" type="AnimatedSprite2D"]
+z_index = 4096
+sprite_frames = SubResource("SpriteFrames_gluot")
+animation = &"cursor_spinning"
+speed_scale = 2.0
+script = ExtResource("2_nxje3")
