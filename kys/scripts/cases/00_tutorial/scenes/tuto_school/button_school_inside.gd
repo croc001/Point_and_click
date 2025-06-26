@@ -1,1 +1,1 @@
-extends Button
+extends Interactable_object_button

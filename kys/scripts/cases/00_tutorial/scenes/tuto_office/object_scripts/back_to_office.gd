@@ -1,4 +1,4 @@
-extends Button
+extends Interactable_object_button
 
 
 # Called when the node enters the scene tree for the first time.

@@ -27,6 +27,16 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(32.7814, 43.4126, 52.45
 [node name="00_tuto_office" type="Node2D"]
 script = ExtResource("1_pu6w3")
 
+[node name="pc" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 213.0
+offset_top = 423.0
+offset_right = 286.0
+offset_bottom = 512.0
+script = ExtResource("2_vtybv")
+target_scene = ExtResource("4_cahqc")
+
 [node name="clock" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
 self_modulate = Color(1, 1, 1, 0)
@@ -131,40 +141,9 @@ navigation_polygon = SubResource("NavigationPolygon_2n0mp")
 [node name="MainCharacter" parent="." instance=ExtResource("20_cl4vq")]
 position = Vector2(631, 455)
 
-[node name="window2" type="Button" parent="."]
-modulate = Color(1, 1, 1, 0)
-self_modulate = Color(1, 1, 1, 0)
-offset_left = 213.0
-offset_top = 423.0
-offset_right = 286.0
-offset_bottom = 512.0
-script = ExtResource("2_vtybv")
-target_scene = ExtResource("4_cahqc")
-
-[connection signal="mouse_entered" from="clock" to="clock" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="clock" to="clock" method="_on_mouse_exited"]
-[connection signal="pressed" from="clock" to="clock" method="_on_pressed"]
-[connection signal="mouse_entered" from="board" to="board" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="board" to="board" method="_on_mouse_exited"]
-[connection signal="pressed" from="board" to="board" method="_on_pressed"]
-[connection signal="mouse_entered" from="certificate" to="certificate" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="certificate" to="certificate" method="_on_mouse_exited"]
-[connection signal="pressed" from="certificate" to="certificate" method="_on_pressed"]
-[connection signal="mouse_entered" from="window" to="window" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="window" to="window" method="_on_mouse_exited"]
-[connection signal="pressed" from="window" to="window" method="_on_pressed"]
-[connection signal="mouse_entered" from="register" to="register" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="register" to="register" method="_on_mouse_exited"]
-[connection signal="pressed" from="register" to="register" method="_on_pressed"]
-[connection signal="mouse_entered" from="door to corridor" to="door to corridor" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="door to corridor" to="door to corridor" method="_on_mouse_exited"]
-[connection signal="pressed" from="door to corridor" to="door to corridor" method="_on_pressed"]
 [connection signal="timeout" from="tuto_phone_timer" to="tuto_phone_timer" method="_on_timeout"]
 [connection signal="focus_entered" from="tuto_phone_timer/phone" to="tuto_phone_timer/phone" method="_on_focus_entered"]
 [connection signal="mouse_entered" from="tuto_phone_timer/phone" to="tuto_phone_timer/phone" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="tuto_phone_timer/phone" to="tuto_phone_timer/phone" method="_on_mouse_exited"]
 [connection signal="pressed" from="tuto_phone_timer/phone" to="tuto_phone_timer/phone" method="_on_pressed"]
 [connection signal="finished" from="tuto_phone_timer/phone_ring" to="tuto_phone_timer/phone_ring" method="_on_finished"]
-[connection signal="mouse_entered" from="window2" to="window2" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="window2" to="window2" method="_on_mouse_exited"]
-[connection signal="pressed" from="window2" to="window2" method="_on_pressed"]
