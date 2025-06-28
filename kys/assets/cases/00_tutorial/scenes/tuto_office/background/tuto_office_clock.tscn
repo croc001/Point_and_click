@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bpxhtykqwqije"]
 
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/object_scripts/tuto_office_clock.gd" id="1_dm8tl"]
-[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/object_scripts/back_to_office.gd" id="2_uhh8i"]
+[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/object_scripts/back_to_office.gd" id="2_yr2bw"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_a5teq"]
 load_path = "res://.godot/imported/closeup_clock.jpg-b66498364dcc81f56c08c4de71e4bbc8.ctex"
@@ -9,16 +9,13 @@ load_path = "res://.godot/imported/closeup_clock.jpg-b66498364dcc81f56c08c4de71e
 [node name="clock_closeup" type="Node2D"]
 script = ExtResource("1_dm8tl")
 
-[node name="back_to_office" type="Button" parent="."]
-modulate = Color(1, 1, 1, 0)
-self_modulate = Color(1, 1, 1, 0)
-offset_right = 1155.0
-offset_bottom = 652.0
-script = ExtResource("2_uhh8i")
-
 [node name="Office_clock_closeup" type="Sprite2D" parent="."]
 position = Vector2(576, 324)
 scale = Vector2(1.72973, 1.82022)
 texture = SubResource("CompressedTexture2D_a5teq")
 
-[connection signal="pressed" from="back_to_office" to="back_to_office" method="_on_pressed"]
+[node name="back_to_office" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+offset_right = 1152.0
+offset_bottom = 648.0
+script = ExtResource("2_yr2bw")

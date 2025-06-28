@@ -6,6 +6,7 @@ Generischer Button zum Szenenwechsel
 @export var target_scene : PackedScene        # im Inspector auswählen
 
 func _ready() -> void:
+	print("kek")
 	super._ready()
 	connect("pressed", Callable(self,"_on_pressed"))
 

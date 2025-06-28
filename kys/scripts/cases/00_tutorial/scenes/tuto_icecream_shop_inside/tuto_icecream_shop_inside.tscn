@@ -39,6 +39,7 @@ offset_top = -87.45
 offset_right = -50.0
 offset_bottom = -87.525
 script = ExtResource("5_2074w")
+cursor_hover_state = "cursor_spinning"
 
 [connection signal="pressed" from="Button_icecream_shop_outside" to="." method="_on_button_icecream_shop_outside_pressed"]
 [connection signal="pressed" from="IcecreamMan/button_interaction_IcyGiovanni" to="IcecreamMan/button_interaction_IcyGiovanni" method="_on_pressed"]

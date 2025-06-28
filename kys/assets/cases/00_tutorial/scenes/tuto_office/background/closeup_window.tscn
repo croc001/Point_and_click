@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://df75pkg02w12f"]
 
 [ext_resource type="Texture2D" uid="uid://du3gbqf4qemgf" path="res://assets/cases/00_tutorial/scenes/tuto_office/background/closeup_window.png" id="1_o0cbi"]
-[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/object_scripts/button_back_to_office_from_window.gd" id="2_36qyj"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/object_scripts/window_closeup.gd" id="2_cihyl"]
+[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/object_scripts/back_to_office.gd" id="3_5rkkp"]
 
 [node name="window" type="Node2D"]
 script = ExtResource("2_cihyl")
@@ -17,6 +17,4 @@ modulate = Color(1, 1, 1, 0)
 self_modulate = Color(1, 1, 1, 0)
 offset_right = 1152.0
 offset_bottom = 648.0
-script = ExtResource("2_36qyj")
-
-[connection signal="pressed" from="Button_back_to_office_from_window" to="Button_back_to_office_from_window" method="_on_pressed"]
+script = ExtResource("3_5rkkp")

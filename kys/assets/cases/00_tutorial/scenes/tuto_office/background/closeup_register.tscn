@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://djefkcm4ggur4" path="res://assets/cases/00_tutorial/scenes/tuto_office/background/closeup_register.png" id="1_0avfw"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/object_scripts/closeup_register.gd" id="1_tuvm6"]
-[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/button_back_from_register.gd" id="2_tiwih"]
+[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/object_scripts/back_to_office.gd" id="3_87fa6"]
 
 [node name="register" type="Node2D"]
 script = ExtResource("1_tuvm6")
@@ -17,6 +17,4 @@ modulate = Color(1, 1, 1, 0)
 self_modulate = Color(1, 1, 1, 0)
 offset_right = 1149.0
 offset_bottom = 651.0
-script = ExtResource("2_tiwih")
-
-[connection signal="pressed" from="button_back_from_register" to="button_back_from_register" method="_on_pressed"]
+script = ExtResource("3_87fa6")

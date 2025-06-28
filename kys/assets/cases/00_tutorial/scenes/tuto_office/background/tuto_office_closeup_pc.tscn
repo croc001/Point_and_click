@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cwipy2ctchtmd" path="res://assets/cases/00_tutorial/scenes/tuto_office/objects/closeup_pc.png" id="1_ouf3p"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/object_scripts/tuto_office_closeup_pc.gd" id="1_xrno6"]
-[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/object_scripts/back_to_office_from_pc.gd" id="2_d6fwx"]
+[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/object_scripts/back_to_office.gd" id="3_f22ns"]
 
 [node name="tuto_office_closeup_pc" type="Node2D"]
 script = ExtResource("1_xrno6")
@@ -17,6 +17,4 @@ modulate = Color(1, 1, 1, 0)
 self_modulate = Color(1, 1, 1, 0)
 offset_right = 1156.0
 offset_bottom = 651.0
-script = ExtResource("2_d6fwx")
-
-[connection signal="pressed" from="back_to_office_from_pc" to="back_to_office_from_pc" method="_on_pressed"]
+script = ExtResource("3_f22ns")

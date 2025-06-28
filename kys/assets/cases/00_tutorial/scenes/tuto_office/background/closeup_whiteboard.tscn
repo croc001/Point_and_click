@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/object_scripts/closeup_whiteboard.gd" id="1_pmjg2"]
 [ext_resource type="Texture2D" uid="uid://dy3o5jbmi3w8n" path="res://assets/cases/00_tutorial/scenes/tuto_office/background/closeup_whiteboard.png" id="1_tfjsq"]
-[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/object_scripts/back_to_office_from_board.gd" id="2_qn7pq"]
+[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/object_scripts/back_to_office.gd" id="3_5krcp"]
 
 [node name="tuto_office_board" type="Node2D"]
 script = ExtResource("1_pmjg2")
@@ -17,6 +17,4 @@ modulate = Color(1, 1, 1, 0)
 self_modulate = Color(1, 1, 1, 0)
 offset_right = 1152.0
 offset_bottom = 649.0
-script = ExtResource("2_qn7pq")
-
-[connection signal="pressed" from="back_to_office_from_board" to="back_to_office_from_board" method="_on_pressed"]
+script = ExtResource("3_5krcp")

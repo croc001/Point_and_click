@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://byprnvb1622tk"]
+[gd_scene load_steps=6 format=3 uid="uid://byprnvb1622tk"]
 
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_forest_cabin_outside/tuto_forest_cabin_outside.gd" id="1_8dpj3"]
 [ext_resource type="Texture2D" uid="uid://dqo4l2ppciidx" path="res://assets/cases/00_tutorial/scenes/tuto_forest_cabin_outside/forest_cabin_outside.png" id="1_vij3o"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_forest_cabin_outside/button_forest_trail_1_1.gd" id="2_d38al"]
-[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_forest_cabin_outside/button_forest_cabin_inside.gd" id="4_ys4nw"]
+[ext_resource type="Script" path="res://scripts/common/SceneSwitchButton.gd" id="4_802ja"]
+[ext_resource type="PackedScene" uid="uid://cnh8hery3ks0u" path="res://scripts/cases/00_tutorial/scenes/tuto_forest_cabin_inside/tuto_forest_cabin_inside.tscn" id="5_yfnfr"]
 
 [node name="TutoForestCabinOutside" type="Node2D"]
 script = ExtResource("1_8dpj3")
@@ -27,7 +28,5 @@ offset_left = 500.0
 offset_top = 343.0
 offset_right = 614.0
 offset_bottom = 591.0
-script = ExtResource("4_ys4nw")
-
-[connection signal="pressed" from="Button_forest_trail_1_1" to="." method="_on_button_forest_trail_1_1_pressed"]
-[connection signal="pressed" from="Button_forest_cabin_inside" to="." method="_on_button_forest_cabin_inside_pressed"]
+script = ExtResource("4_802ja")
+target_scene = ExtResource("5_yfnfr")

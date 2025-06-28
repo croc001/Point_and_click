@@ -19,5 +19,3 @@ offset_top = 589.0
 offset_right = 839.0
 offset_bottom = 684.0
 script = ExtResource("2_vf43x")
-
-[connection signal="pressed" from="Button_forest_trail_1" to="." method="_on_button_forest_trail_1_pressed"]

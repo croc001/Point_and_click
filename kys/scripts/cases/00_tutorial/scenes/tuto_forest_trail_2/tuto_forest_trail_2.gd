@@ -9,7 +9,3 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
-
-
-func _on_button_forest_trail_1_pressed() -> void:
-	get_tree().change_scene_to_file("res://scripts/cases/00_tutorial/scenes/tuto_forest_trail_1/forest_trail_1.tscn")

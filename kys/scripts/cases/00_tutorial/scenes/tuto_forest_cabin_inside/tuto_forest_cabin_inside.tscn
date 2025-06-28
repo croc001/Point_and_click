@@ -19,5 +19,3 @@ offset_top = 215.0
 offset_right = 1048.0
 offset_bottom = 580.0
 script = ExtResource("2_xl7ti")
-
-[connection signal="pressed" from="Button_forest_cabin_outside" to="." method="_on_button_forest_cabin_outside_pressed"]

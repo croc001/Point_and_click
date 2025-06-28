@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dwr3qijja5srh" path="res://assets/cases/00_tutorial/scenes/tuto_office/background/closeup_sheet.png" id="1_jhv1i"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/object_scripts/closeup_certificate.gd" id="1_m2rba"]
-[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/object_scripts/back_from_certificate.gd" id="2_vawj0"]
+[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/object_scripts/back_to_office.gd" id="3_et40x"]
 
 [node name="closeup_certificate" type="Node2D"]
 script = ExtResource("1_m2rba")
@@ -17,6 +17,4 @@ modulate = Color(1, 1, 1, 0)
 self_modulate = Color(1, 1, 1, 0)
 offset_right = 1152.0
 offset_bottom = 650.0
-script = ExtResource("2_vawj0")
-
-[connection signal="pressed" from="back_from_certificate" to="back_from_certificate" method="_on_pressed"]
+script = ExtResource("3_et40x")

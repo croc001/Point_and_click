@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://8yd8p7frptya" path="res://assets/cases/00_tutorial/scenes/tuto_school_inside/tuto_school_inside.png" id="1_nsrw3"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_school_inside/tuto_school_inside.gd" id="1_tqfbj"]
-[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_school_inside/button.gd" id="2_ech2s"]
+[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_school_inside/button_school_outside.gd" id="3_8a6pv"]
 [ext_resource type="Texture2D" uid="uid://cwflruspl08up" path="res://assets/cases/00_tutorial/scenes/tuto_school_inside/character/Teacher.png" id="4_2sg0j"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_school_inside/object_scripts/button_interaction_teacher.gd" id="5_ots2y"]
 
@@ -20,7 +20,7 @@ offset_left = 429.0
 offset_top = 221.0
 offset_right = 753.0
 offset_bottom = 514.0
-script = ExtResource("2_ech2s")
+script = ExtResource("3_8a6pv")
 
 [node name="Teacher" type="Sprite2D" parent="."]
 position = Vector2(1041, 450)
@@ -38,6 +38,6 @@ offset_top = -87.425
 offset_right = -50.0
 offset_bottom = -87.0
 script = ExtResource("5_ots2y")
+cursor_hover_state = "cursor_spinning"
 
-[connection signal="pressed" from="Button_school_outside" to="." method="_on_button_school_outside_pressed"]
 [connection signal="pressed" from="Teacher/button_interaction_teacher" to="Teacher/button_interaction_teacher" method="_on_pressed"]
