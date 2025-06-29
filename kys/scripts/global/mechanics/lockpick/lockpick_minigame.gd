@@ -71,6 +71,10 @@ func attempt_unlock(delta: float):
 		lock_turn_progress = max(lock_turn_progress - delta * lock_turn_speed * 2, 0.0)
 		lock.rotation_degrees = lock_turn_progress
 
+signal lockpick_succeeded  # <- GANZ OBEN hinzufügen
+
 func unlock():
 	is_unlocked = true
 	print("Unlocked!")
+	emit_signal("lockpick_succeeded")  # <- SIGNAL SENDEN
+	queue_free()  # optional: Minispiel schließen
