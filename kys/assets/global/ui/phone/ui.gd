@@ -25,11 +25,19 @@ func _on_map_app_pressed():
 		map_overlay.visible = not map_overlay.visible
 
 func _on_evidence_app_pressed():
-	print("HURENSOHN")
 	if evidence_board == null:
 		var scene = preload("res://assets/global/Evidenceboard/Evidenceboard.tscn")
 		evidence_board = scene.instantiate()
+
+		# Access the Control node where case_data exists
+		var control_node = evidence_board.get_node("Control")
+		control_node.case_data = preload("res://assets/global/Evidenceboard/resources/Office_Evidence.tres")
+
 		get_tree().current_scene.add_child(evidence_board)
+		control_node.show()  # Show the evidence board (the Control node)
+	else:
+		var control_node = evidence_board.get_node("Control")
+		control_node.visible = not control_node.visible
 
 func _on_inventory_app_pressed():
 	print("Inventory geöffnet")

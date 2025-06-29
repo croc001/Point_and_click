@@ -62,5 +62,7 @@ func _on_check_button_pressed():
 
 	if inputs == case_data.correct_answers:
 		feedback_label.text = "Correct combination!"
+		await get_tree().create_timer(2.0).timeout
+		free()
 	else:
 		feedback_label.text = "Incorrect – try again."
