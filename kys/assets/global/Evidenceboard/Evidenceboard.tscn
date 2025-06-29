@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=3 uid="uid://dn6chmuwdsiva"]
+
+[ext_resource type="Script" path="res://assets/global/Evidenceboard/control.gd" id="1_w0sgc"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1153.0
+offset_bottom = 651.0
+script = ExtResource("1_w0sgc")
+
+[node name="hinweisliste" type="VBoxContainer" parent="Control"]
+layout_mode = 0
+offset_left = 97.0
+offset_top = 30.0
+offset_right = 491.0
+offset_bottom = 632.0
+
+[node name="antwort 1" type="LineEdit" parent="Control/hinweisliste"]
+layout_mode = 2
+
+[node name="antwort 2" type="LineEdit" parent="Control/hinweisliste"]
+layout_mode = 2
+
+[node name="antwort 3" type="LineEdit" parent="Control/hinweisliste"]
+layout_mode = 2
+
+[node name="checkbutton" type="Button" parent="."]
+offset_left = 905.0
+offset_top = 568.0
+offset_right = 1139.0
+offset_bottom = 629.0
+text = "checklameck"
+
+[node name="feedbacklabel" type="Label" parent="."]
+offset_left = 655.0
+offset_top = 575.0
+offset_right = 878.0
+offset_bottom = 619.0
+
+[connection signal="pressed" from="checkbutton" to="Control" method="_on_checkbutton_pressed"]

@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Hint" load_steps=2 format=3 uid="uid://yyt5heff5jae"]
+
+[ext_resource type="Script" path="res://assets/global/Evidenceboard/Hint.gd" id="1_owde6"]
+
+[resource]
+script = ExtResource("1_owde6")
+text = "Iggy Welst"
+id = "Iggy Welst"
