@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="CaseResource" load_steps=2 format=3 uid="uid://c1fhno3bvhgh5"]
+
+[ext_resource type="Script" path="res://assets/global/Evidenceboard/Test/CaseResource.gd" id="1_dpu7c"]
+
+[resource]
+script = ExtResource("1_dpu7c")
+text_template = Array[String](["A 16 Year old ", "_", " is missing for ", "_", " Named ", "_"])
+correct_answers = Array[String](["male", "a week", "Iggy Welst"])
+hints = Array[Dictionary]([{
+"id": "male",
+"text": "Male"
+}, {
+"id": "female",
+"text": "Female"
+}, {
+"id": "a week",
+"text": "A Week"
+}, {
+"id": "Iggy Welst",
+"text": "Iggy Welst"
+}, {
+"id": "Detective",
+"text": "Detective"
+}])

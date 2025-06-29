@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dn6chmuwdsiva"]
+[gd_scene load_steps=3 format=3 uid="uid://dn6chmuwdsiva"]
 
 [ext_resource type="Script" path="res://assets/global/Evidenceboard/control.gd" id="1_w0sgc"]
+[ext_resource type="Resource" uid="uid://c1fhno3bvhgh5" path="res://assets/global/Evidenceboard/Test/Office_Evidence.tres" id="2_j0n7c"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 
@@ -10,34 +11,32 @@ anchors_preset = 0
 offset_right = 1153.0
 offset_bottom = 651.0
 script = ExtResource("1_w0sgc")
+case_data = ExtResource("2_j0n7c")
 
-[node name="hinweisliste" type="VBoxContainer" parent="Control"]
+[node name="hintList" type="VBoxContainer" parent="Control"]
 layout_mode = 0
 offset_left = 97.0
 offset_top = 30.0
 offset_right = 491.0
 offset_bottom = 632.0
 
-[node name="antwort 1" type="LineEdit" parent="Control/hinweisliste"]
+[node name="TextGapContainer" type="VBoxContainer" parent="Control/hintList"]
 layout_mode = 2
 
-[node name="antwort 2" type="LineEdit" parent="Control/hinweisliste"]
+[node name="HintButtons" type="VBoxContainer" parent="Control/hintList"]
 layout_mode = 2
 
-[node name="antwort 3" type="LineEdit" parent="Control/hinweisliste"]
-layout_mode = 2
-
-[node name="checkbutton" type="Button" parent="."]
+[node name="checkButton" type="Button" parent="."]
 offset_left = 905.0
 offset_top = 568.0
 offset_right = 1139.0
 offset_bottom = 629.0
 text = "checklameck"
 
-[node name="feedbacklabel" type="Label" parent="."]
+[node name="feedbackLabel" type="Label" parent="."]
 offset_left = 655.0
 offset_top = 575.0
 offset_right = 878.0
 offset_bottom = 619.0
 
-[connection signal="pressed" from="checkbutton" to="Control" method="_on_checkbutton_pressed"]
+[connection signal="pressed" from="checkButton" to="Control" method="_on_checkbutton_pressed"]

@@ -1,48 +1,64 @@
 extends Control
 
-@onready var antwort_felder := [
-	$"hinweisliste/antwort 1",
-	$"hinweisliste/antwort 2",
-	$"hinweisliste/antwort 3"
-]
-@onready var feedback_label := $"../feedbacklabel"
-@onready var hinweis_liste := $hinweisliste
-@onready var check_button := $"../checkbutton"
+@export var case_data: CaseResource
 
+@onready var hint_list := $hintList
+@onready var text_gap_container := $hintList/TextGapContainer
+@onready var feedback_label := $"../feedbackLabel"
+@onready var check_button := $"../checkButton"
+@onready var hint_button_container := $hintList/HintButtons
 
-var richtige_antworten = ["male", "Iggy Welst", "a week"]
+var answer_fields: Array[LineEdit] = []
 
 func _ready():
-	_lade_hinweise()
+	if case_data == null:
+		push_error("No case data assigned! Please select a CaseResource in the Inspector.")
+		return
 
-func _lade_hinweise():
-	var hinweise = [
-		preload("res://assets/global/Evidenceboard/aweek.tres"),
-		preload("res://assets/global/Evidenceboard/detective.tres"),
-		preload("res://assets/global/Evidenceboard/female.tres"),
-		preload("res://assets/global/Evidenceboard/Iggy.tres"),
-		preload("res://assets/global/Evidenceboard/male.tres")
-	]
-	for hinweis in hinweise:
+	_load_case(case_data)
+	check_button.pressed.connect(_on_check_button_pressed)
+
+func _load_case(case: CaseResource):
+	answer_fields.clear()
+
+	# Properly clear the containers
+	for child in text_gap_container.get_children():
+		child.queue_free()
+
+	for child in hint_button_container.get_children():
+		child.queue_free()
+
+	# Build the text with gaps
+	for part in case.text_template:
+		if part == "_":
+			var field = LineEdit.new()
+			field.custom_minimum_size = Vector2(120, 0)
+			answer_fields.append(field)
+			text_gap_container.add_child(field)
+		else:
+			var label = Label.new()
+			label.text = part
+			text_gap_container.add_child(label)
+
+	# Build the hint buttons
+	for hint in case.hints:
 		var btn = Button.new()
-		btn.text = hinweis.text
-		btn.pressed.connect(_on_hinweis_ausgewaehlt.bind(hinweis.id))
-		hinweis_liste.add_child(btn)
+		btn.text = hint["text"]
+		btn.pressed.connect(func(): _on_hint_selected(hint["id"]))
+		hint_button_container.add_child(btn)
 
-func _on_hinweis_ausgewaehlt(hinweis_id: String):
-	# Füllt das erste freie Antwortfeld
-	for feld in antwort_felder:
-		if feld.text == "":
-			feld.text = hinweis_id
+func _on_hint_selected(hint_id: String):
+	for field in answer_fields:
+		if field.text == "":
+			field.text = hint_id
 			return
 
-func _on_checkbutton_pressed():
-	print("asdadadadada")
-	var eingaben = []
-	for feld in antwort_felder:
-		eingaben.append(feld.text.strip_edges().to_lower())
+func _on_check_button_pressed():
+	var inputs = []
+	for field in answer_fields:
+		inputs.append(field.text.strip_edges())
 
-	if eingaben == richtige_antworten:
-		feedback_label.text = "Richtig kombiniert!"
+	if inputs == case_data.correct_answers:
+		feedback_label.text = "Correct combination!"
 	else:
-		feedback_label.text = "Falsch – versuch's nochmal."
+		feedback_label.text = "Incorrect – try again."
