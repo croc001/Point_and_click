@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="CaseResource" load_steps=2 format=3 uid="uid://du3nyl5qfh843"]
+
+[ext_resource type="Script" path="res://assets/global/Evidenceboard/resources/CaseResource.gd" id="1_fj05n"]
+
+[resource]
+script = ExtResource("1_fj05n")
+text_template = Array[String](["_", " an his ", "_", " were ", "_", " They usually meet at ", "_"])
+correct_answers = Array[String](["Iggy", "Friends", "fighting", "the Ice cream shop"])
+hints = Array[Dictionary]([{
+"id": "Iggy",
+"text": "Iggy"
+}, {
+"id": "Friends",
+"text": "Friends"
+}, {
+"id": "Teachers",
+"text": "Teachers"
+}, {
+"id": "sick",
+"text": "sick"
+}, {
+"id": "fighting",
+"text": "fighting"
+}, {
+"id": "the School",
+"text": "the School"
+}, {
+"id": "the Ice cream shop",
+"text": "the Ice cream shop"
+}])

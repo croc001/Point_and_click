@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="CaseResource" load_steps=2 format=3 uid="uid://bdcpyltix1xkg"]
+
+[ext_resource type="Script" path="res://assets/global/Evidenceboard/resources/CaseResource.gd" id="1_8uv0f"]
+
+[resource]
+script = ExtResource("1_8uv0f")
+text_template = Array[String](["_", " and his ", "_", " wanted to ", "_", " at the ", "_", " in the ", "_"])
+correct_answers = Array[String](["Iggy", "Friends", "meet up", "cabin", "woods"])
+hints = Array[Dictionary]([{
+"id": "Iggy",
+"text": "Iggy"
+}, {
+"id": "woods",
+"text": "woods"
+}, {
+"id": "Teachers",
+"text": "Teachers"
+}, {
+"id": "meet up",
+"text": "meet up"
+}, {
+"id": "cabin",
+"text": "cabin"
+}, {
+"id": "the School",
+"text": "the School"
+}, {
+"id": "the Ice cream shop",
+"text": "the Ice cream shop"
+}, {
+"id": "Friends",
+"text": "Friends"
+}])
