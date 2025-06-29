@@ -11,6 +11,7 @@ extends Control
 var answer_fields: Array[LineEdit] = []
 
 func _ready():
+	DetectivePhone.visible = false
 	if case_data == null:
 		push_error("No case data assigned! Please select a CaseResource in the Inspector.")
 		return
