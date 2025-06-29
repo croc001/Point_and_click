@@ -4,13 +4,14 @@ extends Control
 
 @onready var hint_list := $hintList
 @onready var text_gap_container := $hintList/TextGapContainer
-@onready var feedback_label := $"../feedbackLabel"
-@onready var check_button := $"../checkButton"
+@onready var feedback_label := $feedbackLabel
+@onready var check_button := $checkButton
 @onready var hint_button_container := $hintList/HintButtons
 
 var answer_fields: Array[LineEdit] = []
 
 func _ready():
+	hide()  # standardmäßig ausblenden
 	DetectivePhone.visible = false
 	if case_data == null:
 		push_error("No case data assigned! Please select a CaseResource in the Inspector.")

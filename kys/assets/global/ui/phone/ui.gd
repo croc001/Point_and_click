@@ -5,6 +5,7 @@ var is_animating := false
 var phone_start_pos := Vector2()
 var phone_offset_y := -135
 var map_overlay: Node = null
+var evidence_board: Node = null
 
 func _ready():
 	visible = true #das macht das das gesamte handy angezeigt wird oder nicht
@@ -24,7 +25,11 @@ func _on_map_app_pressed():
 		map_overlay.visible = not map_overlay.visible
 
 func _on_evidence_app_pressed():
-	print("Evidenceboard geöffnet")
+	print("HURENSOHN")
+	if evidence_board == null:
+		var scene = preload("res://assets/global/Evidenceboard/Evidenceboard.tscn")
+		evidence_board = scene.instantiate()
+		get_tree().current_scene.add_child(evidence_board)
 
 func _on_inventory_app_pressed():
 	print("Inventory geöffnet")

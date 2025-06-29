@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://assets/global/Evidenceboard/control.gd" id="1_w0sgc"]
 [ext_resource type="Resource" uid="uid://bdcpyltix1xkg" path="res://assets/global/Evidenceboard/resources/Ice_cream_shop_Evidence.tres" id="2_efeol"]
 
-[node name="CanvasLayer" type="CanvasLayer"]
+[node name="Evidenceboard" type="CanvasLayer"]
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -26,17 +26,19 @@ layout_mode = 2
 [node name="HintButtons" type="VBoxContainer" parent="Control/hintList"]
 layout_mode = 2
 
-[node name="checkButton" type="Button" parent="."]
+[node name="checkButton" type="Button" parent="Control"]
+layout_mode = 0
 offset_left = 905.0
 offset_top = 568.0
 offset_right = 1139.0
 offset_bottom = 629.0
 text = "checklameck"
 
-[node name="feedbackLabel" type="Label" parent="."]
+[node name="feedbackLabel" type="Label" parent="Control"]
+layout_mode = 0
 offset_left = 655.0
 offset_top = 575.0
 offset_right = 878.0
 offset_bottom = 619.0
 
-[connection signal="pressed" from="checkButton" to="Control" method="_on_checkbutton_pressed"]
+[connection signal="pressed" from="Control/checkButton" to="Control" method="_on_checkbutton_pressed"]
