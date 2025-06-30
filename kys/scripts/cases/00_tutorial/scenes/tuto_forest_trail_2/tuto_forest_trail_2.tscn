@@ -1,8 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://b5lpgax5os0r3"]
+[gd_scene load_steps=6 format=3 uid="uid://b5lpgax5os0r3"]
 
 [ext_resource type="Texture2D" uid="uid://bpxjjoackrj7w" path="res://assets/cases/00_tutorial/scenes/tuto_forest_trail_2/forest_trail_2.png" id="1_5r4jj"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_forest_trail_2/tuto_forest_trail_2.gd" id="1_xlgdf"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_forest_trail_2/button_forest_trail_1.gd" id="2_vf43x"]
+[ext_resource type="PackedScene" uid="uid://lhqb8jhlpqc2" path="res://assets/global/characters/main/MainCharacter.tscn" id="4_ssb0q"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_1annk"]
+vertices = PackedVector2Array(436.781, 286.867, 530.93, 250.781, 500.938, 269.211, 790.313, 641.938, 66.2031, 637.617, 219.133, 584.148, 337.008, 518.094, 388.852, 321.242, 487.578, 302.633, 419.742, 389.344, 388.102, 346.82, 675.867, 416.609, 744.289, 463.82, 776.656, 525.719, 796.797, 595.719, 423.344, 434.922, 584.43, 370.898, 510.438, 331.852)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(3, 4, 5), PackedInt32Array(3, 5, 6), PackedInt32Array(7, 0, 2, 8, 9, 10), PackedInt32Array(11, 12, 13, 14, 3, 6, 15, 16), PackedInt32Array(17, 16, 15, 9), PackedInt32Array(8, 17, 9)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-38, 647, 52, 632, 215, 575, 331, 510, 413, 431, 410, 393, 378, 350, 379, 316, 432, 278, 552, 232, 573, 230, 579, 233, 509, 276, 499, 301, 517, 324, 589, 362, 681, 408, 752, 457, 786, 522, 807, 595, 799, 652)])
 
 [node name="TutoForestTrail2" type="Node2D"]
 script = ExtResource("1_xlgdf")
@@ -19,3 +25,10 @@ offset_top = 589.0
 offset_right = 839.0
 offset_bottom = 684.0
 script = ExtResource("2_vf43x")
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_1annk")
+
+[node name="MainCharacter" parent="." instance=ExtResource("4_ssb0q")]
+position = Vector2(141, 632)
+scale = Vector2(1.5, 1.5)

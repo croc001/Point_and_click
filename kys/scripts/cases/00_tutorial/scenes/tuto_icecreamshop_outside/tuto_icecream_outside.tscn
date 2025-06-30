@@ -1,9 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://cvy4yxx4tcc6x"]
+[gd_scene load_steps=7 format=3 uid="uid://cvy4yxx4tcc6x"]
 
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_icecreamshop_outside/tuto_icecream_outside.gd" id="1_0s655"]
 [ext_resource type="Texture2D" uid="uid://gbsmsajc16lc" path="res://assets/cases/00_tutorial/scenes/tuto_icecream_shop_outside/icecream_outside.png" id="1_eyddh"]
 [ext_resource type="Script" path="res://scripts/common/SceneSwitchButton.gd" id="3_fdr3w"]
 [ext_resource type="PackedScene" uid="uid://bncr7638p2uch" path="res://scripts/cases/00_tutorial/scenes/tuto_icecream_shop_inside/tuto_icecream_shop_inside.tscn" id="4_eed8l"]
+[ext_resource type="PackedScene" uid="uid://lhqb8jhlpqc2" path="res://assets/global/characters/main/MainCharacter.tscn" id="5_jl2rx"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_cklup"]
+vertices = PackedVector2Array(-6.64844, 506.961, 271.703, 506.031, 269.719, 575.82, -13.2813, 603, 1195, 603.992, 842.867, 586.18, 1195, 513.891, 843.859, 510.102)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 3, 2, 5), PackedInt32Array(6, 4, 5, 7)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-16, 497, 282, 496, 280, 566, 833, 576, 834, 500, 1205, 504, 1205, 614, -24, 613)])
 
 [node name="TutoIcecreamOutside" type="Node2D"]
 script = ExtResource("1_0s655")
@@ -21,3 +27,10 @@ offset_right = 521.0
 offset_bottom = 577.0
 script = ExtResource("3_fdr3w")
 target_scene = ExtResource("4_eed8l")
+
+[node name="MainCharacter" parent="." instance=ExtResource("5_jl2rx")]
+position = Vector2(46, 584)
+scale = Vector2(1.5, 1.5)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_cklup")

@@ -1,10 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://dn18advb57oj0"]
+[gd_scene load_steps=8 format=3 uid="uid://dn18advb57oj0"]
 
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_forest_trail_1.1/tuto_forest_trail_1_1.gd" id="1_3lsis"]
 [ext_resource type="Texture2D" uid="uid://b167m5iak5613" path="res://assets/cases/00_tutorial/scenes/tuto_forest_trail_1.1/forest_trail_1.1.png" id="1_jd5kj"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_forest_trail_1.1/button_forest_trail_1.gd" id="2_daeb0"]
 [ext_resource type="Script" path="res://scripts/common/SceneSwitchButton.gd" id="4_v8prx"]
 [ext_resource type="PackedScene" uid="uid://byprnvb1622tk" path="res://scripts/cases/00_tutorial/scenes/tuto_forest_cabin_outside/tuto_forest_cabin_outside.tscn" id="5_vd41y"]
+[ext_resource type="PackedScene" uid="uid://lhqb8jhlpqc2" path="res://assets/global/characters/main/MainCharacter.tscn" id="6_88n1u"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_wv2gx"]
+vertices = PackedVector2Array(869.563, 582.641, 1053.37, 651.758, -62.2266, 647.039, 792.32, 508.703, -63.8281, 579.672, 54.4219, 532, 129.391, 488.023, 221.93, 451.594, 348.188, 423.969, 428.25, 422, 493.961, 422, 609.078, 399.781, 887.688, 334.867, 833.891, 439.406, 944.313, 382.648, 1151.07, 306.031, 1139.95, 327.188, 1153.06, 325.391)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(3, 0, 2, 4, 5), PackedInt32Array(3, 5, 6, 7, 8, 9, 10), PackedInt32Array(3, 10, 11), PackedInt32Array(3, 11, 12, 13), PackedInt32Array(14, 13, 12), PackedInt32Array(14, 12, 15, 16), PackedInt32Array(15, 17, 16)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-74, 573, -72, 657, 1109, 662, 875, 574, 805, 507, 841, 447, 948, 392, 1142, 337, 1164, 334, 1160, 295, 886, 325, 607, 390, 493, 412, 428, 412, 347, 414, 219, 442, 125, 479, 50, 523)])
 
 [node name="TutoForestTrail11" type="Node2D"]
 script = ExtResource("1_3lsis")
@@ -30,3 +36,10 @@ offset_right = 1233.0
 offset_bottom = 406.0
 script = ExtResource("4_v8prx")
 target_scene = ExtResource("5_vd41y")
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_wv2gx")
+
+[node name="MainCharacter" parent="." instance=ExtResource("6_88n1u")]
+position = Vector2(0, 631)
+scale = Vector2(1.5, 1.5)

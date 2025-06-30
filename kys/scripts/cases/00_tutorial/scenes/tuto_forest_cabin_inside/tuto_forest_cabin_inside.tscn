@@ -1,8 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://cnh8hery3ks0u"]
+[gd_scene load_steps=6 format=3 uid="uid://cnh8hery3ks0u"]
 
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_forest_cabin_inside/tuto_forest_cabin_inside.gd" id="1_eplrq"]
 [ext_resource type="Texture2D" uid="uid://d3yi1kwvxjm12" path="res://assets/cases/00_tutorial/scenes/tuto_forest_cabin_inside/forest_cabin_inside.png" id="1_n6xcb"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_forest_cabin_inside/button_forest_cabin_outside.gd" id="2_xl7ti"]
+[ext_resource type="PackedScene" uid="uid://lhqb8jhlpqc2" path="res://assets/global/characters/main/MainCharacter.tscn" id="4_vsfcj"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_bttln"]
+vertices = PackedVector2Array(1191.76, 628.273, 1193.1, 643.969, 63.6797, 641.242, 445.547, 567.078)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(445, 557, 1201, 619, 1204, 654, -39, 651)])
 
 [node name="TutoForestCabinInside" type="Node2D"]
 script = ExtResource("1_eplrq")
@@ -19,3 +25,10 @@ offset_top = 215.0
 offset_right = 1048.0
 offset_bottom = 580.0
 script = ExtResource("2_xl7ti")
+
+[node name="MainCharacter" parent="." instance=ExtResource("4_vsfcj")]
+position = Vector2(928, 620)
+scale = Vector2(2, 2)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_bttln")

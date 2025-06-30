@@ -24,7 +24,8 @@ offset = Vector2(0.955, 0)
 navigation_polygon = SubResource("NavigationPolygon_u5mlc")
 
 [node name="MainCharacter" parent="NavigationRegion2D" instance=ExtResource("4_bmjrl")]
-position = Vector2(272, 478)
+position = Vector2(45, 618)
+scale = Vector2(1.1, 1.1)
 
 [node name="button_inside_school" type="Button" parent="."]
 self_modulate = Color(1, 1, 1, 0)
