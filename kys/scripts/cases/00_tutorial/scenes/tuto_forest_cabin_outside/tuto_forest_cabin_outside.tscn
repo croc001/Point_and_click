@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dqo4l2ppciidx" path="res://assets/cases/00_tutorial/scenes/tuto_forest_cabin_outside/forest_cabin_outside.png" id="1_vij3o"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_forest_cabin_outside/button_forest_trail_1_1.gd" id="2_d38al"]
 [ext_resource type="Script" path="res://scripts/common/LockpickScriptButton.gd" id="4_llhw6"]
-[ext_resource type="PackedScene" uid="uid://cnh8hery3ks0u" path="res://scripts/cases/00_tutorial/scenes/tuto_forest_cabin_inside/tuto_forest_cabin_inside.tscn" id="5_yfnfr"]
+[ext_resource type="PackedScene" uid="uid://dvh1dcocn2ddl" path="res://scripts/cases/00_tutorial/scenes/tuto_ending/tuto_ending.tscn" id="5_n564v"]
 [ext_resource type="PackedScene" uid="uid://c10tdvqh272kr" path="res://scripts/global/mechanics/lockpick/lockpick_minigame.tscn" id="6_mrfwj"]
 [ext_resource type="PackedScene" uid="uid://lhqb8jhlpqc2" path="res://assets/global/characters/main/MainCharacter.tscn" id="7_6noyx"]
 
@@ -36,7 +36,7 @@ offset_top = 343.0
 offset_right = 614.0
 offset_bottom = 591.0
 script = ExtResource("4_llhw6")
-target_scene = ExtResource("5_yfnfr")
+target_scene = ExtResource("5_n564v")
 lockpick_scene = ExtResource("6_mrfwj")
 
 [node name="MainCharacter" parent="." instance=ExtResource("7_6noyx")]

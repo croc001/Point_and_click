@@ -76,5 +76,5 @@ signal lockpick_succeeded  # <- GANZ OBEN hinzufügen
 func unlock():
 	is_unlocked = true
 	print("Unlocked!")
-	emit_signal("lockpick_succeeded")  # <- SIGNAL SENDEN
-	queue_free()  # optional: Minispiel schließen
+	emit_signal("lockpick_succeeded")
+	queue_free()  

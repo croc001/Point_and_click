@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvh1dcocn2ddl"]
+
+[ext_resource type="Texture2D" uid="uid://dwqe4h1clyjn8" path="res://scripts/cases/00_tutorial/scenes/tuto_ending/sddefault.png" id="1_26vy5"]
+[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_ending/button.gd" id="2_j5x40"]
+
+[node name="tuto_ending" type="Node2D"]
+
+[node name="Sddefault" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(1.8, 1.35)
+texture = ExtResource("1_26vy5")
+
+[node name="Button" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+offset_right = 1152.0
+offset_bottom = 648.0
+script = ExtResource("2_j5x40")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
