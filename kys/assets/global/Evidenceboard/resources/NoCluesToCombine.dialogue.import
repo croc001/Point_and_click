@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://bohcvvi8lv6e5"
+path="res://.godot/imported/NoCluesToCombine.dialogue-6bb110b956bab9502e5c5a0ea7634855.tres"
+
+[deps]
+
+source_file="res://assets/global/Evidenceboard/resources/NoCluesToCombine.dialogue"
+dest_files=["res://.godot/imported/NoCluesToCombine.dialogue-6bb110b956bab9502e5c5a0ea7634855.tres"]
+
+[params]
+
+defaults=true

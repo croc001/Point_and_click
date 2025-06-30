@@ -1,11 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://dn6chmuwdsiva"]
+[gd_scene load_steps=4 format=3 uid="uid://dn6chmuwdsiva"]
 
+[ext_resource type="Script" path="res://assets/global/Evidenceboard/evidenceboard.gd" id="1_ebl0m"]
 [ext_resource type="Script" path="res://assets/global/Evidenceboard/control.gd" id="1_w0sgc"]
 [ext_resource type="Resource" uid="uid://bdcpyltix1xkg" path="res://assets/global/Evidenceboard/resources/Ice_cream_shop_Evidence.tres" id="2_efeol"]
 
 [node name="Evidenceboard" type="CanvasLayer"]
+script = ExtResource("1_ebl0m")
 
 [node name="Control" type="Control" parent="."]
+z_index = 1
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1153.0

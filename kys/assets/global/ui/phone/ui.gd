@@ -6,6 +6,14 @@ var phone_start_pos := Vector2()
 var phone_offset_y := -135
 var map_overlay: Node = null
 var evidence_board: Node = null
+var dialogue = load("res://assets/global/Evidenceboard/resources/NoCluesToCombine.dialogue")
+
+
+var case_mapping = {
+	"00_tuto_office": "res://assets/global/Evidenceboard/resources/Office_Evidence.tres",
+	"TutoSchoolInside": "res://assets/global/Evidenceboard/resources/School_Evidence.tres",
+	"TutoIcecreamShopInside": "res://assets/global/Evidenceboard/resources/Ice_cream_shop_Evidence.tres"
+	}
 
 func _ready():
 	visible = true #das macht das das gesamte handy angezeigt wird oder nicht
@@ -24,20 +32,19 @@ func _on_map_app_pressed():
 	else:
 		map_overlay.visible = not map_overlay.visible
 
+
 func _on_evidence_app_pressed():
-	if evidence_board == null:
-		var scene = preload("res://assets/global/Evidenceboard/Evidenceboard.tscn")
-		evidence_board = scene.instantiate()
+	print(get_tree().current_scene.name)
+	var current_scene = get_tree().current_scene
 
-		# Access the Control node where case_data exists
-		var control_node = evidence_board.get_node("Control")
-		control_node.case_data = preload("res://assets/global/Evidenceboard/resources/Office_Evidence.tres")
+	if case_mapping.has(current_scene.name):
+		var case_resource = load(case_mapping[current_scene.name])
+		EvidenceBoardManager.toggle_board(case_resource)
 
-		get_tree().current_scene.add_child(evidence_board)
-		control_node.show()  # Show the evidence board (the Control node)
+		# Optional: Block input on Phone while EvidenceBoard is open
+		$Control/PhonePanel.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	else:
-		var control_node = evidence_board.get_node("Control")
-		control_node.visible = not control_node.visible
+		DialogueManager.show_dialogue_balloon(dialogue, "Evidence_Board")
 
 func _on_inventory_app_pressed():
 	print("Inventory geöffnet")

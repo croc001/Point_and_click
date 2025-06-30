@@ -9,28 +9,32 @@ extends Control
 @onready var hint_button_container := $hintList/HintButtons
 
 var answer_fields: Array[LineEdit] = []
+var current_case: CaseResource = null
 
 func _ready():
-	hide()  # standardmäßig ausblenden
+	hide()  # Hidden by default
 	DetectivePhone.visible = false
-	if case_data == null:
-		push_error("No case data assigned! Please select a CaseResource in the Inspector.")
-		return
-
-	_load_case(case_data)
 	check_button.pressed.connect(_on_check_button_pressed)
 
-func _load_case(case: CaseResource):
+func load_case(new_case: CaseResource):
+	reset_board()
+	current_case = new_case
+	_build_case(current_case)
+	show()
+
+func reset_board():
 	answer_fields.clear()
 
-	# Properly clear the containers
 	for child in text_gap_container.get_children():
 		child.queue_free()
 
 	for child in hint_button_container.get_children():
 		child.queue_free()
 
-	# Build the text with gaps
+	feedback_label.text = ""
+	current_case = null
+
+func _build_case(case: CaseResource):
 	for part in case.text_template:
 		if part == "_":
 			var field = LineEdit.new()
@@ -42,7 +46,6 @@ func _load_case(case: CaseResource):
 			label.text = part
 			text_gap_container.add_child(label)
 
-	# Build the hint buttons
 	for hint in case.hints:
 		var btn = Button.new()
 		btn.text = hint["text"]
@@ -60,9 +63,10 @@ func _on_check_button_pressed():
 	for field in answer_fields:
 		inputs.append(field.text.strip_edges())
 
-	if inputs == case_data.correct_answers:
+	if inputs == current_case.correct_answers:
 		feedback_label.text = "Correct combination!"
 		await get_tree().create_timer(2.0).timeout
-		free()
+		reset_board()
+		hide()
 	else:
 		feedback_label.text = "Incorrect – try again."
