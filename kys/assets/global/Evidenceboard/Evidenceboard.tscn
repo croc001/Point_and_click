@@ -35,7 +35,7 @@ offset_left = 905.0
 offset_top = 568.0
 offset_right = 1139.0
 offset_bottom = 629.0
-text = "checklameck"
+text = "Check Button"
 
 [node name="feedbackLabel" type="Label" parent="Control"]
 layout_mode = 0
