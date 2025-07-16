@@ -7,4 +7,4 @@
 
 [resource]
 script = ExtResource("4_2f6o5")
-items = Array[ExtResource("1_hunn2")]([ExtResource("2_1uhop"), ExtResource("3_hudv2"), ExtResource("3_hudv2"), null, null, null, null, null, null, ExtResource("2_1uhop"), null, null, null, null])
+items = Array[ExtResource("1_hunn2")]([ExtResource("2_1uhop"), ExtResource("3_hudv2"), null, null, null, null, null, null, null, null, null, null, null, null])
