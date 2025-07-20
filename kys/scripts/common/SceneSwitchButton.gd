@@ -12,6 +12,10 @@ func _ready() -> void:
 
 func _on_pressed() -> void:
 	print("on pressed")
+	if not GlobalVar.phone_is_answered:
+		print("Tür ist verschlossen. Telefon wurde nicht beantwortet.")
+		return # bricht die Funktion ab
+		
 	if target_scene:
 		get_tree().change_scene_to_packed(target_scene)
 	else:
