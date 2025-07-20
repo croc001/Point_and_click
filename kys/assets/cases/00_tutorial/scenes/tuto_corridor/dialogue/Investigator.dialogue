@@ -1,12 +1,12 @@
 ~ Investigator_dialogue
-Officer John: Hey Jocob you heared about the new case? 
-Jacob: actually i was just on the phone with the chief, he assigned it to me.
-Officer John: It’s scary what this city has become...   
-Officer John: ...  
-Officer John:  you um... you sure you up for this?
-Jacob: Im fine. I´ll manage it
-Officer John: Well, if you’re sure,[wait=1] I heard about your wife and-
-Jacob interupts the investigator before he could say another word
-Jacob: I said I‘m fine. i´ll manage the case
+Officer John: Hey Jocob you heared about the new case?  
+Jacob: actually i was just on the phone with the chief, he assigned it to me. 
+Officer John: It’s scary what this city has become... 
+Officer John: ...   
+Officer John:  you um... you sure you up for this? 
+Jacob: Im fine. I´ll manage it 
+Officer John: Well, if you’re sure,[wait=1] I heard about your wife and- 
+Jacob interupts the investigator before he could say another word 
+Jacob: I said I‘m fine. i´ll manage the case 
 Officer John: Alright, alright i was just trying to help. Good luck with your Case. Im going back to my Duty.
 => END

@@ -16,7 +16,7 @@ var case_mapping = {
 	}
 
 func _ready():
-	visible = true #das macht das das gesamte handy angezeigt wird oder nicht
+	visible = false
 	phone_start_pos = $Control/PhonePanel.position
 	$Control/PhonePanel/MAP_APP.pressed.connect(_on_map_app_pressed)
 	$Control/PhonePanel/EVIDENCE_APP.pressed.connect(_on_evidence_app_pressed)

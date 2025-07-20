@@ -20,6 +20,7 @@ Zentrale Szene-Logik für den Tutorial-Büroraum.
 #  Lebenszyklus
 # ─────────────────────────────────────
 func _ready() -> void:
+	DetectivePhone.visible = false
 	# (1) Musik starten, falls gesetzt
 	if background_music:
 		var player := AudioStreamPlayer.new()
