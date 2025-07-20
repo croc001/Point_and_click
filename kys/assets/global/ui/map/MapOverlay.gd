@@ -3,6 +3,16 @@ extends CanvasLayer
 
 func _ready() -> void:
 	hide()  # standardmäßig ausblenden
+	
+	$Button_school.disabled = not GlobalVar.can_access_school()
+	$Button_icecream_shop.disabled = not GlobalVar.can_access_icecream()
+	$Button_forest.disabled = not GlobalVar.can_access_forest()
+	
+	if $Button_icecream_shop.disabled:
+		$Button_icecream_shop.tooltip_text = "Finde erst alle Hinweise in der Schule."
+
+	if $Button_forest.disabled:
+		$Button_forest.tooltip_text = "Löse den Fall in der Eisdiele, um weiterzukommen."
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("toggle_map"):  # Taste M im Input Map
