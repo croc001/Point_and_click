@@ -42,7 +42,10 @@ func _on_evidence_app_pressed():
 	if current_scene.name == "TutoSchoolInside" and not GlobalVar.teacher_dialogue_is_over:
 		DialogueManager.show_dialogue_balloon(dialogue)  # Hinweis anzeigen
 		return
-	
+
+	if current_scene.name == "TutoIcecreamShopInside" and not GlobalVar.icygiovanni_dialogue_is_over:
+		DialogueManager.show_dialogue_balloon(dialogue)
+		return
 
 	if case_mapping.has(current_scene.name):
 		var case_resource = load(case_mapping[current_scene.name])
