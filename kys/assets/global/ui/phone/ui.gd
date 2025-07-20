@@ -25,6 +25,10 @@ func _ready():
 	#von hier bis
 	
 func _on_map_app_pressed():
+	if not GlobalVar.map_unlocked:
+			print("🗺️ Die Map ist noch gesperrt. Finde erst alle Hinweise.")
+			return
+	
 	if map_overlay == null:
 		var scene = preload("res://assets/global/ui/map/MapOverlay.tscn")
 		map_overlay = scene.instantiate()

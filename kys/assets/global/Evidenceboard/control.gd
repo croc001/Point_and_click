@@ -65,6 +65,8 @@ func _on_check_button_pressed():
 
 	if inputs == current_case.correct_answers:
 		feedback_label.text = "Correct combination!"
+		GlobalVar.map_unlocked = true
+		print("🗺️ Map wurde freigeschaltet!")
 		await get_tree().create_timer(2.0).timeout
 		reset_board()
 		hide()
