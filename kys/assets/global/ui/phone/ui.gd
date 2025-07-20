@@ -38,8 +38,11 @@ func _on_map_app_pressed():
 
 
 func _on_evidence_app_pressed():
-	print(get_tree().current_scene.name)
 	var current_scene = get_tree().current_scene
+	if current_scene.name == "TutoSchoolInside" and not GlobalVar.teacher_dialogue_is_over:
+		DialogueManager.show_dialogue_balloon(dialogue)  # Hinweis anzeigen
+		return
+	
 
 	if case_mapping.has(current_scene.name):
 		var case_resource = load(case_mapping[current_scene.name])

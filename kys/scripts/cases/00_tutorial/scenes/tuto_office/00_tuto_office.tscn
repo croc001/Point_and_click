@@ -105,7 +105,6 @@ target_scene = ExtResource("10_gyd18")
 
 [node name="tuto_phone_timer" type="Timer" parent="."]
 process_callback = 0
-wait_time = 10.0
 one_shot = true
 autostart = true
 script = ExtResource("7_md7qg")

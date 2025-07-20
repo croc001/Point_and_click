@@ -65,8 +65,22 @@ func _on_check_button_pressed():
 
 	if inputs == current_case.correct_answers:
 		feedback_label.text = "Correct combination!"
+		if current_case == load("res://assets/global/Evidenceboard/resources/School_Evidence.tres"):
+			GlobalVar.school_evidence_done = true
+			print("✅ Schul-Fall abgeschlossen.")
+			
+		elif current_case == load("res://assets/global/Evidenceboard/resources/Office_Evidence.tres"):
+			GlobalVar.office_evidence_done = true
+			print("✅ Büro-Fall abgeschlossen.")
+			
+		elif current_case == load("res://assets/global/Evidenceboard/resources/Ice_cream_shop_Evidence.tres"):
+			GlobalVar.icecream_evidence_done = true
+			print("✅ Eisdiele-Fall abgeschlossen.")
+			
 		GlobalVar.map_unlocked = true
 		print("🗺️ Map wurde freigeschaltet!")
+
+
 		await get_tree().create_timer(2.0).timeout
 		reset_board()
 		hide()
