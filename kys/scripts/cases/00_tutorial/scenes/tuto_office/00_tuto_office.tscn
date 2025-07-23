@@ -14,7 +14,7 @@
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/phone_ring.gd" id="9_luior"]
 [ext_resource type="PackedScene" uid="uid://ccfusmr7it07e" path="res://assets/cases/00_tutorial/scenes/tuto_office/background/closeup_register.tscn" id="9_xp3ai"]
 [ext_resource type="PackedScene" uid="uid://b4176x40cccpr" path="res://assets/cases/00_tutorial/scenes/tuto_corridor/background/tuto_corridor.tscn" id="10_gyd18"]
-[ext_resource type="PackedScene" uid="uid://bougd7exuwurh" path="res://assets/global/ui/phone/detective_phone.tscn" id="17_y74n2"]
+[ext_resource type="PackedScene" path="res://assets/global/ui/phone/detective_phone.tscn" id="17_y74n2"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/PhonePickupButton.gd" id="18_jsuyb"]
 [ext_resource type="PackedScene" uid="uid://co2a42of6qxpx" path="res://assets/global/ui/phone/inventory/items/test_item.tscn" id="19_41eyn"]
 [ext_resource type="PackedScene" uid="uid://lhqb8jhlpqc2" path="res://assets/global/characters/main/MainCharacter.tscn" id="20_cl4vq"]
@@ -127,11 +127,11 @@ script = ExtResource("9_luior")
 
 [node name="TestItem" parent="." instance=ExtResource("19_41eyn")]
 position = Vector2(631, 385)
-scale = Vector2(1.745, 1.745)
+scale = Vector2(3.07, 3.07)
 
 [node name="Smartphone" parent="." instance=ExtResource("20_fcn63")]
 position = Vector2(193, 511)
-scale = Vector2(1.69, 1.69)
+scale = Vector2(3.575, 3.575)
 
 [node name="Button für Flags wegen handy menü und so hahahahhahahahahahaha" type="Button" parent="Smartphone"]
 self_modulate = Color(1, 1, 1, 0)

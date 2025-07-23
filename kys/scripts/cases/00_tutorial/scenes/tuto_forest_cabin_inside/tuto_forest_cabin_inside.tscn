@@ -1,20 +1,21 @@
-[gd_scene load_steps=6 format=3 uid="uid://cnh8hery3ks0u"]
+[gd_scene load_steps=7 format=3 uid="uid://cnh8hery3ks0u"]
 
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_forest_cabin_inside/tuto_forest_cabin_inside.gd" id="1_eplrq"]
 [ext_resource type="Texture2D" uid="uid://d3yi1kwvxjm12" path="res://assets/cases/00_tutorial/scenes/tuto_forest_cabin_inside/forest_cabin_inside.png" id="1_n6xcb"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_forest_cabin_inside/button_forest_cabin_outside.gd" id="2_xl7ti"]
 [ext_resource type="PackedScene" uid="uid://lhqb8jhlpqc2" path="res://assets/global/characters/main/MainCharacter.tscn" id="4_vsfcj"]
+[ext_resource type="PackedScene" uid="uid://cwgcn8w44l6xq" path="res://assets/global/ui/phone/inventory/items/ItemPickUp.tscn" id="5_rts3d"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_bttln"]
-vertices = PackedVector2Array(1191.76, 628.273, 1193.1, 643.969, 63.6797, 641.242, 445.547, 567.078)
+vertices = PackedVector2Array(548.813, 372.961, 1157.78, 644.352, -85.6875, 653.797, 215.922, 368.063)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(445, 557, 1201, 619, 1204, 654, -39, 651)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(212, 358, 551, 363, 1204, 654, -111, 664)])
 
 [node name="TutoForestCabinInside" type="Node2D"]
 script = ExtResource("1_eplrq")
 
 [node name="forest_cabin_inside" type="Sprite2D" parent="."]
-position = Vector2(582, 322)
+position = Vector2(548, 331)
 scale = Vector2(1.875, 1.875)
 texture = ExtResource("1_n6xcb")
 
@@ -31,4 +32,9 @@ position = Vector2(928, 620)
 scale = Vector2(2, 2)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+position = Vector2(-12, 13)
 navigation_polygon = SubResource("NavigationPolygon_bttln")
+
+[node name="ItemPickUp" parent="." instance=ExtResource("5_rts3d")]
+position = Vector2(744, 554)
+scale = Vector2(4.825, 4.825)

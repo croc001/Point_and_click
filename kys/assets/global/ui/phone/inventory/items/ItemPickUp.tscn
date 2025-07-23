@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cwgcn8w44l6xq"]
+[gd_scene load_steps=4 format=3 uid="uid://cwgcn8w44l6xq"]
 
 [ext_resource type="Script" path="res://assets/global/ui/phone/inventory/items/item_pick_up.gd" id="1_8k36g"]
+[ext_resource type="Texture2D" uid="uid://nk27rpoxpo2o" path="res://assets/cases/00_tutorial/scenes/tuto_office/objects/item_book_inventory.png" id="2_qx47j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7c4h3"]
 resource_local_to_scene = true
@@ -12,3 +13,5 @@ script = ExtResource("1_8k36g")
 shape = SubResource("RectangleShape2D_7c4h3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.43617, 0.5)
+texture = ExtResource("2_qx47j")
