@@ -1,0 +1,107 @@
+[gd_scene load_steps=9 format=3 uid="uid://djq4cg776rvlh"]
+
+[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/interrogation/interrogation.gd" id="1_4g3ii"]
+[ext_resource type="Texture2D" uid="uid://erts3wip80ic" path="res://scripts/cases/00_tutorial/scenes/interrogation/verhoer_guy4.png" id="2_pjwiu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sogih"]
+atlas = ExtResource("2_pjwiu")
+region = Rect2(0, 0, 666, 356)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mcmar"]
+atlas = ExtResource("2_pjwiu")
+region = Rect2(666, 0, 666, 356)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ie2oj"]
+atlas = ExtResource("2_pjwiu")
+region = Rect2(1332, 0, 666, 356)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j8hdj"]
+atlas = ExtResource("2_pjwiu")
+region = Rect2(1998, 0, 666, 356)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7h3qv"]
+atlas = ExtResource("2_pjwiu")
+region = Rect2(2664, 0, 666, 356)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l4x65"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sogih")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mcmar")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ie2oj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j8hdj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7h3qv")
+}],
+"loop": true,
+"name": &"main",
+"speed": 5.0
+}]
+
+[node name="Interrogation" type="Node2D"]
+script = ExtResource("1_4g3ii")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(577.5, 323)
+scale = Vector2(1.73123, 1.80899)
+sprite_frames = SubResource("SpriteFrames_l4x65")
+animation = &"main"
+
+[node name="OllamaRequest" type="HTTPRequest" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="InputField" type="LineEdit" parent="CanvasLayer"]
+offset_left = 55.0
+offset_top = 389.0
+offset_right = 486.0
+offset_bottom = 629.0
+placeholder_text = "Your question"
+
+[node name="SendButton" type="Button" parent="CanvasLayer"]
+offset_left = 529.0
+offset_top = 528.0
+offset_right = 648.0
+offset_bottom = 628.0
+text = "Interrogate!"
+
+[node name="TestLabel" type="RichTextLabel" parent="CanvasLayer"]
+offset_left = 685.0
+offset_top = 393.0
+offset_right = 1114.0
+offset_bottom = 629.0
+
+[node name="ButtonBar" type="HBoxContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Btn1" type="Button" parent="ButtonBar"]
+layout_mode = 2
+text = "Micheal"
+
+[node name="Btn2" type="Button" parent="ButtonBar"]
+layout_mode = 2
+text = "Selly"
+
+[node name="Btn3" type="Button" parent="ButtonBar"]
+layout_mode = 2
+text = "Jacky"
+
+[node name="Btn4" type="Button" parent="ButtonBar"]
+layout_mode = 2
+text = "Jürgen"
+
+[node name="Finish" type="Button" parent="."]
+offset_left = 1050.0
+offset_top = 2.0
+offset_right = 1152.0
+offset_bottom = 42.0
+text = "Finish?"
