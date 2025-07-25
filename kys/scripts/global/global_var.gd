@@ -5,6 +5,7 @@ var investigator_dialogue_is_over := false
 var icygiovanni_dialogue_is_over = false
 var teacher_dialogue_is_over = false
 var phone_collected := false
+var box_collected := false
 var map_unlocked := false
 var school_evidence_done := false
 var icecream_evidence_done := false

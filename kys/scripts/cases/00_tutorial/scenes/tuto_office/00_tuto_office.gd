@@ -23,6 +23,7 @@ func _ready() -> void:
 	if GlobalVar.phone_collected == false:
 		DetectivePhone.visible = false
 	else: 
+		
 		DetectivePhone.visible = true
 		
 	# (1) Musik starten, falls gesetzt
