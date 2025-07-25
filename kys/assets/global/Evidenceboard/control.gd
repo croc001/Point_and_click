@@ -59,6 +59,7 @@ func _on_hint_selected(hint_id: String):
 			return
 
 func _on_check_button_pressed():
+	DetectivePhone.visible = true
 	var inputs = []
 	for field in answer_fields:
 		inputs.append(field.text.strip_edges())

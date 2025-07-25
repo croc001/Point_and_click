@@ -3,7 +3,10 @@ extends Node2D
 var dialogue = load("res://assets/cases/00_tutorial/scenes/tuto_corridor/dialogue/Investigator.dialogue")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	DetectivePhone.visible = false
+	if GlobalVar.phone_collected == false:
+		DetectivePhone.visible = false
+	else:
+		DetectivePhone.visible = true
 	if GlobalVar.investigator_dialogue_is_over == false:
 		DialogueManager.show_dialogue_balloon(dialogue,"Investigator_dialogue")
 		GlobalVar.investigator_dialogue_is_over = true
