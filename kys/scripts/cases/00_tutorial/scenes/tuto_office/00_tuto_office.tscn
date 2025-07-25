@@ -1,19 +1,13 @@
-[gd_scene load_steps=21 format=3 uid="uid://cat6dy4hy6s0t"]
+[gd_scene load_steps=15 format=3 uid="uid://cat6dy4hy6s0t"]
 
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/00_tuto_office.gd" id="1_pu6w3"]
 [ext_resource type="Texture2D" uid="uid://bf0quatrdl6bm" path="res://assets/cases/00_tutorial/scenes/tuto_office/background/detective_office_new.png" id="2_if1x8"]
 [ext_resource type="Script" path="res://scripts/common/SceneSwitchButton.gd" id="2_vtybv"]
-[ext_resource type="PackedScene" uid="uid://d32dan1mv2sr4" path="res://assets/cases/00_tutorial/scenes/tuto_office/background/tuto_office_closeup_pc.tscn" id="3_ndvin"]
-[ext_resource type="PackedScene" uid="uid://bpxhtykqwqije" path="res://assets/cases/00_tutorial/scenes/tuto_office/background/tuto_office_clock.tscn" id="4_kspkh"]
-[ext_resource type="PackedScene" uid="uid://caocihig0mxee" path="res://assets/cases/00_tutorial/scenes/tuto_office/background/closeup_whiteboard.tscn" id="5_xey20"]
-[ext_resource type="PackedScene" uid="uid://dnuga82but3qm" path="res://assets/cases/00_tutorial/scenes/tuto_office/background/closeup_certificate.tscn" id="6_ef28o"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/tuto_office_phone.gd" id="6_gd1ue"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/tuto_phone_timer.gd" id="7_md7qg"]
 [ext_resource type="AudioStream" uid="uid://dlthcxx25it5a" path="res://assets/cases/00_tutorial/scenes/tuto_office/audio/fx/phone_ring.mp3" id="8_2adsv"]
-[ext_resource type="PackedScene" uid="uid://df75pkg02w12f" path="res://assets/cases/00_tutorial/scenes/tuto_office/background/closeup_window.tscn" id="8_3x166"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/phone_ring.gd" id="9_luior"]
-[ext_resource type="PackedScene" uid="uid://ccfusmr7it07e" path="res://assets/cases/00_tutorial/scenes/tuto_office/background/closeup_register.tscn" id="9_xp3ai"]
-[ext_resource type="PackedScene" uid="uid://b4176x40cccpr" path="res://assets/cases/00_tutorial/scenes/tuto_corridor/background/tuto_corridor.tscn" id="10_gyd18"]
+[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/door_to_corridor.gd" id="10_u7svr"]
 [ext_resource type="PackedScene" uid="uid://bougd7exuwurh" path="res://assets/global/ui/phone/detective_phone.tscn" id="17_y74n2"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_office/PhonePickupButton.gd" id="18_jsuyb"]
 [ext_resource type="PackedScene" uid="uid://co2a42of6qxpx" path="res://assets/global/ui/phone/inventory/items/test_item.tscn" id="19_41eyn"]
@@ -36,7 +30,6 @@ offset_top = 423.0
 offset_right = 286.0
 offset_bottom = 512.0
 script = ExtResource("2_vtybv")
-target_scene = ExtResource("3_ndvin")
 
 [node name="clock" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
@@ -46,7 +39,6 @@ offset_top = 13.0
 offset_right = 625.0
 offset_bottom = 110.0
 script = ExtResource("2_vtybv")
-target_scene = ExtResource("4_kspkh")
 
 [node name="board" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
@@ -56,7 +48,6 @@ offset_top = 211.0
 offset_right = 870.0
 offset_bottom = 334.0
 script = ExtResource("2_vtybv")
-target_scene = ExtResource("5_xey20")
 
 [node name="certificate" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
@@ -66,7 +57,6 @@ offset_top = 72.0
 offset_right = 819.0
 offset_bottom = 131.0
 script = ExtResource("2_vtybv")
-target_scene = ExtResource("6_ef28o")
 
 [node name="tuto_office" type="Sprite2D" parent="."]
 position = Vector2(577, 325)
@@ -81,7 +71,6 @@ offset_top = 108.0
 offset_right = 144.0
 offset_bottom = 363.0
 script = ExtResource("2_vtybv")
-target_scene = ExtResource("8_3x166")
 
 [node name="register" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
@@ -91,7 +80,6 @@ offset_top = 180.0
 offset_right = 485.0
 offset_bottom = 385.0
 script = ExtResource("2_vtybv")
-target_scene = ExtResource("9_xp3ai")
 
 [node name="door to corridor" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
@@ -100,8 +88,7 @@ offset_left = 989.0
 offset_top = 229.0
 offset_right = 1091.0
 offset_bottom = 465.0
-script = ExtResource("2_vtybv")
-target_scene = ExtResource("10_gyd18")
+script = ExtResource("10_u7svr")
 
 [node name="tuto_phone_timer" type="Timer" parent="."]
 process_callback = 0

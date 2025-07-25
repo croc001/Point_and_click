@@ -15,7 +15,7 @@ Jacob: I should look around. Maybe there’s something important I can use durin
 Jacob (muttering): God, I hate this job.
 => END
 
-~ collected_cursed_book
+~ collectedCursedBook
 Jacob picks up the worn, dust-covered book, its cover etched with unsettling symbols.
 Jacob: (thinking) What the hell is this...? Looks like something out of a bad horror movie.
 He flips through a few brittle pages, the ink smeared and chaotic, some words crossed out, others circled in red.
@@ -45,3 +45,7 @@ He starts heading toward the door.
 Jacob: I’m bringing the book back with me. I’ll be at HQ in twenty. Prep the room.
 He ends the call without waiting for a reply.
 => END
+
+~ leave_cabin
+Jacob: i should head back as quick as possible
+Jacob gets to the Office and starts the interegation right away.

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://cbl4dcc0cny4o"
+path="res://.godot/imported/end_dialog.dialogue-3dd16611c0c2a6b1ea7f80f09d2585ec.tres"
+
+[deps]
+
+source_file="res://assets/cases/00_tutorial/scenes/tuto_end/Dialogue/end_dialog.dialogue"
+dest_files=["res://.godot/imported/end_dialog.dialogue-3dd16611c0c2a6b1ea7f80f09d2585ec.tres"]
+
+[params]
+
+defaults=true

@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://cnh8hery3ks0u"]
+[gd_scene load_steps=6 format=3 uid="uid://cnh8hery3ks0u"]
 
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_forest_cabin_inside/tuto_forest_cabin_inside.gd" id="1_eplrq"]
 [ext_resource type="Texture2D" uid="uid://d3yi1kwvxjm12" path="res://assets/cases/00_tutorial/scenes/tuto_forest_cabin_inside/forest_cabin_inside.png" id="1_n6xcb"]
-[ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_forest_cabin_inside/button_forest_cabin_outside.gd" id="2_xl7ti"]
 [ext_resource type="PackedScene" uid="uid://lhqb8jhlpqc2" path="res://assets/global/characters/main/MainCharacter.tscn" id="4_vsfcj"]
 [ext_resource type="PackedScene" uid="uid://d3048nqylltsb" path="res://assets/global/ui/phone/inventory/items/book.tscn" id="5_00r0r"]
 
@@ -19,14 +18,6 @@ position = Vector2(548, 331)
 scale = Vector2(1.875, 1.875)
 texture = ExtResource("1_n6xcb")
 
-[node name="Button_forest_cabin_outside" type="Button" parent="."]
-self_modulate = Color(1, 1, 1, 0)
-offset_left = 863.0
-offset_top = 215.0
-offset_right = 1048.0
-offset_bottom = 580.0
-script = ExtResource("2_xl7ti")
-
 [node name="MainCharacter" parent="." instance=ExtResource("4_vsfcj")]
 position = Vector2(152, 661)
 scale = Vector2(2, 2)
@@ -38,3 +29,15 @@ navigation_polygon = SubResource("NavigationPolygon_bttln")
 [node name="Book" parent="." instance=ExtResource("5_00r0r")]
 position = Vector2(740, 529)
 scale = Vector2(4.875, 4.875)
+
+[node name="BlackFade" type="ColorRect" parent="."]
+z_index = 2
+clip_contents = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[connection signal="tree_exiting" from="Book" to="." method="_on_book_tree_exiting"]

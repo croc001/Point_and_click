@@ -144,6 +144,3 @@ func _on_request_completed(_result: int, code: int, _headers: Array, body: Packe
 #  Helper: speaker name for current case
 func _ai_speaker() -> String:
 	return ["Michael", "Jürgen", "Jacky", "Selly"][current_case]
-	
-func _on_finish_pressed() -> void:
-	get_tree().change_scene_to_file("")

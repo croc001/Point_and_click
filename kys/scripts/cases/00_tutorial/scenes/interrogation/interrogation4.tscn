@@ -1,7 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://djq4cg776rvlh"]
+[gd_scene load_steps=11 format=3 uid="uid://djq4cg776rvlh"]
 
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/interrogation/interrogation.gd" id="1_4g3ii"]
 [ext_resource type="Texture2D" uid="uid://erts3wip80ic" path="res://scripts/cases/00_tutorial/scenes/interrogation/verhoer_guy4.png" id="2_pjwiu"]
+[ext_resource type="Script" path="res://scripts/common/SceneSwitchButton.gd" id="3_saqs2"]
+[ext_resource type="PackedScene" uid="uid://c6ubaajar6tfj" path="res://assets/cases/00_tutorial/scenes/tuto_end/Blackscreen.tscn" id="4_eensc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sogih"]
 atlas = ExtResource("2_pjwiu")
@@ -105,3 +107,5 @@ offset_top = 2.0
 offset_right = 1152.0
 offset_bottom = 42.0
 text = "Finish?"
+script = ExtResource("3_saqs2")
+target_scene = ExtResource("4_eensc")
