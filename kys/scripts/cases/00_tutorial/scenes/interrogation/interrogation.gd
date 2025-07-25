@@ -52,6 +52,8 @@ const CASE_SCENES: Array[String] = [
 	"res://scripts/cases/00_tutorial/scenes/interrogation/interrogation4.tscn"
 ]
 
+@export var model_name: String = "llama2:7b" # CHANGE NAME OF MODEL HERE !
+
 #  Node references
 @onready var http_request : HTTPRequest      = $OllamaRequest
 @onready var input_field  : LineEdit         = $CanvasLayer/InputField
@@ -109,7 +111,7 @@ func _send_request() -> void:
 	start_time = Time.get_ticks_msec()
 	var headers: Array[String] = ["Content-Type: application/json"]
 	var body: Dictionary = {
-		"model": "llama2:7b",
+		"model": model_name,
 		"prompt": _build_prompt(),
 		"stream": false,
 		"max_length": 100,
