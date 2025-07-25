@@ -11,7 +11,7 @@ var school_evidence_done := false
 var icecream_evidence_done := false
 var Evidence_Board_Locked := true
 var office_evidence_done := false
-
+var book_collected := false
 
 func can_access_school() -> bool:
 	return true

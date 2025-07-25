@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://d3yi1kwvxjm12" path="res://assets/cases/00_tutorial/scenes/tuto_forest_cabin_inside/forest_cabin_inside.png" id="1_n6xcb"]
 [ext_resource type="Script" path="res://scripts/cases/00_tutorial/scenes/tuto_forest_cabin_inside/button_forest_cabin_outside.gd" id="2_xl7ti"]
 [ext_resource type="PackedScene" uid="uid://lhqb8jhlpqc2" path="res://assets/global/characters/main/MainCharacter.tscn" id="4_vsfcj"]
-[ext_resource type="PackedScene" uid="uid://cwgcn8w44l6xq" path="res://assets/global/ui/phone/inventory/items/ItemPickUp.tscn" id="5_rts3d"]
+[ext_resource type="PackedScene" uid="uid://d3048nqylltsb" path="res://assets/global/ui/phone/inventory/items/book.tscn" id="5_00r0r"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_bttln"]
 vertices = PackedVector2Array(548.813, 372.961, 1157.78, 644.352, -85.6875, 653.797, 215.922, 368.063)
@@ -35,6 +35,6 @@ scale = Vector2(2, 2)
 position = Vector2(-12, 13)
 navigation_polygon = SubResource("NavigationPolygon_bttln")
 
-[node name="ItemPickUp" parent="." instance=ExtResource("5_rts3d")]
-position = Vector2(744, 554)
-scale = Vector2(4.825, 4.825)
+[node name="Book" parent="." instance=ExtResource("5_00r0r")]
+position = Vector2(740, 529)
+scale = Vector2(4.875, 4.875)

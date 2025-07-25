@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3048nqylltsb"]
+
+[ext_resource type="PackedScene" uid="uid://cwgcn8w44l6xq" path="res://assets/global/ui/phone/inventory/items/ItemPickUp.tscn" id="1_e3mam"]
+[ext_resource type="Script" path="res://assets/global/ui/phone/inventory/items/book.gd" id="2_wgsil"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ps3u2"]
+resource_local_to_scene = true
+
+[node name="Book" instance=ExtResource("1_e3mam")]
+script = ExtResource("2_wgsil")
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("RectangleShape2D_ps3u2")
