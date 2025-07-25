@@ -1,129 +1,237 @@
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
+<!-- Improved compatibility of back to top link -->
+
 <a id="readme-top"></a>
 
 <!-- PROJECT LOGO -->
+
 <br />
 <div align="center">
   <a href="https://github.com/croc001/Point_and_click.git">
   </a>
 
-  <h3 align="center">Point-And-Click Video Game Installation</h3>
+  <h3 align="center">Point-And-Click Mystery Game – Installation Guide</h3>
 
   <p align="center">
-    A short installation guide for the video game demo.
+    A short guide to install, build, and experience our mysterious point-and-click game.
     <br />
     <a href="https://github.com/croc001/Point_and_click.git"><strong>Explore the docs »</strong></a>
   </p>
 </div>
 
-
-
 <!-- TABLE OF CONTENTS -->
+
 <details>
   <summary>Table of Contents</summary>
   <ol>
+    <li><a href="#about-the-project">About The Project</a></li>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation-build-yourself">Installation (Build Yourself)</a></li>
+        <li><a href="#installation-executable">Installation (Executable)</a></li>
+        <li><a href="#installing-the-ai">Installing the AI</a></li>
+      </ul>
     </li>
-    <li>
-      <a href="#running-the-game-in-godot-for-developers">Running the Game in Godot (for developers)</a>
-    </li>
+    <li><a href="#how-to-play">How to Play</a></li>
     <li><a href="#creators">Creators</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
+## About the Project
 
-
-
-<!-- ABOUT THE PROJECT -->
-## About The Project
-
-
-This is a short guide to help you get through the installation process for our Point-and-Click mystery game demo. So far, the demo includes a main menu, clickable objects, and test art. It's the playable part of our 2D mystery game we got so far.
-
-The game will be made with the Godot engine, primarily using its own programming language GDScript. C# will be used as an addition if needed.
+This is a short guide to help you get through the installation process of our point-and-click mystery game demo – and uncover its secrets with the help of artificial intelligence.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## Getting Started
 
+### Prerequisites
 
-<!-- GETTING STARTED -->
+To build the game yourself, you’ll need to install **Godot**:
 
-## Installing the game (.exe)
-**The current state of the Game changes a lot since we are still in Development, the Version provided with this method might be outdated !**
+* [Download for Windows](https://godotengine.org/download/windows/)
+* [Download for macOS](https://godotengine.org/download/macos/)
 
-**To be sure to get the newest Version please check out <a href="#running-the-game-in-godot-for-developers">Running the Game in Godot (for developers)</a>**
+Additionally, AI support requires installing **Ollama** and a compatible language model – more on that below.
 
+## Installation (Build Yourself)
 
-_Below is a short guide to help you through the installation process. The game is currently only available for Windows._
+*If you’d like to build the game from source, follow these steps like a true adventurer:*
 
-1. Download the game through the [**bwSync&Share**](https://bwsyncandshare.kit.edu/s/xSer3LqXGbdDHnB) link and press "download".
-   
-2. Double click the .exe file in the folder to start it.
-   
-3. If your PC prevents the installation due to secruity reasons, press "trust this source" to install it anyway.
-   
+1. Clone the repository:
 
-_Now you should be able to play the game. Have fun!_
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-## Running the game in Godot (for developers)
-
-1. First, download Godot. You can download it through the following links, depending on your device:
-
-   - **Windows:** https://godotengine.org/download/windows/  
-   - **Mac:** https://godotengine.org/download/macos/  
-
-2. Unzip and install the program.
-
-3. Clone the repository using the following command in your terminal:  
    ```sh
    git clone https://github.com/croc001/Point_and_click.git
    ```
-4. Start Godot and import the folder "goofy-ahh-game".
 
-5. You can press "f5" to start the game preview.
+2. Open the game project in Godot.
 
+3. In Godot, go to:
+   `Editor -> Manage Export Templates -> Download from Official GitHub Releases mirror`
+   Click **Download and Install**, then click **Close** once it’s done.
+
+4. Navigate to:
+   `Project -> Export -> Add -> Windows (Desktop)`
+   Choose a save location and click **Export Project**.
+
+5. Click **OK** to confirm.
+   You can ignore any warning messages.
+
+6. Locate the exported `.exe` file – double-click to launch the game.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## Installation (Executable)
 
+*If building isn’t your thing, just download and play:*
 
-<!-- CREATORS -->
+1. Download the game:
+   [Download from Mediafire](https://www.mediafire.com/file/m9vkdg7947uzuda/goofy-ahh-game.zip/file)
+
+2. Unzip the folder.
+
+3. Double-click the `game` file inside the folder to launch it.
+
+4. If your PC warns you, click “Trust this source” or “Run anyway”.
+
+Have fun!
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Installing the AI
+
+To use the **AI dialogue system**, follow these steps.</br>
+⚠️ The game **will not work** without the AI running.
+
+### Requirements
+
+* Operating System: Windows, macOS, or Linux
+* At least **8 GB of RAM** recommended
+
+### Step 1: Install Ollama
+
+Install Ollama using this terminal command:
+
+```sh
+curl -fsSL https://ollama.com/install.sh | sh
+```
+
+Alternatively, download it here: [https://ollama.com](https://ollama.com)
+
+### Step 2: Download the LLaMA 2 Model
+
+Pull the required 7B model:
+
+```sh
+ollama pull llama2:7b
+```
+
+This will download \~3–4 GB and store the model locally.
+
+### Step 3: Run the Model
+
+Start the model with:
+
+```sh
+ollama run llama2:7b
+```
+
+Expected output:
+
+```
+Starting llama2:7b...
+Listening on http://localhost:11434
+```
+
+### Step 4: Connect to the Game (in Godot)
+
+1. Open the file `interrogation_ai.gd`.
+
+2. Find this line:
+
+```gdscript
+"model": "llama2:7b"
+```
+
+3. To use another model (e.g. `mistral`, `llama3`), change the value:
+
+```gdscript
+"model": "mistral"
+```
+
+Make sure to pull the model first:
+
+```sh
+ollama pull mistral
+```
+
+> ⚠️ The game is currently configured to run with `"llama2:7b"`. Other models may require adjustments.
+
+### ✅ Quick Command Overview
+
+| Purpose               | Command                                                                     |      |
+| --------------------- | --------------------------------------------------------------------------- | ---- |
+| Install Ollama        | \`curl -fsSL [https://ollama.com/install.sh](https://ollama.com/install.sh) | sh\` |
+| Download model        | `ollama pull llama2:7b`                                                     |      |
+| Run the model         | `ollama run llama2:7b`                                                      |      |
+| Check connection      | `curl http://localhost:11434`                                               |      |
+| List installed models | `ollama list`                                                               |      |
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## How to Play
+
+Welcome, detective. Here’s how you navigate the shadows:
+
+### 🧩 Lockpick Minigame
+
+* Move lockpick: **Arrow keys (← / →)**
+* Turn the lock: **ENTER**
+
+### 🧠 Evidenceboard Minigame
+
+* Select words: **Left-click** on words to fill blanks
+* Check answers: **Click** the check button
+* Remove answers: **Click** the word in the text, press **Backspace**
+* Words fill the **next available blank**
+
+### 🕵️ General Controls
+
+* Interact with objects/people: **Left-click**
+* Advance dialogues: **Left-click**
+
+### 📱 UI Controls
+
+* Open/close the phone: **Mouse wheel**
+* Select apps: **Left-click**
+
+### 🗺️ Map Navigation
+
+* Travel to locations: **Left-click** on **grey-grounded** buildings
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## Creators
 
 <div style="display: flex; justify-content: space-evenly; flex-wrap: nowrap; gap: 20px;">
-  <!-- Profile 1: Lukas -->
   <div style="text-align: center; flex: 1;">
     <h4><a href="https://github.com/croc001">croc001</a></h4>
   </div>
-  
-  <!-- Profile 2: Daniel -->
   <div style="text-align: center; flex: 1;">
     <h4><a href="https://github.com/Thewischmoop">Thewischmoop</a></h4>
   </div>
-
-  <!-- Profile 3: Uwe -->
   <div style="text-align: center; flex: 1;">
     <h4><a href="https://github.com/uhahne">uhahne</a></h4>
   </div>
-
-  <!-- Profile 4: Agon -->
   <div style="text-align: center; flex: 1;">
     <h4><a href="https://github.com/Agon69">Agon69</a></h4>
   </div>
-
-  <!-- Profile 5: Mareike -->
   <div style="text-align: center; flex: 1;">
     <h4><a href="https://github.com/MareikeMKB">MareikeMKB</a></h4>
   </div>
-
-  <!-- Profile 6: Pierre -->
   <div style="text-align: center; flex: 1;">
     <h4><a href="https://github.com/420Pierre">420Pierre</a></h4>
   </div>
@@ -131,29 +239,21 @@ _Now you should be able to play the game. Have fun!_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
-<!-- LICENSE -->
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
-<!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-Some useful tools we used:
+Tools and inspirations we used:
 
 * [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
 * [Godot](https://godotengine.org/)
-* [Github](https://github.com/)
+* [GitHub](https://github.com/)
 * [Obsidian](https://obsidian.md/)
 * [Aseprite](https://www.aseprite.org/)
-* [FL Studio](https://www.image-line.com/)
+* [Ollama](https://ollama.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
