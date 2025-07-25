@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://dccmgct743n6g"
+path="res://.godot/imported/cabin_inside_dialogue.dialogue-204f177abcc78925c33cae05bef1bcfb.tres"
+
+[deps]
+
+source_file="res://assets/cases/00_tutorial/scenes/tuto_forest_cabin_inside/dialogue/cabin_inside_dialogue.dialogue"
+dest_files=["res://.godot/imported/cabin_inside_dialogue.dialogue-204f177abcc78925c33cae05bef1bcfb.tres"]
+
+[params]
+
+defaults=true

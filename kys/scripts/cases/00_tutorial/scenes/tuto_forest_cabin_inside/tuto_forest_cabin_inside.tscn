@@ -28,7 +28,7 @@ offset_bottom = 580.0
 script = ExtResource("2_xl7ti")
 
 [node name="MainCharacter" parent="." instance=ExtResource("4_vsfcj")]
-position = Vector2(928, 620)
+position = Vector2(152, 661)
 scale = Vector2(2, 2)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
